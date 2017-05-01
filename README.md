@@ -6,13 +6,13 @@ FYI: The optimal way to do this would be using npm's link, but we can't use it h
 
 1. In the root of the project you want to include this library:
 
-  ```javascript
-  npm install ./path/to/this/library
-  ```
+```javascript
+npm install ./path/to/this/library
+```
 
-  That's it.
+That's it.
 
-1. For consuming modules (components) from the library:
+2. For consuming modules (components) from the library:
 
 ```javascript
 import { TheComponentIWant } from 'elnative';
@@ -24,8 +24,8 @@ And that would do the trick.
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
+* The intended use for this repository is serving as a component library to develop react-native applications.
+* Version 1.0.0
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
