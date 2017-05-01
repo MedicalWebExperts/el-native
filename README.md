@@ -12,7 +12,7 @@ npm install ./path/to/this/library
 
 That's it.
 
-2. For consuming modules (components) from the library:
+1. For consuming modules (components) from the library:
 
 ```javascript
 import { TheComponentIWant } from 'elnative';
@@ -20,7 +20,7 @@ import { TheComponentIWant } from 'elnative';
 
 And that would do the trick.
 
-** NOTE: This is intended for development user only. Ideally when this library is finished, should be publish to npm** 
+** NOTE: This is intended for development user only. Ideally when this library is finished, should be publish to npm**
 
 ### What is this repository for? ###
 
