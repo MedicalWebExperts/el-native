@@ -16,7 +16,6 @@
     "eslint-plugin-react": "^6.10.3",
     "mocha": "^3.3.0",
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-native-mock": "^0.3.1",
     "react-test-renderer": "^15.5.4"
@@ -25,6 +24,7 @@
     "test": "mocha --require react-native-mock/mock.js --compilers js:babel-core/register --recursive test/*.js"
   },
   "dependencies": {
+    "react": "^15.5.4",
     "react-native": "^0.43.4"
   }
 }
