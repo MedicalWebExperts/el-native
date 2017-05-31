@@ -1,9 +1,11 @@
 import { Dimensions } from 'react-native';
 
-import { palette } from '../../styles/theme';
-
 const { width } = Dimensions.get('window');
 
+const palette = {
+  darkTextColor: '#666666',
+  opacity: 'rgba(0,0,0,0.2)',
+};
 
 const styles = {
   wrapper: {
