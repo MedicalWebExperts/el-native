@@ -4,7 +4,7 @@ import './storybook/addons';
 
 // import your stories
 configure(() => {
-  require('./storybook/stories');
+  require('./storybook');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
