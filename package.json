@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "testjest": "jest",
-    "test": "mocha --require react-native-mock/mock.js --compilers js:babel-core/register --recursive test/*.js",
+    "testjest": "./node_modules/.bin/jest",
+    "test": "mocha --require react-native-mock/mock.js --compilers js:babel-core/register --recursive test/*.js src/**/*.test.js",
     "storybook": "storybook start -p 7007"
   },
   "dependencies": {
+    "qs": "^6.4.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "0.44.2"
+    "react-native": "0.44.2",
+    "react-native-swiper": "^1.5.4"
   },
   "devDependencies": {
     "@storybook/react-native": "^3.0.0",
@@ -26,12 +28,12 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "jest": "20.0.4",
     "mocha": "^3.3.0",
     "prop-types": "^15.5.8",
-    "jest": "20.0.4",
-    "react-native-mock": "^0.3.1",
     "react-dom": "^15.5.4",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^15.5.4"
   },
   "jest": {
     "preset": "react-native"
