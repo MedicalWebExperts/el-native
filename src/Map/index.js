@@ -63,7 +63,7 @@ export default function Map(props) {
   };
 
   const handleOnPress = () => {
-    const generateIos = () => `http://maps.apple.com/?q=${props.latitude},${props.longitude}&z=${props.zoom}`;
+    const generateIos = () => `https://maps.apple.com/?q=${props.latitude},${props.longitude}&z=${props.zoom}`;
     const generateAndroid = () => `geo:${props.latitude},${props.longitude}`;
 
     const url = Platform.select({
