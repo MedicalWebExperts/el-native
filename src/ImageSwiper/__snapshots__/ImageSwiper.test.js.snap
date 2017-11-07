@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots should render default image swiper 1`] = `
+<View>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      activeDot={
+        <View
+          style={
+            Object {
+              "backgroundColor": "#666666",
+              "borderRadius": 5,
+              "height": 10,
+              "margin": 3,
+              "width": 10,
+            }
+          }
+        />
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={true}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {},
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      dot={
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.2)",
+              "borderRadius": 5,
+              "height": 10,
+              "margin": 3,
+              "width": 10,
+            }
+          }
+        />
+      }
+      height={240}
+      horizontal={true}
+      index={0}
+      loadMinimal={false}
+      loadMinimalSize={1}
+      loop={true}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      paginationStyle={
+        Object {
+          "bottom": 8,
+          "left": null,
+          "right": 14,
+        }
+      }
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+      style={undefined}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 240,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://facebook.github.io/react/img/logo_og.png",
+                }
+              }
+              style={
+                Object {
+                  "flex": 1,
+                  "width": 750,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 240,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://facebook.github.io/react/img/logo_og.png",
+                }
+              }
+              style={
+                Object {
+                  "flex": 1,
+                  "width": 750,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 240,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://facebook.github.io/react/img/logo_og.png",
+                }
+              }
+              style={
+                Object {
+                  "flex": 1,
+                  "width": 750,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 240,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://facebook.github.io/react/img/logo_og.png",
+                }
+              }
+              style={
+                Object {
+                  "flex": 1,
+                  "width": 750,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "bottom": 8,
+            "left": null,
+            "right": 14,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#666666",
+            "borderRadius": 5,
+            "height": 10,
+            "margin": 3,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "borderRadius": 5,
+            "height": 10,
+            "margin": 3,
+            "width": 10,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

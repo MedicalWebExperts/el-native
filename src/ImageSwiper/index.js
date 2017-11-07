@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
 
 import styles from './styles';
@@ -19,20 +20,21 @@ function ImageSwiper({ images, style }) {
   const swiper = (
     <View>
       <Swiper
-        style={stylesCommon.wrapper} height={240}
+        style={stylesCommon.wrapper}
+        height={240}
         dot={<View style={stylesCommon.dot} />}
         activeDot={<View style={stylesCommon.activeDot} />}
         paginationStyle={stylesCommon.paginationStyle}
         autoplay
       >
         {images.map(image =>
-          <View style={stylesCommon.slide}>
+          (<View style={stylesCommon.slide}>
             <Image
               resizeMode="stretch"
               style={stylesCommon.image}
               source={image}
             />
-          </View>)
+          </View>))
         }
       </Swiper>
     </View>
