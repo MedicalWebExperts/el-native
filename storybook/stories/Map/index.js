@@ -6,7 +6,7 @@ import {
 import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
-import Map from '../../../src/Map';
+import { Map } from '../../../src';
 
 const apiKey = process.env.ELNATIVE_GOOGLE_MAPS_APIKEY || '';
 

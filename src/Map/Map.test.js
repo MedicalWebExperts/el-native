@@ -1,4 +1,4 @@
-/* global describe it expect jest:true*/
+/* global describe it expect jest:true */
 import React from 'react';
 import { Text } from 'react-native';
 import renderer from 'react-test-renderer';

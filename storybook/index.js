@@ -3,7 +3,6 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 
 // import stories
 configure(() => {
-  require('./stories/ImageSwiper');
   require('./stories/Map');
 }, module);
 

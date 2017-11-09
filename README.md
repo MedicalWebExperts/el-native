@@ -1,49 +1,125 @@
-# README #
+# EL NATIVE
 
-To use this repo as a local library (prior to npm publish, and while in development), follow this instructions:
+Just Another React Native Components Library.
 
-FYI: The optimal way to do this would be using npm's link, but we can't use it here due to react-native doesn't support it (watchman specifically avoids symlinks in node_modules). This would have allow us to update the library and see those changes in the project. As we are not using this alternative is important to erase and re-install the library in order to get the updates. :(
+### What is this repository for?
 
-1.In the root of the project you want to include this library:
+* The intended use for this repository is serving as a component library to develop react-native applications.
+* Version 1.0.1
 
-```javascript
-npm install ./path/to/this/library
+# Getting Started
+
+To use this library in your project, just install it using npm and the repository url.
+
+```bash
+$ npm install git+https://bitbucket.org/NewWaveWeb/el-native.git#1.0.1 --save
 ```
 
 That's it.
 
-2.For consuming modules (components) from the library:
+Then, import the components that you want to use:
 
-```javascript
-import { TheComponentIWant } from 'elnative';
+```js
+  import { Map } from 'el-native';
 ```
 
 And that would do the trick.
 
-** NOTE: This is intended for development user only. Ideally when this library is finished, should be publish to npm**
+# How to Contribute
 
-### What is this repository for? ###
+## Clone this repository
 
-* The intended use for this repository is serving as a component library to develop react-native applications.
-* Version 1.0.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+``` bash
+$ git clone git@bitbucket.org:NewWaveWeb/el-native.git
+```
 
-### How do I get set up? ###
+## Running the application for development
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### 1. Install the dependencies
 
-### Contribution guidelines ###
+``` bash
+$ cd el-native
+$ npm install
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+### 2. Run the application
 
-### Who do I talk to? ###
+``` bash
+$ react-native run-ios
+```
 
-* Repo owner or admin
-* Other community or team contact
+or
+
+``` bash
+$ react-native run-android
+```
+
+### 3. Running Storybook
+
+``` bash
+$ npm run storybook
+```
+
+This command will show a storybook instance at: [http://localhost:7007](http://localhost:7007).
+
+### 4. Running Tests
+
+``` bash
+$ npm test
+```
+
+To update the snapshots:
+``` bash
+$ npm test -- -u
+```
+
+To watch the test suite:
+``` bash
+$ npm run test:watch
+```
+
+### 5. Building the app to publish
+
+``` bash
+$ npm run prepublish
+```
+
+or:
+
+``` bash
+$ npm run build
+```
+
+## Structure of the Components Directory
+
+### src/
+
+All the components are placed under the src/ folder. If you want to create a new component use the following structure:
+
+```
+src/
+├── index.js
+├── MyComponent
+│   └── __snapshots__
+│       ├── index.js
+│       ├── styles.js
+│       └── MyComponent.test.js
+```
+
+## Storybook
+
+This project has configured a [storybook](https://storybook.js.org/). If you run the application as discribed in [step 1](#running-the-application-for-development), you will have an intereactive storybook and ready to use at: [http://localhost:7007](http://localhost:7007). You will be able to select the component from the stories list and preview it in the emulator.
+
+If you want to add an story to the storybook, you can add it in the storybook/ folder at the root of this repository.
+
+```js
+  import React from 'react';
+  import { storiesOf } from '@storybook/react-native';
+
+  import { MyComponent } from '../../../src';
+
+  storiesOf('MyComponent', module).add('default', () => <MyComponent />);
+```
+
+Checkout the storybook [documentation](https://storybook.js.org/basics/guide-react/) for more examples.
+

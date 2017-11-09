@@ -21,11 +21,11 @@ const propTypes = {
   height: PropTypes.number,
   apiKey: PropTypes.string.isRequired,
   maptype: PropTypes.string,
-  zoom: PropTypes.number,
+  zoom: PropTypes.number, // eslint-disable-line react/no-unused-prop-types
   onPress: PropTypes.func,
   style: PropTypes.object,
-  button: PropTypes.element,
-  underlayColor: PropTypes.string,
+  button: PropTypes.element, // eslint-disable-line react/no-unused-prop-types
+  underlayColor: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
 };
 
 const defaultProps = {
