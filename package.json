@@ -1,28 +1,25 @@
 {
   "name": "el-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "main": "./index.js",
+  "description": "Just Another React Native Components Library.",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "test:watch": "TEST=true jest --watch --silent",
     "test:coverage": "TEST=true jest --coverage --silent",
     "lint": "eslint src",
+    "build": "babel src --out-dir dist --ignore '**/*.test.js'",
+    "build:watch": "babel src -w -d dist",
+    "prepublish": "npm run build",
     "precommit": "npm run lint",
     "prepush": "npm run test",
     "updateSnapshots": "jest --updateSnapshot",
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007"
   },
-  "dependencies": {
-    "qs": "^6.4.0",
-    "react": "16.0.0",
-    "react-native": "0.50.1",
-    "prop-types": "^15.6.0",
-    "react-native-linear-gradient": "^2.0.0",
-    "react-native-swiper": "^1.5.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@storybook/react-native": "^3.0.0",
     "babel-eslint": "7.2.3",
@@ -44,6 +41,11 @@
     "react-addons-test-utils": "15.6.2",
     "react-dom": "^16.0.0",
     "react-test-renderer": "16.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.0.0",
+    "react-native": "0.50.1",
+    "prop-types": "^15.6.0"
   },
   "jest": {
     "preset": "react-native",
