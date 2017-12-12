@@ -7,6 +7,11 @@ Just Another React Native Components Library.
 * The intended use for this repository is serving as a component library to develop react-native applications.
 * Version 1.0.1
 
+### Misc
+
+- [Sketch Files](https://bitbucket.org/NewWaveWeb/el-native-sketch)
+- [Jira Task](https://newwaveweb.atlassian.net/browse/MIW-894)
+
 # Getting Started
 
 To use this library in your project, just install it using npm and the repository url.

@@ -21,10 +21,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "react": "16.0.0",
-    "react-native": "0.50.1",
-    "prop-types": "^15.6.0",
     "@storybook/react-native": "^3.0.0",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "1.9.2",
@@ -41,8 +39,11 @@
     "jest": "20.0.4",
     "jest-enzyme": "3.8.3",
     "jest-serializer-enzyme": "1.0.0",
+    "prop-types": "^15.6.0",
+    "react": "16.0.0",
     "react-addons-test-utils": "15.6.2",
     "react-dom": "^16.0.0",
+    "react-native": "0.50.1",
     "react-test-renderer": "16.0.0"
   },
   "peerDependencies": {
