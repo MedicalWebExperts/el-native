@@ -19,7 +19,11 @@
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.50.1",
+    "prop-types": "^15.6.0"
+  },
   "devDependencies": {
     "@storybook/react-native": "^3.0.0",
     "babel-cli": "^6.26.0",
