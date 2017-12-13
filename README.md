@@ -1,5 +1,7 @@
 # EL NATIVE
 
+[![Nevercode build status](https://app.nevercode.io/api/projects/00221536-8b56-4bfd-8d15-b6b7c876d4f6/workflows/26972073-bbf4-4458-8c20-a02c9a4bcba3/status_badge.svg?branch=develop)](https://app.nevercode.io/#/project/00221536-8b56-4bfd-8d15-b6b7c876d4f6/workflow/26972073-bbf4-4458-8c20-a02c9a4bcba3/latestBuild?branch=develop)
+
 Just Another React Native Components Library.
 
 ### What is this repository for?
