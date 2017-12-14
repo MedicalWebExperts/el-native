@@ -1,5 +1,5 @@
 {
-  "src/Map/index.js": {
+  "src/Map/Map.js": {
     "description": "Map component description.",
     "displayName": "Map",
     "methods": [],
