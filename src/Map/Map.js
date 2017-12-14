@@ -15,10 +15,25 @@ import {
 import Styles from './styles';
 
 const propTypes = {
+  /**
+   * Description of prop "latitude".
+   */
   latitude: PropTypes.number.isRequired,
+  /**
+   * Description of prop "longitude".
+   */
   longitude: PropTypes.number.isRequired,
+  /**
+   * Description of prop "width".
+   */
   width: PropTypes.number,
+  /**
+   * Description of prop "height".
+   */
   height: PropTypes.number,
+  /**
+   * Description of prop "apiKey".
+   */
   apiKey: PropTypes.string.isRequired,
   maptype: PropTypes.string,
   zoom: PropTypes.number, // eslint-disable-line react/no-unused-prop-types
@@ -39,6 +54,9 @@ const defaultProps = {
   underlayColor: 'white',
 };
 
+/**
+ * Map component description.
+ */
 export default function Map(props) {
   const dims = Dimensions.get('window');
 

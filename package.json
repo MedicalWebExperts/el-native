@@ -17,12 +17,13 @@
     "prepush": "npm run test",
     "updateSnapshots": "jest --updateSnapshot",
     "updateTests": "npm run test -- -u",
-    "storybook": "storybook start -p 7007"
+    "storybook": "storybook start -p 7007",
+    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty"    
   },
   "dependencies": {
+    "prop-types": "^15.6.0",
     "react": "16.0.0",
-    "react-native": "0.50.1",
-    "prop-types": "^15.6.0"
+    "react-native": "0.50.1"
   },
   "devDependencies": {
     "@storybook/react-native": "^3.0.0",
@@ -46,6 +47,7 @@
     "prop-types": "^15.6.0",
     "react": "16.0.0",
     "react-addons-test-utils": "15.6.2",
+    "react-docgen": "^2.20.0",
     "react-dom": "^16.0.0",
     "react-native": "0.50.1",
     "react-test-renderer": "16.0.0"
