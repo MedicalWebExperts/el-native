@@ -85,7 +85,17 @@ To watch the test suite:
 $ npm run test:watch
 ```
 
-### 5. Building the app to publish
+### 5. Component Documentation
+* To document the components we are using [react-docgen](https://github.com/reactjs/react-docgen). Follow the docs to document your components.
+
+*Everytime a component is added, modified or deleted, run:
+``` bash
+$ npm run updateDocs
+```
+
+This command will update the `docs.json` file placed in the root of this repository. Add this file to commit and submit it with your changes.
+
+### 6. Building the app to publish
 
 ``` bash
 $ npm run prepublish
@@ -108,7 +118,7 @@ src/
 ├── index.js
 ├── MyComponent
 │   └── __snapshots__
-│       ├── index.js
+│       ├── MyComponent.js
 │       ├── styles.js
 │       └── MyComponent.test.js
 ```

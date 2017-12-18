@@ -1,4 +1,4 @@
-import Map from './Map';
+import Map from './Map/Map';
 
 module.exports = {
   Map,

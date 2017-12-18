@@ -1,0 +1,118 @@
+{
+  "src/Map/Map.js": {
+    "description": "Map component description.",
+    "displayName": "Map",
+    "methods": [],
+    "props": {
+      "latitude": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Description of prop \"latitude\"."
+      },
+      "longitude": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Description of prop \"longitude\"."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Description of prop \"width\".",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "height": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Description of prop \"height\".",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "apiKey": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Description of prop \"apiKey\"."
+      },
+      "maptype": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'roadmap'",
+          "computed": false
+        }
+      },
+      "zoom": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "18",
+          "computed": false
+        }
+      },
+      "onPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "button": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "underlayColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'white'",
+          "computed": false
+        }
+      }
+    }
+  }
+}
