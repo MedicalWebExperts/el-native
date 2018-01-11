@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import CenterView from '../CenterView';
 import { H1, H2, H3, H4, H5, Text } from '../../../src';
 
-storiesOf('Map', module)
+storiesOf('Typography', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('H1', () => <H1>{"I'm the migthy H1."}</H1>)
   .add('H1 Color', () => <H1 color>{"I'm the migthy H1, dressed in colors."}</H1>)

@@ -4,24 +4,26 @@ import renderer from 'react-test-renderer';
 
 import { H1, H2, H3, H4, H5, Text } from './Typography';
 
-const defaultProps = {
+const props = {
   style: {},
   color: false,
+  children: 'Hi there!',
 };
 
-const textDefaultProps = {
+const textProps = {
   style: {},
+  children: 'Hi there!',
 };
 
 describe('H1 Snapshots', () => {
   it('should render an H1', () => {
-    const component = renderer.create(<H1 {...defaultProps} />);
+    const component = renderer.create(<H1 {...props} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an H1 with color', () => {
-    const component = renderer.create(<H1 {...defaultProps} color />);
+    const component = renderer.create(<H1 {...props} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -29,7 +31,7 @@ describe('H1 Snapshots', () => {
   it('should apply custom styles to H1', () => {
     const component = renderer.create(
       <H1
-        {...defaultProps}
+        {...props}
         style={{
           color: 'green',
         }}
@@ -42,13 +44,13 @@ describe('H1 Snapshots', () => {
 
 describe('H2 Snapshots', () => {
   it('should render an H2', () => {
-    const component = renderer.create(<H2 {...defaultProps} />);
+    const component = renderer.create(<H2 {...props} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an H2 with color', () => {
-    const component = renderer.create(<H2 {...defaultProps} color />);
+    const component = renderer.create(<H2 {...props} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -56,7 +58,7 @@ describe('H2 Snapshots', () => {
   it('should apply custom styles to H2', () => {
     const component = renderer.create(
       <H2
-        {...defaultProps}
+        {...props}
         style={{
           color: 'green',
         }}
@@ -69,13 +71,13 @@ describe('H2 Snapshots', () => {
 
 describe('H3 Snapshots', () => {
   it('should render an H3', () => {
-    const component = renderer.create(<H3 {...defaultProps} />);
+    const component = renderer.create(<H3 {...props} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an H3 with color', () => {
-    const component = renderer.create(<H3 {...defaultProps} color />);
+    const component = renderer.create(<H3 {...props} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -83,7 +85,7 @@ describe('H3 Snapshots', () => {
   it('should apply custom styles to H3', () => {
     const component = renderer.create(
       <H3
-        {...defaultProps}
+        {...props}
         style={{
           color: 'green',
         }}
@@ -96,13 +98,13 @@ describe('H3 Snapshots', () => {
 
 describe('H4 Snapshots', () => {
   it('should render an H4', () => {
-    const component = renderer.create(<H4 {...defaultProps} />);
+    const component = renderer.create(<H4 {...props} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an H4 with color', () => {
-    const component = renderer.create(<H4 {...defaultProps} color />);
+    const component = renderer.create(<H4 {...props} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -110,7 +112,7 @@ describe('H4 Snapshots', () => {
   it('should apply custom styles to H4', () => {
     const component = renderer.create(
       <H4
-        {...defaultProps}
+        {...props}
         style={{
           color: 'green',
         }}
@@ -123,13 +125,13 @@ describe('H4 Snapshots', () => {
 
 describe('H5 Snapshots', () => {
   it('should render an H5', () => {
-    const component = renderer.create(<H5 {...defaultProps} />);
+    const component = renderer.create(<H5 {...props} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an H5 with color', () => {
-    const component = renderer.create(<H5 {...defaultProps} color />);
+    const component = renderer.create(<H5 {...props} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -137,7 +139,7 @@ describe('H5 Snapshots', () => {
   it('should apply custom styles to H5', () => {
     const component = renderer.create(
       <H5
-        {...defaultProps}
+        {...props}
         style={{
           color: 'green',
         }}
@@ -150,13 +152,13 @@ describe('H5 Snapshots', () => {
 
 describe('Text Snapshots', () => {
   it('should render an Text', () => {
-    const component = renderer.create(<Text {...textDefaultProps} />);
+    const component = renderer.create(<Text {...textProps} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render an Text with color', () => {
-    const component = renderer.create(<Text {...textDefaultProps} color />);
+    const component = renderer.create(<Text {...textProps} color />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -164,7 +166,7 @@ describe('Text Snapshots', () => {
   it('should apply custom styles to Text', () => {
     const component = renderer.create(
       <Text
-        {...textDefaultProps}
+        {...textProps}
         style={{
           color: 'green',
         }}
