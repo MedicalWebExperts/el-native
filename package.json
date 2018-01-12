@@ -18,7 +18,7 @@
     "updateSnapshots": "jest --updateSnapshot",
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
-    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty"    
+    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty"
   },
   "dependencies": {
     "prop-types": "^15.6.0",

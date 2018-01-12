@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots should apply custom styles 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-end",
+      "width": 50,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://maps.googleapis.com/maps/api/staticmap?markers=-34.5844583%2C-58.4230539&maptype=roadmap&size=750x500&scale=2&apiKey=",
+      }
+    }
+    style={
+      Object {
+        "height": 500,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "yellow",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Navigate
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Snapshots should apply underlayColor 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-end",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://maps.googleapis.com/maps/api/staticmap?markers=-34.5844583%2C-58.4230539&maptype=roadmap&size=750x500&scale=2&apiKey=",
+      }
+    }
+    style={
+      Object {
+        "height": 500,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Navigate
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Snapshots should render custom button 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-end",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://maps.googleapis.com/maps/api/staticmap?markers=-34.5844583%2C-58.4230539&maptype=roadmap&size=750x500&scale=2&apiKey=",
+      }
+    }
+    style={
+      Object {
+        "height": 500,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        custom
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Snapshots should render default map 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-end",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://maps.googleapis.com/maps/api/staticmap?markers=-34.5844583%2C-58.4230539&maptype=roadmap&size=750x500&scale=2&apiKey=",
+      }
+    }
+    style={
+      Object {
+        "height": 500,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Navigate
+      </Text>
+    </View>
+  </View>
+</View>
+`;
