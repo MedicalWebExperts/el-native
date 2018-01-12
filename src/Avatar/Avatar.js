@@ -1,18 +1,18 @@
 import React from 'react';
-import { oneOf, oneOfType, string, number, imgSrcPropType, object } from 'prop-types';
+import { oneOf, oneOfType, string, number, imgSrcPropType, bool } from 'prop-types';
 import { Image } from 'react-native';
 
 import Styles from './styles';
 
 const propTypes = {
   /**
-   * Description of prop "shape".
+   * Description of prop "square".
    */
-  shape: oneOf('square', 'circle'),
+  square: bool,
   /**
    * Description of prop "size".
    */
-  size: oneOf('large', 'medium', 'small'),
+  size: oneOf(['large', 'medium', 'small']),
   /**
    * Description of prop "borderColor".
    */
@@ -24,27 +24,20 @@ const propTypes = {
   /**
    * Description of prop "placeholder".
    */
-  placeholder: oneOfType(string, imgSrcPropType),
+  placeholder: oneOfType([string, imgSrcPropType]),
   /**
    * Description of prop "source".
    */
-  source: object.isRequired,
+  source: string,
 };
 
 const defaultProps = {
-  shape: 'circle',
+  square: false,
   size: 'medium',
-  borderColor: undefined,
+  borderColor: '',
   borderThickness: 0,
-  placeholder: undefined,
-  source: {},
-};
-
-const getShape = (shape) => {
-  if (shape === 'circle') {
-    return Styles.avatarCircle;
-  }
-  return Styles.avatarSquare;
+  placeholder: null,
+  source: '',
 };
 
 const getSize = (size) => {
@@ -53,7 +46,7 @@ const getSize = (size) => {
   } else if (size === 'small') {
     return Styles.avatarSmall;
   }
-  return Styles.avatarMedium;
+  return false;
 };
 
 /**
@@ -64,10 +57,10 @@ const Avatar = props => (
     source={props.source ? { uri: props.source } : props.placeholder}
     style={[
       Styles.avatar,
-      !!props.borderThickness && { border: `${props.borderThickness} solid` },
+      !!props.borderThickness && { borderWidth: props.borderThickness },
       !!props.borderColor && { borderColor: props.borderColor },
-      !!props.shape && getShape(props.shape),
-      !!props.size && getSize(props.shape),
+      !!props.size && getSize(props.size),
+      !!props.square && Styles.avatarSquare,
     ]}
   />
 );
