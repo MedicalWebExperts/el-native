@@ -6,27 +6,31 @@ import Styles from './styles';
 
 const propTypes = {
   /**
-   * Description of prop "square".
+   * The prop "square" is a boolean that when present makes the Avatar squared.
+   * In abscence the shape will be rounded.
    */
   square: bool,
   /**
-   * Description of prop "size".
+   * The prop "size" offers 3 custom sizes to choose from. In abscence the default is medium.
+   * The other sizes available are "large" and "small"
    */
   size: oneOf(['large', 'medium', 'small']),
   /**
-   * Description of prop "borderColor".
+   * The prop "borderColor" defines the color of the border.
+   * This prop will not work without the "borderThickness" prop present.
    */
   borderColor: string,
   /**
-   * Description of prop "borderThickness".
+   * The prop "borderThickness" determines the width of the border of the Avatar.
+   * Expects a number. The default is 0.
    */
   borderThickness: number,
   /**
-   * Description of prop "placeholder".
+   * The prop "placeholder" can be used as a default image if no image is present in "source" prop.
    */
   placeholder: oneOfType([string, imgSrcPropType]),
   /**
-   * Description of prop "source".
+   * The prop "source" is the main prop, and expects a string or a uri to show the image in Avatar.
    */
   source: string,
 };
@@ -50,7 +54,8 @@ const getSize = (size) => {
 };
 
 /**
- * Avatar component description.
+ * Avatar component is a wrapper over RN <Image> with custom styles
+ * applied and with an interface that let users change certain props with ease.
  */
 const Avatar = props => (
   <Image
