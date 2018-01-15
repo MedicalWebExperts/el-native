@@ -6,15 +6,15 @@ import Styles from './styles';
 
 const h1Proptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "color".
+   * The prop "color" defines the color of the text.
    */
   color: bool,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -24,15 +24,15 @@ const h1DefaultProps = {
 };
 const h2Proptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "color".
+   * The prop "color" defines the color of the text.
    */
   color: bool,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -42,15 +42,15 @@ const h2DefaultProps = {
 };
 const h3Proptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "color".
+   * The prop "color" defines the color of the text.
    */
   color: bool,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -60,15 +60,15 @@ const h3DefaultProps = {
 };
 const h4Proptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "color".
+   * The prop "color" defines the color of the text.
    */
   color: bool,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -78,15 +78,15 @@ const h4DefaultProps = {
 };
 const h5Proptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "color".
+   * The prop "color" defines the color of the text.
    */
   color: bool,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -96,11 +96,11 @@ const h5DefaultProps = {
 };
 const textProptypes = {
   /**
-   * Description of prop "style".
+   * The prop "style" overrides the custom styles set in the component.
    */
   style: object,
   /**
-   * Description of prop "children".
+   * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
@@ -109,7 +109,7 @@ const textDefaultProps = {
 };
 
 /**
- * H1 component description.
+ * H1 component renders a RN <Text> component with custom styles.
  */
 const H1 = props => (
   <Text
@@ -119,7 +119,7 @@ const H1 = props => (
   </Text>
 );
 /**
- * H2 component description.
+ * H2 component renders a RN <Text> component with custom styles.
  */
 const H2 = props => (
   <Text
@@ -129,7 +129,7 @@ const H2 = props => (
   </Text>
 );
 /**
- * H3 component description.
+ * H3 component renders a RN <Text> component with custom styles.
  */
 const H3 = props => (
   <Text
@@ -139,7 +139,7 @@ const H3 = props => (
   </Text>
 );
 /**
- * H4 component description.
+ * H4 component renders a RN <Text> component with custom styles.
  */
 const H4 = props => (
   <Text
@@ -149,7 +149,7 @@ const H4 = props => (
   </Text>
 );
 /**
- * H5 component description.
+ * H5 component renders a RN <Text> component with custom styles.
  */
 const H5 = props => (
   <Text
@@ -159,7 +159,7 @@ const H5 = props => (
   </Text>
 );
 /**
- * Text component description.
+ * Text component renders a RN <Text> component with custom styles.
  */
 const TextTheme = props => <Text style={{ ...Styles.text, ...props.style }}>{props.children}</Text>;
 
