@@ -123,6 +123,20 @@ src/
 │       └── MyComponent.test.js
 ```
 
+## Generate component
+
+Set bash script permissions:
+
+```
+$ chmod +x generate-component.sh
+```
+
+Generate component:
+
+```
+$ npm run generate MyComponent
+```
+
 ## Storybook
 
 This project has configured a [storybook](https://storybook.js.org/). If you run the application as discribed in [step 1](#running-the-application-for-development), you will have an intereactive storybook and ready to use at: [http://localhost:7007](http://localhost:7007). You will be able to select the component from the stories list and preview it in the emulator.
