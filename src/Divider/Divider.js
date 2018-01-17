@@ -2,11 +2,7 @@ import React from 'react';
 import { string, oneOf } from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 
-// TODO: Get theme colors
-const colors = {
-  primary: 'lightgreen',
-  background: 'lightgray',
-};
+import colors from '../styles/colors';
 
 const lineType = {
   none: '0%',
@@ -23,7 +19,7 @@ const styles = StyleSheet.create({
   dividerWrapper: {
     width: '100%',
     height: 0.5,
-    backgroundColor: colors.background,
+    backgroundColor: colors.lightgray,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -44,7 +40,7 @@ const propTypes = {
   length: oneOf(['short', 'medium', 'long', 'none']),
 };
 const defaultProps = {
-  color: colors.brand,
+  color: colors.lightgray,
   primaryColor: null,
   length: 'none',
 };
