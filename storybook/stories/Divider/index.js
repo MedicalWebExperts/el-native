@@ -24,32 +24,32 @@ storiesOf('Divider', module)
   .add('Default', () => (
     <View style={styles.wrapper}>
       <Divider />
-      <Divider length="short" />
-      <Divider length="medium" />
-      <Divider length="long" />
+      <Divider accentLength="short" />
+      <Divider accentLength="medium" />
+      <Divider accentLength="long" />
     </View>
   ))
   .add('Custom color', () => (
     <View style={styles.wrapper}>
       <Divider color={customColor} />
-      <Divider length="short" color={customColor} />
-      <Divider length="medium" color={customColor} />
-      <Divider length="long" color={customColor} />
+      <Divider accentLength="short" color={customColor} />
+      <Divider accentLength="medium" color={customColor} />
+      <Divider accentLength="long" color={customColor} />
     </View>
   ))
   .add('Custom primary color', () => (
     <View style={styles.wrapper}>
       <Divider primaryColor={customPrimaryColor} />
-      <Divider length="short" primaryColor={customPrimaryColor} />
-      <Divider length="medium" primaryColor={customPrimaryColor} />
-      <Divider length="long" primaryColor={customPrimaryColor} />
+      <Divider accentLength="short" primaryColor={customPrimaryColor} />
+      <Divider accentLength="medium" primaryColor={customPrimaryColor} />
+      <Divider accentLength="long" primaryColor={customPrimaryColor} />
     </View>
   ))
   .add('Custom colors', () => (
     <View style={styles.wrapper}>
       <Divider color={customColor} primaryColor={customPrimaryColor} />
-      <Divider length="short" color={customColor} primaryColor={customPrimaryColor} />
-      <Divider length="medium" color={customColor} primaryColor={customPrimaryColor} />
-      <Divider length="long" color={customColor} primaryColor={customPrimaryColor} />
+      <Divider accentLength="short" color={customColor} primaryColor={customPrimaryColor} />
+      <Divider accentLength="medium" color={customColor} primaryColor={customPrimaryColor} />
+      <Divider accentLength="long" color={customColor} primaryColor={customPrimaryColor} />
     </View>
   ));

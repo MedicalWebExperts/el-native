@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import colors from '../styles/colors';
 
-const lineAccent = {
+const accentLength = {
   none: '0%',
   short: '20%',
   medium: '40%',
@@ -27,22 +27,22 @@ const styles = StyleSheet.create({
 
 const propTypes = {
   /**
-   * Color of the long thin line divider. Default: Theme primary color.
+   * Color of the divider. Default: Theme light gray color.
    */
   color: string,
   /**
-   * Color of the short thick line divider. Default: Theme light gray color.
+   * Color of the short thick line divider. Default: Theme primary color.
    */
   primaryColor: string,
   /**
-   * Length of the short thick line divider. Default: none.
+   * Length of the short thick accent. Default: none.
    */
-  length: oneOf(['short', 'medium', 'long', 'none']),
+  accentLength: oneOf(['short', 'medium', 'long', 'none']),
 };
 const defaultProps = {
   color: colors.lightgray,
   primaryColor: null,
-  length: 'none',
+  accentLength: 'none',
 };
 
 /**
@@ -54,7 +54,7 @@ const Divider = props => (
       style={[
         styles.divider,
         props.primaryColor && { backgroundColor: props.primaryColor },
-        { width: lineAccent[props.length] },
+        { width: accentLength[props.accentLength] },
       ]}
     />
   </View>

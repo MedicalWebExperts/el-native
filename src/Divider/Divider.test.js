@@ -14,19 +14,19 @@ describe('Divider Snapshots', () => {
   });
 
   it('should render a short Divider', () => {
-    const component = renderer.create(<Divider length="short" />);
+    const component = renderer.create(<Divider accentLength="short" />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render a medium Divider', () => {
-    const component = renderer.create(<Divider length="medium" />);
+    const component = renderer.create(<Divider accentLength="medium" />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
 
   it('should render a long Divider', () => {
-    const component = renderer.create(<Divider length="long" />);
+    const component = renderer.create(<Divider accentLength="long" />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
