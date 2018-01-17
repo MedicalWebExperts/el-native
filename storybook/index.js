@@ -5,6 +5,7 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 configure(() => {
   require('./stories/Map');
   require('./stories/Typography');
+  require('./stories/Avatar');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
