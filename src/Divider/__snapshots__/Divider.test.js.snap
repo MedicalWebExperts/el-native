@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Snapshots should render a Divider with custom colors 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "lightgray",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "darkgray",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "lightgreen",
+          "height": 3,
+        },
+        Object {
+          "backgroundColor": "aquamarine",
+        },
+        Object {
+          "width": "0%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Divider Snapshots should render a long Divider 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "lightgray",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "lightgray",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "lightgreen",
+          "height": 3,
+        },
+        null,
+        Object {
+          "width": "60%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Divider Snapshots should render a medium Divider 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "lightgray",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "lightgray",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "lightgreen",
+          "height": 3,
+        },
+        null,
+        Object {
+          "width": "40%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Divider Snapshots should render a short Divider 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "lightgray",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "lightgray",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "lightgreen",
+          "height": 3,
+        },
+        null,
+        Object {
+          "width": "20%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Divider Snapshots should render a simple Divider  1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "lightgray",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "lightgray",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "lightgreen",
+          "height": 3,
+        },
+        null,
+        Object {
+          "width": "0%",
+        },
+      ]
+    }
+  />
+</View>
+`;
