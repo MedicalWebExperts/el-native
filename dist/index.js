@@ -1,10 +1,24 @@
-var _Map=require('./Map/Map');var _Map2=_interopRequireDefault(_Map);
-var _Grid=require('./Grid/Grid');var _Grid2=_interopRequireDefault(_Grid);
-var _Col=require('./Col/Col');var _Col2=_interopRequireDefault(_Col);
-var _Row=require('./Row/Row');var _Row2=_interopRequireDefault(_Row);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+const _Map = require('./Map/Map');
+const _Map2 = _interopRequireDefault(_Map);
+const _Grid = require('./Grid/Grid');
+const _Grid2 = _interopRequireDefault(_Grid);
+const _Col = require('./Col/Col');
+const _Col2 = _interopRequireDefault(_Col);
+const _Row = require('./Row/Row');
+const _Row2 = _interopRequireDefault(_Row);
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+const _Switch = require('./Switch/Switch');
+const _Switch2 = _interopRequireDefault(_Switch);
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-module.exports={
-Map:_Map2.default,
-Grid:_Grid2.default,
-Col:_Col2.default,
-Row:_Row2.default};
+module.exports = {
+  Map: _Map2.default,
+  Grid: _Grid2.default,
+  Col: _Col2.default,
+  Row: _Row2.default,
+  Switch: _Switch2.default,
+};
