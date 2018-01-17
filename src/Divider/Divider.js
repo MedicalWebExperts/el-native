@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import colors from '../styles/colors';
 
-const lineType = {
+const lineAccent = {
   none: '0%',
   short: '20%',
   medium: '40%',
@@ -54,7 +54,7 @@ const Divider = props => (
       style={[
         styles.divider,
         props.primaryColor && { backgroundColor: props.primaryColor },
-        { width: lineType[props.length] },
+        { width: lineAccent[props.length] },
       ]}
     />
   </View>

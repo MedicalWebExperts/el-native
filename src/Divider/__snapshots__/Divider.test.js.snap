@@ -47,7 +47,9 @@ exports[`Divider Snapshots should render a long Divider 1`] = `
         "justifyContent": "center",
         "width": "100%",
       },
-      undefined,
+      Object {
+        "backgroundColor": "lightgray",
+      },
     ]
   }
 >
@@ -79,7 +81,9 @@ exports[`Divider Snapshots should render a medium Divider 1`] = `
         "justifyContent": "center",
         "width": "100%",
       },
-      undefined,
+      Object {
+        "backgroundColor": "lightgray",
+      },
     ]
   }
 >
@@ -111,7 +115,9 @@ exports[`Divider Snapshots should render a short Divider 1`] = `
         "justifyContent": "center",
         "width": "100%",
       },
-      undefined,
+      Object {
+        "backgroundColor": "lightgray",
+      },
     ]
   }
 >
@@ -143,7 +149,9 @@ exports[`Divider Snapshots should render a simple Divider  1`] = `
         "justifyContent": "center",
         "width": "100%",
       },
-      undefined,
+      Object {
+        "backgroundColor": "lightgray",
+      },
     ]
   }
 >
