@@ -6,6 +6,7 @@ configure(() => {
   require('./stories/Map');
   require('./stories/Typography');
   require('./stories/Avatar');
+  require('./stories/Switch');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
