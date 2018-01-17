@@ -1,51 +1,49 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import { array, func, number, object, oneOfType } from 'prop-types';
 import { View, TouchableOpacity } from 'react-native';
 
 import computeProps from '../Utils/computeProps';
 
-export default class Row extends Component {
-  static propTypes = {
-    size: number,
-    children: oneOfType([array, object]),
-    style: oneOfType([number, object]),
-    onPress: func,
-  };
+const propTypes = {
+  size: number,
+  children: oneOfType([array, object]),
+  style: oneOfType([number, object]),
+  onPress: func,
+};
 
-  static defaultProps = {
-    children: null,
-    size: null,
-    onPress: null,
-    style: null,
-  };
+const defaultProps = {
+  children: null,
+  size: null,
+  onPress: null,
+  style: null,
+};
 
-  prepareRootProps() {
-    const componentStyle = {
-      flex: this.props.size || (this.props.style && this.props.style.height ? 0 : 1),
+const Row = (props) => {
+  const prepareRootProps = () => {
+    const style = {
+      flex: props.size || (props.style && props.style.height ? 0 : 1),
       flexDirection: 'row',
     };
 
-    const defaultProps = {
-      style: componentStyle,
+    const onRenderProps = {
+      style,
     };
 
-    return computeProps(this.props.style, defaultProps);
-  }
+    return computeProps(props, onRenderProps);
+  };
 
-  renderView = () => (
-    <View {...this.props} {...this.prepareRootProps()}>
-      {this.props.children}
-    </View>
-  );
+  const renderView = () => <View {...prepareRootProps()}>{props.children}</View>;
 
-  renderTouchableOpacity = () => (
-    <TouchableOpacity onPress={this.props.onPress} {...this.prepareRootProps()}>
-      {this.renderView()}
+  const renderTouchableOpacity = () => (
+    <TouchableOpacity onPress={props.onPress} {...prepareRootProps()}>
+      {props.children}
     </TouchableOpacity>
   );
 
-  render() {
-    return this.props.onPress ? this.renderTouchableOpacity() : this.renderView();
-  }
-}
+  return props.onPress ? renderTouchableOpacity() : renderView();
+};
+
+Row.propTypes = propTypes;
+Row.defaultProps = defaultProps;
+
+export default Row;

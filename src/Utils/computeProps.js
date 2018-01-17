@@ -35,7 +35,6 @@ function computeProps(props, defaultProps) {
 
     _.merge(computedProps.style, defaultProps.style, computedPropsStyle);
   }
-
   return computedProps;
 }
 

@@ -1,54 +1,45 @@
-import React, { Component } from 'react';
-import { array, func, object, oneOfType } from 'prop-types';
-import { TouchableOpacity, View } from 'react-native';
-import computeProps from '../Utils/computeProps';
+import React from 'react';
+import { array, object, oneOfType } from 'prop-types';
+import { View } from 'react-native';
+
 import Row from '../Row/Row';
 
-export default class Grid extends Component {
-  static propTypes = {
-    children: oneOfType([array, object]).isRequired,
-    onPress: func,
-  };
+const propTypes = {
+  children: oneOfType([array, object]).isRequired,
+};
 
-  static defaultProps = {
-    children: null,
-    onPress: null,
-  };
+const defaultProps = {
+  children: null,
+};
 
-  prepareRootProps() {
-    const style = {
-      flex: 1,
-      flexDirection: this.isRow() ? 'column' : 'row',
-    };
-
-    const defaultProps = {
-      style,
-    };
-
-    return computeProps(this.props, defaultProps);
-  }
-
-  isRow = () => {
+const Grid = (props) => {
+  const ifRow = (child) => {
     let isRow = false;
-    React.Children.forEach(this.props.children, (child) => {
-      isRow = child && child.type === Row ? isRow : true;
-    });
+    if (child && child.type === Row) isRow = true;
     return isRow;
   };
 
-  renderView = () => (
-    <View {...this.props} {...this.prepareRootProps()}>
-      {this.props.children}
-    </View>
-  );
+  const prepareRootProps = (child) => {
+    const style = {
+      flex: 1,
+      flexDirection: ifRow(child) ? 'row' : 'column',
+    };
+    return style;
+  };
 
-  renderTouchableOpacity = () => (
-    <TouchableOpacity onPress={this.props.onPress} {...this.prepareRootProps()}>
-      {this.renderView()}
-    </TouchableOpacity>
-  );
+  const renderView = () =>
+    props.children &&
+    props.children.length > 1 &&
+    props.children.map(child => (
+      <View key={props.children.indexOf(child)} {...prepareRootProps(child)}>
+        {child}
+      </View>
+    ));
 
-  render() {
-    return this.props.onPress ? this.renderTouchableOpacity() : this.renderView();
-  }
-}
+  return renderView();
+};
+
+Grid.propTypes = propTypes;
+Grid.defaultProps = defaultProps;
+
+export default Grid;
