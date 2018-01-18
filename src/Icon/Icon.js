@@ -1,6 +1,7 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 import VectorIcon from 'react-native-vector-icons/Ionicons';
+
 import colors from '../styles/colors';
 
 const propTypes = {
