@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
 import { Map } from '../../../src';
+import colors from '../styles/colors';
 
 const apiKey = process.env.ELNATIVE_GOOGLE_MAPS_APIKEY || '';
 
@@ -26,11 +27,16 @@ storiesOf('Map', module)
       apiKey={apiKey}
       style={{
         button: {
-          backgroundColor: 'blue',
+          backgroundColor: colors.blueColor,
         },
       }}
     />
   ))
   .add('underlayColor', () => (
-    <Map latitude={-34.5844583} longitude={-58.4230539} apiKey={apiKey} underlayColor="green" />
+    <Map
+      latitude={-34.5844583}
+      longitude={-58.4230539}
+      apiKey={apiKey}
+      underlayColor={colors.primary}
+    />
   ));

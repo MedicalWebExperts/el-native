@@ -4,6 +4,7 @@ import { StyleSheet, View, Dimensions } from 'react-native';
 
 import CenterView from '../CenterView';
 import { Divider } from '../../../src';
+import colors from '../styles/colors';
 
 const { width } = Dimensions.get('window');
 
@@ -15,9 +16,6 @@ const styles = StyleSheet.create({
     height: 240,
   },
 });
-
-const customColor = 'darkgray';
-const customPrimaryColor = 'aquamarine';
 
 storiesOf('Divider', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
@@ -31,25 +29,25 @@ storiesOf('Divider', module)
   ))
   .add('Custom color', () => (
     <View style={styles.wrapper}>
-      <Divider color={customColor} />
-      <Divider accentLength="short" color={customColor} />
-      <Divider accentLength="medium" color={customColor} />
-      <Divider accentLength="long" color={customColor} />
+      <Divider color={colors.darkgray} />
+      <Divider accentLength="short" color={colors.darkgray} />
+      <Divider accentLength="medium" color={colors.darkgray} />
+      <Divider accentLength="long" color={colors.darkgray} />
     </View>
   ))
   .add('Custom primary color', () => (
     <View style={styles.wrapper}>
-      <Divider primaryColor={customPrimaryColor} />
-      <Divider accentLength="short" primaryColor={customPrimaryColor} />
-      <Divider accentLength="medium" primaryColor={customPrimaryColor} />
-      <Divider accentLength="long" primaryColor={customPrimaryColor} />
+      <Divider primaryColor={colors.customColor} />
+      <Divider accentLength="short" primaryColor={colors.customColor} />
+      <Divider accentLength="medium" primaryColor={colors.customColor} />
+      <Divider accentLength="long" primaryColor={colors.customColor} />
     </View>
   ))
   .add('Custom colors', () => (
     <View style={styles.wrapper}>
-      <Divider color={customColor} primaryColor={customPrimaryColor} />
-      <Divider accentLength="short" color={customColor} primaryColor={customPrimaryColor} />
-      <Divider accentLength="medium" color={customColor} primaryColor={customPrimaryColor} />
-      <Divider accentLength="long" color={customColor} primaryColor={customPrimaryColor} />
+      <Divider color={colors.darkgray} primaryColor={colors.customColor} />
+      <Divider accentLength="short" color={colors.darkgray} primaryColor={colors.customColor} />
+      <Divider accentLength="medium" color={colors.darkgray} primaryColor={colors.customColor} />
+      <Divider accentLength="long" color={colors.darkgray} primaryColor={colors.customColor} />
     </View>
   ));

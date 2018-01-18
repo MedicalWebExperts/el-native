@@ -10,6 +10,7 @@ configure(() => {
   require('./stories/Avatar');
   require('./stories/Switch');
   require('./stories/Divider');
+  require('./stories/Icon');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });

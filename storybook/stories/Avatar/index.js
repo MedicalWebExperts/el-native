@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import CenterView from '../CenterView';
 import { Avatar } from '../../../src';
 import placeholderImage from '../../../src/Avatar/placeholderImage.png';
-import colors from '../../../src/styles/colors';
+import colors from '../styles/colors';
 
 const imageUrl = 'https://wallscover.com/images/gunther-wallpaper-2.jpg';
 
