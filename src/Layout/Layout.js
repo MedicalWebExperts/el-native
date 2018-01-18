@@ -1,5 +1,5 @@
 import React from 'react';
-import { array, object, oneOfType } from 'prop-types';
+import { array, object, func, oneOfType } from 'prop-types';
 import { View, TouchableOpacity } from 'react-native';
 
 const propTypes = {
@@ -8,6 +8,16 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
+};
+
+const pressPropTypes = {
+  children: oneOfType([array, object]).isRequired,
+  onPress: func,
+};
+
+const pressDefaultProps = {
+  children: null,
+  onPress: () => {},
 };
 
 const createChild = (props, type) => {
@@ -28,6 +38,11 @@ const createChild = (props, type) => {
     </TouchableOpacity>
   );
 
+  renderView.propTypes = propTypes;
+  renderView.defaultProps = defaultProps;
+  renderTouchableOpacity.propTypes = pressPropTypes;
+  renderTouchableOpacity.defaultProps = pressDefaultProps;
+
   return props.onPress ? renderTouchableOpacity() : renderView();
 };
 
@@ -37,17 +52,17 @@ const Col = props => createChild(props, 'column');
 const Grid = (props) => {
   const ifRow = () => !!props.children && props.children[0].type === Row;
 
-  const prepareRootProps = () => {
-    const style = {
-      flex: 1,
-      flexDirection: ifRow() ? 'column' : 'row',
-      height: '100%',
-      width: '100%',
-    };
-    return style;
+  const style = {
+    flex: 1,
+    flexDirection: ifRow() ? 'column' : 'row',
+    height: '100%',
+    width: '100%',
   };
 
-  const renderView = () => <View style={prepareRootProps()}>{props.children}</View>;
+  const renderView = () => <View style={style}>{props.children}</View>;
+
+  renderView.propTypes = propTypes;
+  renderView.defaultProps = defaultProps;
 
   return renderView();
 };
