@@ -1,126 +1,150 @@
 {
-  "src/Col/Col.js": {
-    "description": "",
-    "displayName": "Col",
-    "methods": [
-      {
-        "name": "prepareRootProps",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      },
-      {
-        "name": "renderView",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      },
-      {
-        "name": "renderTouchableOpacity",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      }
-    ],
+  "src/Avatar/Avatar.js": {
+    "description": "Avatar component is a wrapper over RN <Image> with custom styles\napplied and with an interface that let users change certain props with ease.",
+    "methods": [],
     "props": {
+      "square": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The prop \"square\" is a boolean that when present makes the Avatar squared.\nIn abscence the shape will be rounded.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'large'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'small'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The prop \"size\" offers 3 custom sizes to choose from. In abscence the default is medium.\nThe other sizes available are \"large\" and \"small\"",
+        "defaultValue": {
+          "value": "'medium'",
+          "computed": false
+        }
+      },
+      "borderColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The prop \"borderColor\" defines the color of the border.\nThis prop will not work without the \"borderThickness\" prop present.",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "borderThickness": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "",
+        "description": "The prop \"borderThickness\" determines the width of the border of the Avatar.\nExpects a number. The default is 0.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The prop \"placeholder\" can be used as a default image if no image is present in \"source\" prop.",
         "defaultValue": {
           "value": "null",
           "computed": false
         }
       },
-      "children": {
+      "source": {
         "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "array"
-            },
-            {
-              "name": "object"
-            }
-          ]
+          "name": "string"
         },
         "required": false,
-        "description": "",
+        "description": "The prop \"source\" is the main prop, and expects a string or a uri to show the image in Avatar.",
         "defaultValue": {
-          "value": "null",
-          "computed": false
-        }
-      },
-      "style": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "number"
-            },
-            {
-              "name": "object"
-            }
-          ]
-        },
-        "required": false,
-        "description": "",
-        "defaultValue": {
-          "value": "null",
-          "computed": false
-        }
-      },
-      "onPress": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "",
-        "defaultValue": {
-          "value": "null",
+          "value": "''",
           "computed": false
         }
       }
     }
   },
-  "src/Grid/Grid.js": {
-    "description": "",
-    "displayName": "Grid",
-    "methods": [
-      {
-        "name": "prepareRootProps",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
+  "src/Divider/Divider.js": {
+    "description": "Divider renders a thin View to separate content.",
+    "methods": [],
+    "props": {
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Color of the divider. Default: Theme light gray color.",
+        "defaultValue": {
+          "value": "colors.lightgray",
+          "computed": true
+        }
       },
-      {
-        "name": "isRow",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
+      "primaryColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Color of the short thick line divider. Default: Theme primary color.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
       },
-      {
-        "name": "renderView",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      },
-      {
-        "name": "renderTouchableOpacity",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
+      "accentLength": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'short'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'long'",
+              "computed": false
+            },
+            {
+              "value": "'none'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Length of the short thick accent. Default: none.",
+        "defaultValue": {
+          "value": "'none'",
+          "computed": false
+        }
       }
-    ],
+    }
+  },
+  "src/Layout/Layout.js": {
+    "description": "Grid component, expects childs, that could be Row or Col components.",
+    "methods": [],
     "props": {
       "children": {
         "type": {
@@ -135,18 +159,7 @@
           ]
         },
         "required": true,
-        "description": "",
-        "defaultValue": {
-          "value": "null",
-          "computed": false
-        }
-      },
-      "onPress": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "",
+        "description": "The prop \"children\" defines the content that will live inside the component.",
         "defaultValue": {
           "value": "null",
           "computed": false
@@ -270,58 +283,16 @@
       }
     }
   },
-  "src/Row/Row.js": {
-    "description": "",
-    "displayName": "Row",
-    "methods": [
-      {
-        "name": "prepareRootProps",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      },
-      {
-        "name": "renderView",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      },
-      {
-        "name": "renderTouchableOpacity",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      }
-    ],
+  "src/Switch/Switch.js": {
+    "description": "Boolean input.\n\nRequires a onPress callback that updates the `value` prop in order to reflect user actions.\nIf no callback is provided, the component will continue to render the value supplied.",
+    "methods": [],
     "props": {
-      "size": {
+      "onPress": {
         "type": {
-          "name": "number"
+          "name": "func"
         },
         "required": false,
-        "description": "",
-        "defaultValue": {
-          "value": "null",
-          "computed": false
-        }
-      },
-      "children": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "array"
-            },
-            {
-              "name": "object"
-            }
-          ]
-        },
-        "required": false,
-        "description": "",
+        "description": "Action to execute when the user toggles the switch.",
         "defaultValue": {
           "value": "null",
           "computed": false
@@ -329,31 +300,45 @@
       },
       "style": {
         "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "number"
-            },
-            {
-              "name": "object"
-            }
-          ]
+          "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "Custom style.",
         "defaultValue": {
-          "value": "null",
+          "value": "{}",
           "computed": false
         }
       },
-      "onPress": {
+      "color": {
         "type": {
-          "name": "func"
+          "name": "string"
         },
         "required": false,
-        "description": "",
+        "description": "Background color when the switch is turned on. Default: Theme primary color.",
         "defaultValue": {
-          "value": "null",
+          "value": "colors.primary",
+          "computed": true
+        }
+      },
+      "value": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The value of the switch. If true the switch will be turned on. Default: false.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true the user won't be able to toggle the switch. Default: false.",
+        "defaultValue": {
+          "value": "false",
           "computed": false
         }
       }
