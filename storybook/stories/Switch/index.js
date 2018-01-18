@@ -5,9 +5,9 @@ import { View } from 'react-native';
 
 import CenterView from '../CenterView';
 import { Switch } from '../../../src';
+import colors from '../styles/colors';
 
-const customColor = 'aquamarine';
-const onPress = () => console.warn('I was pressed');
+const onPress = () => console.warn('I was pressed'); // eslint-disable-line no-console
 
 storiesOf('Switch', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
@@ -21,9 +21,9 @@ storiesOf('Switch', module)
   ))
   .add('Custom color', () => (
     <View>
-      <Switch color={customColor} onPress={onPress} />
-      <Switch value color={customColor} onPress={onPress} />
-      <Switch disabled color={customColor} onPress={onPress} />
-      <Switch disabled value color={customColor} onPress={onPress} />
+      <Switch color={colors.customColor} onPress={onPress} />
+      <Switch value color={colors.customColor} onPress={onPress} />
+      <Switch disabled color={colors.customColor} onPress={onPress} />
+      <Switch disabled value color={colors.customColor} onPress={onPress} />
     </View>
   ));
