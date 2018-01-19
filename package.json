@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test": "jest src/",
     "test:watch": "TEST=true jest --watch --silent",
     "test:coverage": "TEST=true jest --coverage --silent",
     "lint": "eslint src",
