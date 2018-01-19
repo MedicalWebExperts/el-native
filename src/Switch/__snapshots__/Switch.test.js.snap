@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Snapshots should render a Switch 1`] = `
+<RCTSwitch
+  disabled={false}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="lightgreen"
+  onValueChange={[Function]}
+  style={
+    Array [
+      Object {
+        "height": 31,
+        "width": 51,
+      },
+      Object {},
+    ]
+  }
+  value={false}
+/>
+`;
+
+exports[`Switch Snapshots should render a Switch disabled 1`] = `
+<RCTSwitch
+  disabled={true}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="lightgreen"
+  onValueChange={[Function]}
+  style={
+    Array [
+      Object {
+        "height": 31,
+        "width": 51,
+      },
+      Object {},
+    ]
+  }
+  value={false}
+/>
+`;
+
+exports[`Switch Snapshots should render a Switch disabled toggled on 1`] = `
+<RCTSwitch
+  disabled={true}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="lightgreen"
+  onValueChange={[Function]}
+  style={
+    Array [
+      Object {
+        "height": 31,
+        "width": 51,
+      },
+      Object {},
+    ]
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Snapshots should render a Switch toggled on 1`] = `
+<RCTSwitch
+  disabled={false}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="lightgreen"
+  onValueChange={[Function]}
+  style={
+    Array [
+      Object {
+        "height": 31,
+        "width": 51,
+      },
+      Object {},
+    ]
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Snapshots should render a Switch with custom color 1`] = `
+<RCTSwitch
+  disabled={false}
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="#FAFAFA"
+  onValueChange={[Function]}
+  style={
+    Array [
+      Object {
+        "height": 31,
+        "width": 51,
+      },
+      Object {},
+    ]
+  }
+  value={false}
+/>
+`;
