@@ -1,50 +1,83 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, Text, TouchableNativeFeedback, TouchableOpacity, Platform } from 'react-native';
 
-import Styles from './styles';
+import styles from './styles';
 
 const propTypes = {
   style: PropTypes.object,
-  /*
   disabled: PropTypes.bool,
+  /**
+   * Text to display for blindness accessibility features
+   */
+  accessibilityLabel: PropTypes.string,
+  text: PropTypes.string,
   block: PropTypes.bool,
-  size: PropTypes.oneOf("large", "medium", "small"),
+  transparent: PropTypes.bool,
   outline: PropTypes.bool,
   rounded: PropTypes.bool,
-  transparent: PropTypes.bool,
+  /*
   processing: PropTypes.bool,
-  text: PropTypes.string,
   iconRight: PropTypes.string,
   iconLeft: PropTypes.string,
   icon: PropTypes.string,
-  onPress: PropTypes.func.isRequired,
   */
+  onPress: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   style: {},
-  disabled: PropTypes.bool,
-  block: PropTypes.bool,
-  size: PropTypes.oneOf('large', 'medium', 'small'),
-  outline: PropTypes.bool,
-  rounded: PropTypes.bool,
-  transparent: PropTypes.bool,
+  disabled: false,
+  accessibilityLabel: '',
+  block: false,
+  outline: false,
+  rounded: false,
+  transparent: false,
   processing: PropTypes.bool,
-  text: PropTypes.string,
+  text: '',
   iconRight: PropTypes.string,
   iconLeft: PropTypes.string,
   icon: PropTypes.string,
   onPress: PropTypes.func.isRequired,
 };
 
-/**
- * Map component description.
- */
-export default function Button(props) {
-  return <View style={{ ...Styles.container, ...props.style.container }} />;
-}
+const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+
+const accessibilityTraits = ['button'];
+let buttonStyles = styles.button;
+let textStyles = styles.text;
+
+const Button = (props) => {
+  if (props.block) {
+    buttonStyles = { ...buttonStyles, ...{ width: '100%' } };
+  }
+  if (props.transparent) {
+    buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 0 } };
+    textStyles = { ...textStyles, color: 'black' };
+  }
+  if (props.outline) {
+    buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 1 } };
+  }
+  if (props.rounded) {
+    buttonStyles = { ...buttonStyles, ...{ borderRadius: 15 } };
+  }
+  return (
+    <Touchable
+      disabled={props.disabled}
+      onPress={props.onPress}
+      accessibilityLabel={props.accessibilityLabel}
+      accessibilityTraits={accessibilityTraits}
+    >
+      <View style={{ ...buttonStyles, ...props.style }}>
+        <Text style={textStyles} disabled={props.disabled}>
+          {props.text}
+        </Text>
+      </View>
+    </Touchable>
+  );
+};
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+export default Button;
