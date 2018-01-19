@@ -14,6 +14,7 @@ const defaultProps = {
 };
 
 const CenterView = props => <View style={[style.main, props.style]}>{props.children}</View>;
+
 CenterView.propTypes = propTypes;
 CenterView.defaultProps = defaultProps;
 
