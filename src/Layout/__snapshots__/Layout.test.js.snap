@@ -29,7 +29,7 @@ exports[`Layout Snapshots should render a Grid with Cols 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#C769CD",
+        "backgroundColor": undefined,
         "flex": 1,
         "flexDirection": "column",
         "opacity": 1,
@@ -56,7 +56,7 @@ exports[`Layout Snapshots should render a Grid with Cols 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#CB4A40",
+        "backgroundColor": undefined,
         "flex": 2,
         "flexDirection": "column",
         "opacity": 1,
@@ -83,7 +83,7 @@ exports[`Layout Snapshots should render a Grid with Cols 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#D7C563",
+        "backgroundColor": undefined,
         "flex": 3,
         "flexDirection": "column",
         "opacity": 1,
@@ -124,7 +124,7 @@ exports[`Layout Snapshots should render a Grid with Rows 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#8EB568",
+        "backgroundColor": undefined,
         "flex": 1,
         "flexDirection": "row",
         "opacity": 1,
@@ -151,7 +151,7 @@ exports[`Layout Snapshots should render a Grid with Rows 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#509D76",
+        "backgroundColor": undefined,
         "flex": 2,
         "flexDirection": "row",
         "opacity": 1,
@@ -178,7 +178,7 @@ exports[`Layout Snapshots should render a Grid with Rows 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#236571",
+        "backgroundColor": undefined,
         "flex": 3,
         "flexDirection": "row",
         "opacity": 1,
@@ -245,7 +245,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#8EB568",
+          "backgroundColor": undefined,
           "flex": 1,
           "flexDirection": "column",
           "opacity": 1,
@@ -272,7 +272,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#509D76",
+          "backgroundColor": undefined,
           "flex": 2,
           "flexDirection": "column",
           "opacity": 1,
@@ -325,7 +325,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#236571",
+            "backgroundColor": undefined,
             "flex": 1,
             "flexDirection": "row",
             "opacity": 1,
@@ -352,7 +352,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#2F4858",
+            "backgroundColor": undefined,
             "flex": 1,
             "flexDirection": "row",
             "opacity": 1,
@@ -407,7 +407,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#C769CD",
+          "backgroundColor": undefined,
           "flex": 1,
           "flexDirection": "column",
           "opacity": 1,
@@ -434,7 +434,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#CB4A40",
+          "backgroundColor": undefined,
           "flex": 2,
           "flexDirection": "column",
           "opacity": 1,
@@ -461,7 +461,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#D7C563",
+          "backgroundColor": undefined,
           "flex": 3,
           "flexDirection": "column",
           "opacity": 1,

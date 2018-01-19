@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
-import { Grid, Col, Row } from '../../../src/Layout/Layout';
-import colors from '../../../src/styles/colors';
+import { Grid, Col, Row } from '../../../src';
+import colors from '../styles/colors';
 
 storiesOf('Layout', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
