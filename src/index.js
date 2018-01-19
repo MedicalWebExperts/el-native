@@ -5,20 +5,6 @@ import { H1, H2, H3, H4, H5, Text } from './Typography/Typography';
 import Switch from './Switch/Switch';
 import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
+import Input from './Input/Input';
 
-module.exports = {
-  Map,
-  Grid,
-  Col,
-  Row,
-  Avatar,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  Text,
-  Switch,
-  Divider,
-  Icon,
-};
+export { Map, Grid, Col, Row, Avatar, H1, H2, H3, H4, H5, Text, Switch, Divider, Icon, Input };
