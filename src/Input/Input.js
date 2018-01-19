@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import { string, number, bool, oneOf, object } from 'prop-types';
-import { Input as RNInput } from 'react-native';
+import { string, number, bool, oneOf, object, func } from 'prop-types';
+import { TextInput, Text, View } from 'react-native';
 
-import colors from '../styles/colors';
+import styles from './styles';
+
+/**
+ * Input component is a wrapper over React Native Input with 3 predefined styles added
+ * and the possibility of further customizing.
+ */
 
 class Input extends Component {
   static propTypes = {
-    /**
-     * What Input to show, see Input Explorer app or one of the links above. Default: heart.
-     */
-    name: string,
-    /**
-     * Color of the Input. Default: Theme white color.
-     */
-    value: string,
     /**
      * Shows a placeholder with the provided value.
      */
@@ -56,15 +53,13 @@ class Input extends Component {
      */
     style: object,
     /**
-     * Predefined shapes, our customized Inputs. It could be one of "underline", "square" or
+     * Predefined shapes, our customized Inputs. It could be one of "underline", "squared" or
      * "rounded". The default is "underline".
      */
-    type: oneOf(['underline', 'square', 'rounded']),
+    type: oneOf(['underline', 'squared', 'rounded']),
   };
 
   static defaultProps = {
-    name: 'ios-heart',
-    value: '',
     placeholder: 'Placeholder text',
     onChangeText: () => {},
     textArea: false,
@@ -78,50 +73,65 @@ class Input extends Component {
     type: 'underline',
   };
 
-  /**
-   * Input component is a wrapper over React Native Input with 3 predefined styles added
-   * and the possibility of further customizing.
-   */
+  state = {
+    value: '',
+  };
 
-  handleChangeContent = (text) => {};
+  handleChangeContent = (text) => {
+    this.setState({ value: text });
+    if (this.props.onChangeText) this.props.onChangeText(text);
+  };
+
+  defaultStyles = () => {
+    const customStyles = [];
+    if (this.props.error) {
+      customStyles.push(...styles.error);
+    }
+    if (this.props.type) {
+      switch (this.props.type) {
+        case 'rounded':
+          customStyles.push(...styles.rounded);
+          break;
+        case 'squared':
+          customStyles.push(...styles.squared);
+          break;
+        default:
+          customStyles.push(...styles.underline);
+      }
+    }
+    return customStyles;
+  };
 
   render() {
     const { value } = this.state;
     const {
-      name,
       placeholder,
       textArea,
       numberOfLines,
       autoCorrect,
       editable,
       selectTextOnFocus,
-      error,
       errorText,
       style,
-      type,
     } = this.props;
 
     return (
-      <RNInput
-        name={name}
-        value={value}
-        placeholder={placeholder}
-        onChangeText={text => this.handleChangeContent(text)}
-        multiline={textArea}
-        numberOfLines={numberOfLines}
-        autoCorrect={autoCorrect}
-        editable={editable}
-        selectTextOnFocus={selectTextOnFocus}
-        error={error}
-        errorText={errorText}
-        style={style}
-        type={type}
-      />
+      <View style={{ flex: 1 }}>
+        <TextInput
+          value={value}
+          placeholder={placeholder}
+          onChangeText={text => this.handleChangeContent(text)}
+          multiline={textArea}
+          numberOfLines={numberOfLines}
+          autoCorrect={autoCorrect}
+          editable={editable}
+          selectTextOnFocus={selectTextOnFocus}
+          style={[...this.defaultStyles(), ...style]}
+        />
+        <Text>{!!errorText && errorText}</Text>
+      </View>
     );
   }
 }
-
-Input.propTypes = propTypes;
-Input.defaultProps = defaultProps;
 
 export default Input;

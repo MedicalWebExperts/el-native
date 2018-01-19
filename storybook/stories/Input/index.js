@@ -10,7 +10,15 @@ storiesOf('Input', module)
     <CenterView style={{ backgroundColor: colors.backgroundDark }}>{getStory()}</CenterView>
   ))
   .add('Default', () => <Input />)
-  .add('Custom color', () => <Input size={200} color={colors.customColor} />)
-  .add('Custom size', () => <Input size={150} />)
-  .add('Custom Input', () => <Input size={200} name="ios-basketball" />)
-  .add('Custom all', () => <Input name="ios-football" size={250} color={colors.customColor} />);
+  .add('Squared', () => <Input placeholder="Enter yout name" type="squared" />)
+  .add('Rounded', () => <Input placeholder="Enter yout name" type="rounded" />)
+  .add('Text Area', () => (
+    <Input placeholder="Text Area" multiline numberOfLines={8} type="rounded" />
+  ))
+  .add('Error default', () => <Input placeholder="Text here" error errorText="Error" />)
+  .add('Error Squared', () => (
+    <Input placeholder="Text here" error errorText="Error" type="squared" />
+  ))
+  .add('Error Rounded', () => (
+    <Input placeholder="Text here" error errorText="Error" type="rounded" />
+  ));
