@@ -117,10 +117,10 @@ All the components are placed under the src/ folder. If you want to create a new
 src/
 ├── index.js
 ├── MyComponent
-│   └── __snapshots__
-│       ├── MyComponent.js
-│       ├── styles.js
-│       └── MyComponent.test.js
+│   ├── __snapshots__
+│   ├── MyComponent.js
+│   ├── styles.js
+│   └── MyComponent.test.js
 ```
 
 ## Generate component

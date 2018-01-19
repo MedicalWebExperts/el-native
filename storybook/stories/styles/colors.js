@@ -7,4 +7,11 @@ export default {
   lightgray: 'lightgray',
   darkgray: 'gray',
   white: 'white',
+  lightgreen: '#8EB568',
+  jade: '#509D76',
+  turquoise: '#236571',
+  navy: '#2F4858',
+  pink: '#C769CD',
+  red: '#CB4A40',
+  yellow: '#D7C563',
 };
