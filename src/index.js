@@ -6,5 +6,23 @@ import Switch from './Switch/Switch';
 import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
 import Input from './Input/Input';
+import Checkbox from './Checkbox/Checkbox';
 
-export { Map, Grid, Col, Row, Avatar, H1, H2, H3, H4, H5, Text, Switch, Divider, Icon, Input };
+export {
+  Map,
+  Grid,
+  Col,
+  Row,
+  Avatar,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  Text,
+  Switch,
+  Divider,
+  Icon,
+  Input,
+  Checkbox,
+};

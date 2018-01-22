@@ -12,6 +12,7 @@ configure(() => {
   require('./stories/Divider');
   require('./stories/Icon');
   require('./stories/Input');
+  require('./stories/Checkbox');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });

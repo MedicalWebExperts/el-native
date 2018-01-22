@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test": "jest src/",
     "test:watch": "TEST=true jest --watch --silent",
     "test:coverage": "TEST=true jest --coverage --silent",
     "lint": "eslint src",
@@ -19,7 +19,7 @@
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
     "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
-    "generate": "./generate-component.sh $1"
+    "generate": "./generate-component.sh"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
