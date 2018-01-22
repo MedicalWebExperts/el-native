@@ -10,7 +10,7 @@ const styles = {
 
 describe('Button Snapshots', () => {
   it('should render a Button', () => {
-    const component = renderer.create(<Button />);
+    const component = renderer.create(<Button onPress={() => false} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

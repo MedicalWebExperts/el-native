@@ -81,7 +81,7 @@ exports[`Checkbox Snapshots should render a Checkbox with custom size 1`] = `
     style={
       Array [
         Object {
-          "color": "lightgreen",
+          "color": "grey",
           "fontSize": 120,
         },
         undefined,
@@ -130,7 +130,7 @@ exports[`Checkbox Snapshots should render a checked Checkbox 1`] = `
     style={
       Array [
         Object {
-          "color": "lightgreen",
+          "color": "grey",
           "fontSize": 32,
         },
         undefined,
@@ -179,7 +179,7 @@ exports[`Checkbox Snapshots should render a simple Checkbox 1`] = `
     style={
       Array [
         Object {
-          "color": "lightgreen",
+          "color": "grey",
           "fontSize": 32,
         },
         undefined,
