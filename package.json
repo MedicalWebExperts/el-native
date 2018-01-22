@@ -18,8 +18,10 @@
     "updateSnapshots": "jest --updateSnapshot",
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
-    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
-    "generate": "./generate-component.sh $1"
+    "updateDocs":
+      "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
+    "generate": "./generate-component.sh $1",
+    "android": "adb reverse tcp:7007 tcp:7007 && react-native run-android"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -59,18 +61,12 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": [
-      "./jest/setup.js"
-    ],
+    "setupFiles": ["./jest/setup.js"],
     "globals": {
       "__DEV__": true
     },
-    "snapshotSerializers": [
-      "./node_modules/jest-serializer-enzyme"
-    ],
+    "snapshotSerializers": ["./node_modules/jest-serializer-enzyme"],
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
-    "transformIgnorePatterns": [
-      "node_modules/(?!react-native)"
-    ]
+    "transformIgnorePatterns": ["node_modules/(?!react-native)"]
   }
 }

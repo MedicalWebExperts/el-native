@@ -11,10 +11,16 @@ const styles = {
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Default', () => <Button text="LOGIN" onPress={() => false} />)
-  .add('Disbled', () => <Button text="DISABLED" disabled onPress={() => false} />)
+  .add('Disabled', () => <Button text="DISABLED" disabled onPress={() => false} />)
   .add('Styled', () => <Button text="STYLED" onPress={() => false} style={styles} />)
   .add('Block', () => <Button text="BLOCK" onPress={() => false} block />)
   .add('transparent', () => <Button text="TRANSPARENT" onPress={() => false} transparent />)
-  .add('rounded', () => <Button text="R" onPress={() => false} rounded />)
-
+  .add('rounded', () => (
+    <Button icon="ios-basketball" onPress={() => false} roundedDimensions={40} />
+  ))
+  .add('icon', () => <Button onPress={() => false} icon="ios-basketball" />)
+  .add('icon left', () => <Button text="LOGIN" onPress={() => false} iconLeft="ios-basketball" />)
+  .add('icon right', () => <Button text="LOGIN" onPress={() => false} iconRight="ios-basketball" />)
+  .add('processing', () => <Button onPress={() => false} processing />)
+  .add('processing with text', () => <Button text="LOADING..." onPress={() => false} processing />)
   .add('outline', () => <Button text="OUTLINE" onPress={() => false} outline />);
