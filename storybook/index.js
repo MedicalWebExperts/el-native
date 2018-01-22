@@ -11,6 +11,7 @@ configure(() => {
   require('./stories/Switch');
   require('./stories/Divider');
   require('./stories/Icon');
+  require('./stories/Checkbox');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });

@@ -1,0 +1,13 @@
+import React from 'react';
+import { View } from 'react-native';
+import {} from 'prop-types';
+
+const propTypes = {};
+const defaultProps = {};
+
+const <module> = props => (<View />);
+
+<module>.propTypes = propTypes;
+<module>.defaultProps = defaultProps;
+
+export default <module>;
