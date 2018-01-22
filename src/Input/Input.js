@@ -3,6 +3,7 @@ import { string, number, bool, oneOf, object, func } from 'prop-types';
 import { TextInput, Text, View } from 'react-native';
 
 import styles from './styles';
+import colors from '../styles/colors';
 
 /**
  * Input component is a wrapper over React Native Input with 3 predefined styles added
@@ -22,7 +23,7 @@ class Input extends Component {
     /**
      * Shows the Input as a Text Area.
      */
-    textArea: bool,
+    multiline: bool,
     /**
      * Determines the number of lines of the Text Area. The default is 4.
      */
@@ -40,12 +41,11 @@ class Input extends Component {
      */
     selectTextOnFocus: bool,
     /**
-     * Shows predefined error styling when passed "true". Defaulted to "false".
+     * Boolean that gives an error styling and conditions the errorText to be present.
      */
     error: bool,
     /**
      * Shows a provided text under the Input to give more clarity on the kind of error.
-     * If prop not used, no text will appear.
      */
     errorText: string,
     /**
@@ -57,20 +57,25 @@ class Input extends Component {
      * "rounded". The default is "underline".
      */
     type: oneOf(['underline', 'squared', 'rounded']),
+    /**
+     * Prop for changing the placeholder color.
+     */
+    placeholderTextColor: string,
   };
 
   static defaultProps = {
     placeholder: 'Placeholder text',
     onChangeText: () => {},
-    textArea: false,
+    multiline: false,
     numberOfLines: 4,
     autoCorrect: false,
     editable: false,
     selectTextOnFocus: false,
     error: false,
-    errorText: 'Error Text',
+    errorText: 'Error text',
     style: {},
     type: 'underline',
+    placeholderTextColor: colors.textColor,
   };
 
   state = {
@@ -83,20 +88,20 @@ class Input extends Component {
   };
 
   defaultStyles = () => {
-    const customStyles = [];
+    let customStyles = styles.base;
     if (this.props.error) {
-      customStyles.push(...styles.error);
+      customStyles = Object.assign({}, customStyles, styles.error);
     }
     if (this.props.type) {
       switch (this.props.type) {
         case 'rounded':
-          customStyles.push(...styles.rounded);
+          customStyles = Object.assign({}, customStyles, styles.rounded);
           break;
         case 'squared':
-          customStyles.push(...styles.squared);
+          customStyles = Object.assign({}, customStyles, styles.squared);
           break;
         default:
-          customStyles.push(...styles.underline);
+          return customStyles;
       }
     }
     return customStyles;
@@ -106,29 +111,32 @@ class Input extends Component {
     const { value } = this.state;
     const {
       placeholder,
-      textArea,
+      multiline,
       numberOfLines,
       autoCorrect,
       editable,
       selectTextOnFocus,
+      error,
       errorText,
       style,
+      placeholderTextColor,
     } = this.props;
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.container}>
         <TextInput
           value={value}
           placeholder={placeholder}
           onChangeText={text => this.handleChangeContent(text)}
-          multiline={textArea}
+          multiline={multiline}
           numberOfLines={numberOfLines}
           autoCorrect={autoCorrect}
           editable={editable}
           selectTextOnFocus={selectTextOnFocus}
-          style={[...this.defaultStyles(), ...style]}
+          style={[this.defaultStyles(), style]}
+          placeholderTextColor={placeholderTextColor}
         />
-        <Text>{!!errorText && errorText}</Text>
+        <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
       </View>
     );
   }

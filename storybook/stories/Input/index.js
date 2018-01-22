@@ -1,24 +1,54 @@
 import React from 'react';
+import { View, Dimensions } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
 import { Input } from '../../../src';
 import colors from '../styles/colors';
 
+const { width } = Dimensions.get('window');
+
+const customStyle = {
+  borderColor: colors.primary,
+  width: width / 2,
+};
+
 storiesOf('Input', module)
-  .addDecorator(getStory => (
-    <CenterView style={{ backgroundColor: colors.backgroundDark }}>{getStory()}</CenterView>
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('Default', () => <Input placeholder="Underline Input" />)
+  .add('Default Error', () => <Input placeholder="Underline Input" error />)
+  .add('Default custom style', () => (
+    <View>
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+      <Input style={customStyle} placeholder="Underline Input custom styles" />
+    </View>
   ))
-  .add('Default', () => <Input />)
-  .add('Squared', () => <Input placeholder="Enter yout name" type="squared" />)
-  .add('Rounded', () => <Input placeholder="Enter yout name" type="rounded" />)
-  .add('Text Area', () => (
-    <Input placeholder="Text Area" multiline numberOfLines={8} type="rounded" />
+  .add('Default custom error', () => (
+    <Input
+      placeholder="Underline Input custom error"
+      error
+      errorText="This is a custom error text"
+    />
   ))
-  .add('Error default', () => <Input placeholder="Text here" error errorText="Error" />)
-  .add('Error Squared', () => (
-    <Input placeholder="Text here" error errorText="Error" type="squared" />
+  .add('Text Area', () => <Input placeholder="Text Area" multiline numberOfLines={8} />)
+  .add('Squared', () => <Input placeholder="Squared Input" type="squared" />)
+  .add('Squared stacked', () => (
+    <View>
+      <Input placeholder="Squared Input" type="squared" />
+      <Input placeholder="Squared Input" type="squared" />
+      <Input placeholder="Squared Input" type="squared" />
+      <Input placeholder="Squared Input" type="squared" />
+      <Input placeholder="Squared Input" type="squared" />
+      <Input placeholder="Squared Input" type="squared" />
+    </View>
   ))
-  .add('Error Rounded', () => (
-    <Input placeholder="Text here" error errorText="Error" type="rounded" />
+  .add('Squared Error', () => <Input placeholder="Squared Input" error type="squared" />)
+  .add('Rounded', () => <Input placeholder="Rounded Input" type="rounded" />)
+  .add('Rounded Error', () => (
+    <Input placeholder="Rounded Input" error errorText="Error text" type="rounded" />
   ));

@@ -5,5 +5,4 @@ export default {
   white: 'white',
   red: 'red',
   textColor: '#757575',
-  darkTextColor: '#757575',
 };
