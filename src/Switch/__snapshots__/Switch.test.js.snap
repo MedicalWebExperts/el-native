@@ -6,7 +6,7 @@ exports[`Switch Snapshots should render a Switch 1`] = `
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onTintColor="lightgreen"
+  onTintColor="grey"
   onValueChange={[Function]}
   style={
     Array [
@@ -27,7 +27,7 @@ exports[`Switch Snapshots should render a Switch disabled 1`] = `
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onTintColor="lightgreen"
+  onTintColor="grey"
   onValueChange={[Function]}
   style={
     Array [
@@ -48,7 +48,7 @@ exports[`Switch Snapshots should render a Switch disabled toggled on 1`] = `
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onTintColor="lightgreen"
+  onTintColor="grey"
   onValueChange={[Function]}
   style={
     Array [
@@ -69,7 +69,7 @@ exports[`Switch Snapshots should render a Switch toggled on 1`] = `
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onTintColor="lightgreen"
+  onTintColor="grey"
   onValueChange={[Function]}
   style={
     Array [

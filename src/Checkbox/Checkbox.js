@@ -2,7 +2,6 @@ import React from 'react';
 import { bool, string, number, func } from 'prop-types';
 import { Platform, TouchableOpacity } from 'react-native';
 import Icon from '../Icon/Icon';
-import colors from '../styles/colors';
 
 const propTypes = {
   /**
@@ -24,7 +23,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: colors.primary,
+  color: 'grey',
   size: 32,
   checked: false,
   onPress: () => {},

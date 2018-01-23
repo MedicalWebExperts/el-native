@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Avatar from './Avatar';
-import colors from '../styles/colors';
+
 import placeholderImage from './placeholderImage.png';
 
 const imageUrl = 'https://wallscover.com/images/gunther-wallpaper-2.jpg';
@@ -12,7 +12,7 @@ const props = {
   size: 'medium',
   borderColor: '',
   borderThickness: 0,
-  placeholder: null,
+  placeholder: {},
   source: '',
 };
 
@@ -41,13 +41,7 @@ describe('Avatar Snapshots', () => {
   });
   it('should render an Avatar Large bordered', () => {
     const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        size="large"
-        borderColor={colors.blueColor}
-        borderThickness={2}
-      />,
+      <Avatar {...props} source={imageUrl} size="large" borderColor={'blue'} borderThickness={2} />,
     );
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
@@ -58,7 +52,7 @@ describe('Avatar Snapshots', () => {
         {...props}
         source={imageUrl}
         size="medium"
-        borderColor={colors.blueColor}
+        borderColor={'blue'}
         borderThickness={2}
       />,
     );
@@ -67,13 +61,7 @@ describe('Avatar Snapshots', () => {
   });
   it('should render an Avatar Small bordered', () => {
     const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        size="small"
-        borderColor={colors.blueColor}
-        borderThickness={2}
-      />,
+      <Avatar {...props} source={imageUrl} size="small" borderColor={'blue'} borderThickness={2} />,
     );
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
@@ -100,7 +88,7 @@ describe('Avatar Snapshots', () => {
         source={imageUrl}
         square
         size="large"
-        borderColor={colors.blueColor}
+        borderColor={'blue'}
         borderThickness={2}
       />,
     );
@@ -114,7 +102,7 @@ describe('Avatar Snapshots', () => {
         source={imageUrl}
         square
         size="medium"
-        borderColor={colors.blueColor}
+        borderColor={'blue'}
         borderThickness={2}
       />,
     );
@@ -128,7 +116,7 @@ describe('Avatar Snapshots', () => {
         source={imageUrl}
         square
         size="small"
-        borderColor={colors.blueColor}
+        borderColor={'blue'}
         borderThickness={2}
       />,
     );

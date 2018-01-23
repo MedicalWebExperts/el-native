@@ -2,8 +2,6 @@ import React from 'react';
 import { bool, func, object, string } from 'prop-types';
 import { Switch as SwitchRN } from 'react-native';
 
-import colors from '../styles/colors';
-
 const propTypes = {
   /**
    * Action to execute when the user toggles the switch.
@@ -33,7 +31,7 @@ const defaultProps = {
   /**
    * TODO: Replace with theme primary color.
    */
-  color: colors.primary,
+  color: 'grey',
   value: false,
   disabled: false,
 };

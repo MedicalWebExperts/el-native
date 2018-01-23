@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Input from './Input';
-import colors from '../styles/colors';
+import colors from '../Theme/colors';
 
 const props = {
   placeholder: 'Placeholder text',

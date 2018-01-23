@@ -3,7 +3,7 @@ import { string, number, bool, oneOf, object, func } from 'prop-types';
 import { TextInput, Text, View } from 'react-native';
 
 import styles from './styles';
-import colors from '../styles/colors';
+import colors from '../Theme/colors';
 
 /**
  * Input component is a wrapper over React Native Input with 3 predefined styles added
