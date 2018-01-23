@@ -45,7 +45,7 @@ exports[`Avatar Snapshots should render an Avatar Large bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       Object {
         "borderRadius": 45,
@@ -126,7 +126,7 @@ exports[`Avatar Snapshots should render an Avatar Medium bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       false,
       false,
@@ -180,7 +180,7 @@ exports[`Avatar Snapshots should render an Avatar Small bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       Object {
         "borderRadius": 15,
@@ -240,7 +240,7 @@ exports[`Avatar Snapshots should render an Avatar Square Large bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       Object {
         "borderRadius": 45,
@@ -298,7 +298,7 @@ exports[`Avatar Snapshots should render an Avatar Square Medium bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       false,
       Object {
@@ -356,7 +356,7 @@ exports[`Avatar Snapshots should render an Avatar Square Small bordered 1`] = `
         "borderWidth": 2,
       },
       Object {
-        "borderColor": "#2196F3",
+        "borderColor": "blue",
       },
       Object {
         "borderRadius": 15,

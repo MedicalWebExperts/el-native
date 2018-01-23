@@ -2,8 +2,6 @@ import React from 'react';
 import { string, oneOf } from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 
-import colors from '../styles/colors';
-
 const accentLength = {
   none: '0%',
   short: '20%',
@@ -14,12 +12,12 @@ const accentLength = {
 const styles = StyleSheet.create({
   divider: {
     height: 3,
-    backgroundColor: colors.primary,
+    backgroundColor: 'grey',
   },
   dividerWrapper: {
     width: '100%',
     height: 0.5,
-    backgroundColor: colors.lightgray,
+    backgroundColor: 'grey',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -40,7 +38,7 @@ const propTypes = {
   accentLength: oneOf(['short', 'medium', 'long', 'none']),
 };
 const defaultProps = {
-  color: colors.lightgray,
+  color: 'grey',
   primaryColor: null,
   accentLength: 'none',
 };
