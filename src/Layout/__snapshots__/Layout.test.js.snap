@@ -56,7 +56,7 @@ exports[`Layout Snapshots should render a Grid with Cols 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": undefined,
+        "backgroundColor": "red",
         "flex": 2,
         "flexDirection": "column",
         "opacity": 1,
@@ -434,7 +434,7 @@ exports[`Layout Snapshots should render an Grid with Combined Rows and Cols 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "red",
           "flex": 2,
           "flexDirection": "column",
           "opacity": 1,
