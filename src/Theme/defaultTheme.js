@@ -1,4 +1,5 @@
 import buttonStyles from './components/buttonStyles';
+import cardStyles from './components/cardStyles';
 
 export default {
   font: {
@@ -6,4 +7,5 @@ export default {
     color: '#000',
   },
   ...buttonStyles,
+  ...cardStyles,
 };

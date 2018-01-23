@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, string, number, bool } from 'prop-types';
+import { oneOf, string, number, bool, object } from 'prop-types';
 import { Image } from 'react-native';
 
 import Styles from './styles';
@@ -28,7 +28,7 @@ const propTypes = {
   /**
    * The prop "placeholder" can be used as a default image if no image is present in "source" prop.
    */
-  placeholder: string,
+  placeholder: object,
   /**
    * The prop "source" is the main prop, and expects a string or a uri to show the image in Avatar.
    */
@@ -40,7 +40,7 @@ const defaultProps = {
   size: 'medium',
   borderColor: '',
   borderThickness: 0,
-  placeholder: null,
+  placeholder: {},
   source: '',
 };
 

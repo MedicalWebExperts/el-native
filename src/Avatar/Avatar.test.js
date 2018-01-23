@@ -12,7 +12,7 @@ const props = {
   size: 'medium',
   borderColor: '',
   borderThickness: 0,
-  placeholder: null,
+  placeholder: {},
   source: '',
 };
 
