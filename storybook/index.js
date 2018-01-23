@@ -14,6 +14,7 @@ configure(() => {
   require('./stories/Switch');
   require('./stories/Divider');
   require('./stories/Icon');
+  require('./stories/Input');
   require('./stories/Checkbox');
 }, module);
 

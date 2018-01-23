@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Snapshots should render a Text Area Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={true}
+    numberOfLines={8}
+    onChangeText={[Function]}
+    placeholder="Text Area"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#757575",
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a rounded Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#757575",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "paddingLeft": 10,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a rounded Input with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "red",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "paddingLeft": 10,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render a squared Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#757575",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "paddingLeft": 10,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a squared Input with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "red",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "paddingLeft": 10,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render an Input default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#757575",
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render an Input default with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "red",
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render an Input with custom styling 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#757575"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#757575",
+          "color": "#4A4A4A",
+          "marginTop": 4,
+          "minHeight": 40,
+          "textAlign": "left",
+          "width": 750,
+        },
+        Object {
+          "borderColor": "lightgreen",
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
