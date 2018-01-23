@@ -6,7 +6,7 @@ exports[`Divider Snapshots should render a Divider with custom colors 1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
         "height": 0.5,
         "justifyContent": "center",
         "width": "100%",
@@ -21,7 +21,7 @@ exports[`Divider Snapshots should render a Divider with custom colors 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "lightgreen",
+          "backgroundColor": "grey",
           "height": 3,
         },
         Object {
@@ -42,13 +42,13 @@ exports[`Divider Snapshots should render a long Divider 1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
         "height": 0.5,
         "justifyContent": "center",
         "width": "100%",
       },
       Object {
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
       },
     ]
   }
@@ -57,7 +57,7 @@ exports[`Divider Snapshots should render a long Divider 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "lightgreen",
+          "backgroundColor": "grey",
           "height": 3,
         },
         null,
@@ -76,13 +76,13 @@ exports[`Divider Snapshots should render a medium Divider 1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
         "height": 0.5,
         "justifyContent": "center",
         "width": "100%",
       },
       Object {
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
       },
     ]
   }
@@ -91,7 +91,7 @@ exports[`Divider Snapshots should render a medium Divider 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "lightgreen",
+          "backgroundColor": "grey",
           "height": 3,
         },
         null,
@@ -110,13 +110,13 @@ exports[`Divider Snapshots should render a short Divider 1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
         "height": 0.5,
         "justifyContent": "center",
         "width": "100%",
       },
       Object {
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
       },
     ]
   }
@@ -125,7 +125,7 @@ exports[`Divider Snapshots should render a short Divider 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "lightgreen",
+          "backgroundColor": "grey",
           "height": 3,
         },
         null,
@@ -144,13 +144,13 @@ exports[`Divider Snapshots should render a simple Divider  1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
         "height": 0.5,
         "justifyContent": "center",
         "width": "100%",
       },
       Object {
-        "backgroundColor": "lightgray",
+        "backgroundColor": "grey",
       },
     ]
   }
@@ -159,7 +159,7 @@ exports[`Divider Snapshots should render a simple Divider  1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "lightgreen",
+          "backgroundColor": "grey",
           "height": 3,
         },
         null,

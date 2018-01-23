@@ -11,8 +11,8 @@ Just Another React Native Components Library.
 
 ### Misc
 
-- [Sketch Files](https://bitbucket.org/NewWaveWeb/el-native-sketch)
-- [Jira Task](https://newwaveweb.atlassian.net/browse/MIW-894)
+* [Sketch Files](https://bitbucket.org/NewWaveWeb/el-native-sketch)
+* [Jira Task](https://newwaveweb.atlassian.net/browse/MIW-894)
 
 # Getting Started
 
@@ -27,7 +27,7 @@ That's it.
 Then, import the components that you want to use:
 
 ```js
-  import { Map } from 'el-native';
+import { Map } from "el-native";
 ```
 
 And that would do the trick.
@@ -36,7 +36,7 @@ And that would do the trick.
 
 ## Clone this repository
 
-``` bash
+```bash
 $ git clone git@bitbucket.org:NewWaveWeb/el-native.git
 ```
 
@@ -44,26 +44,26 @@ $ git clone git@bitbucket.org:NewWaveWeb/el-native.git
 
 ### 1. Install the dependencies
 
-``` bash
+```bash
 $ cd el-native
 $ npm install
 ```
 
 ### 2. Run the application
 
-``` bash
+```bash
 $ react-native run-ios
 ```
 
 or
 
-``` bash
+```bash
 $ react-native run-android
 ```
 
 ### 3. Running Storybook
 
-``` bash
+```bash
 $ npm run storybook
 ```
 
@@ -71,25 +71,29 @@ This command will show a storybook instance at: [http://localhost:7007](http://l
 
 ### 4. Running Tests
 
-``` bash
+```bash
 $ npm test
 ```
 
 To update the snapshots:
-``` bash
+
+```bash
 $ npm test -- -u
 ```
 
 To watch the test suite:
-``` bash
+
+```bash
 $ npm run test:watch
 ```
 
 ### 5. Component Documentation
+
 * To document the components we are using [react-docgen](https://github.com/reactjs/react-docgen). Follow the docs to document your components.
 
-*Everytime a component is added, modified or deleted, run:
-``` bash
+\*Everytime a component is added, modified or deleted, run:
+
+```bash
 $ npm run updateDocs
 ```
 
@@ -97,14 +101,22 @@ This command will update the `docs.json` file placed in the root of this reposit
 
 ### 6. Building the app to publish
 
-``` bash
+```bash
 $ npm run prepublish
 ```
 
 or:
 
-``` bash
+```bash
 $ npm run build
+```
+
+### For Android development
+
+Reverse the port for the emulator
+
+```bash
+$ adb reverse tcp:7007 tcp:7007
 ```
 
 ## Structure of the Components Directory
@@ -144,13 +156,12 @@ This project has configured a [storybook](https://storybook.js.org/). If you run
 If you want to add an story to the storybook, you can add it in the storybook/ folder at the root of this repository.
 
 ```js
-  import React from 'react';
-  import { storiesOf } from '@storybook/react-native';
+import React from "react";
+import { storiesOf } from "@storybook/react-native";
 
-  import { MyComponent } from '../../../src';
+import { MyComponent } from "../../../src";
 
-  storiesOf('MyComponent', module).add('default', () => <MyComponent />);
+storiesOf("MyComponent", module).add("default", () => <MyComponent />);
 ```
 
 Checkout the storybook [documentation](https://storybook.js.org/basics/guide-react/) for more examples.
-
