@@ -24,7 +24,7 @@ exports[`H1 Snapshots should render an H1 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": undefined,
+      "color": "#4A4A4A",
       "fontSize": 20,
       "fontWeight": "600",
     }

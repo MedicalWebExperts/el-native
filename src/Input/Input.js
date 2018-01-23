@@ -33,7 +33,7 @@ class Input extends Component {
      */
     autoCorrect: bool,
     /**
-     * Determines whether the Input is readonly. The default is "false".
+     * If "false" the Input wil be readonly. The default is "true".
      */
     editable: bool,
     /**
@@ -69,7 +69,7 @@ class Input extends Component {
     multiline: false,
     numberOfLines: 4,
     autoCorrect: false,
-    editable: false,
+    editable: true,
     selectTextOnFocus: false,
     error: false,
     errorText: 'Error text',
@@ -90,16 +90,14 @@ class Input extends Component {
   defaultStyles = () => {
     let customStyles = styles.base;
     if (this.props.error) {
-      customStyles = Object.assign({}, customStyles, styles.error);
+      customStyles = { ...customStyles, ...styles.error };
     }
     if (this.props.type) {
       switch (this.props.type) {
         case 'rounded':
-          customStyles = Object.assign({}, customStyles, styles.rounded);
-          break;
+          return { ...customStyles, ...styles.rounded };
         case 'squared':
-          customStyles = Object.assign({}, customStyles, styles.squared);
-          break;
+          return { ...customStyles, ...styles.squared };
         default:
           return customStyles;
       }
