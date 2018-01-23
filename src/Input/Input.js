@@ -33,7 +33,7 @@ class Input extends Component {
      */
     autoCorrect: bool,
     /**
-     * If "false" the Input wil be readonly. The default is "true".
+     * If "false" the Input will be readonly. The default is "true".
      */
     editable: bool,
     /**
