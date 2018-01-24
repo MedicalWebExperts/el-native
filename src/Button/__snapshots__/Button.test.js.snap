@@ -33,6 +33,9 @@ exports[`Button Snapshots should render a Button 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
         "justifyContent": "center",
         "padding": 8,
@@ -46,8 +49,9 @@ exports[`Button Snapshots should render a Button 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#007AFF",
+          "color": "#FFF",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -91,6 +95,9 @@ exports[`Button Snapshots should render a Button block 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
         "justifyContent": "center",
         "padding": 8,
@@ -105,8 +112,9 @@ exports[`Button Snapshots should render a Button block 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#007AFF",
+          "color": "#dee2e6",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -150,6 +158,9 @@ exports[`Button Snapshots should render a Button disabled 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#1976D2",
+        "borderRadius": 2,
+        "elevation": 0,
         "flexDirection": "row",
         "justifyContent": "center",
         "padding": 8,
@@ -163,8 +174,9 @@ exports[`Button Snapshots should render a Button disabled 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#007AFF",
+          "color": "#dee2e6",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -208,14 +220,12 @@ exports[`Button Snapshots should render a Button with a left icon 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderRadius": 20,
-        "elevation": 0,
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -235,7 +245,7 @@ exports[`Button Snapshots should render a Button with a left icon 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
             },
             undefined,
@@ -257,8 +267,9 @@ exports[`Button Snapshots should render a Button with a left icon 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
+              "fontWeight": "500",
               "textAlign": "center",
             },
             Object {
@@ -307,14 +318,12 @@ exports[`Button Snapshots should render a Button with a right button 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderRadius": 20,
-        "elevation": 0,
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -335,8 +344,9 @@ exports[`Button Snapshots should render a Button with a right button 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
+              "fontWeight": "500",
               "textAlign": "center",
             },
             Object {
@@ -354,7 +364,7 @@ exports[`Button Snapshots should render a Button with a right button 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
             },
             undefined,
@@ -406,14 +416,12 @@ exports[`Button Snapshots should render a Button with a spinner 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderRadius": 20,
-        "elevation": 0,
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -428,7 +436,7 @@ exports[`Button Snapshots should render a Button with a spinner 1`] = `
     >
       <ActivityIndicator
         animating={true}
-        color="black"
+        color="#dee2e6"
         hidesWhenStopped={true}
         size="small"
       />
@@ -470,14 +478,12 @@ exports[`Button Snapshots should render a Button with a spinner and text 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderRadius": 20,
-        "elevation": 0,
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -492,7 +498,7 @@ exports[`Button Snapshots should render a Button with a spinner and text 1`] = `
     >
       <ActivityIndicator
         animating={true}
-        color="black"
+        color="#dee2e6"
         hidesWhenStopped={true}
         size="small"
       />
@@ -503,8 +509,9 @@ exports[`Button Snapshots should render a Button with a spinner and text 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
+              "fontWeight": "500",
               "textAlign": "center",
             },
             Object {
@@ -553,7 +560,9 @@ exports[`Button Snapshots should render a Button with custom styles 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF0000",
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
         "justifyContent": "center",
         "padding": 8,
@@ -567,8 +576,9 @@ exports[`Button Snapshots should render a Button with custom styles 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#007AFF",
+          "color": "#dee2e6",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -613,13 +623,11 @@ exports[`Button Snapshots should render a outline Button 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "transparent",
-        "borderRadius": 20,
+        "borderRadius": 2,
         "elevation": 1,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -630,8 +638,9 @@ exports[`Button Snapshots should render a outline Button 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "black",
+          "color": "#dee2e6",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -675,9 +684,9 @@ exports[`Button Snapshots should render a rounded Button 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
+        "backgroundColor": "#2196F3",
         "borderRadius": 20,
-        "elevation": 0,
+        "elevation": 4,
         "flexDirection": "row",
         "height": 40,
         "justifyContent": "center",
@@ -700,7 +709,7 @@ exports[`Button Snapshots should render a rounded Button 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
             },
             undefined,
@@ -753,11 +762,11 @@ exports[`Button Snapshots should render a transparent Button 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "transparent",
+        "borderRadius": 2,
         "elevation": 0,
         "flexDirection": "row",
         "justifyContent": "center",
         "padding": 8,
-        "width": "100%",
       }
     }
   >
@@ -768,8 +777,9 @@ exports[`Button Snapshots should render a transparent Button 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "black",
+          "color": "#dee2e6",
           "fontSize": 18,
+          "fontWeight": "500",
           "textAlign": "center",
         }
       }
@@ -813,14 +823,12 @@ exports[`Button Snapshots should render an icon Button 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderRadius": 20,
-        "elevation": 0,
+        "backgroundColor": "#2196F3",
+        "borderRadius": 2,
+        "elevation": 4,
         "flexDirection": "row",
-        "height": 40,
         "justifyContent": "center",
         "padding": 8,
-        "width": 40,
       }
     }
   >
@@ -838,7 +846,7 @@ exports[`Button Snapshots should render an icon Button 1`] = `
         style={
           Array [
             Object {
-              "color": "black",
+              "color": "#dee2e6",
               "fontSize": 18,
             },
             undefined,
