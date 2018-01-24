@@ -1,40 +1,40 @@
-import { Platform } from 'react-native';
+import colors from '../colors';
 
 export default {
-  button: Platform.select({
-    ios: {},
-    android: {
-      elevation: 4,
-      backgroundColor: '#2196F3',
-      borderRadius: 2,
-    },
-  }),
-  buttonText: Platform.select({
-    ios: {
-      color: '#007AFF',
-      textAlign: 'center',
-      fontSize: 18,
-    },
-    android: {
-      fontSize: 18,
-      color: '#FFF',
-      textAlign: 'center',
-      fontWeight: '500',
-    },
-  }),
-  buttonDisabled: Platform.select({
-    ios: {},
-    android: {
-      elevation: 0,
-      backgroundColor: '#dfdfdf',
-    },
-  }),
-  buttonDisabledText: Platform.select({
-    ios: {
-      color: '#cdcdcd',
-    },
-    android: {
-      color: '#a1a1a1',
-    },
-  }),
+  default: {
+    flexDirection: 'row',
+    padding: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 4,
+    backgroundColor: colors.primary,
+    borderRadius: 2,
+  },
+  text: {
+    fontSize: 18,
+    color: colors.lightText,
+    textAlign: 'center',
+    fontWeight: '500',
+  },
+  disabled: {
+    elevation: 0,
+    backgroundColor: colors.dark,
+  },
+  disabledText: {
+    color: colors.gray300,
+  },
+  container: {
+    alignItems: 'flex-end',
+  },
+  iconWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textWithIconLeft: {
+    marginLeft: 6,
+  },
+  textWithIconRight: {
+    marginRight: 6,
+  },
 };
