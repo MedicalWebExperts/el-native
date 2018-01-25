@@ -5,5 +5,5 @@ export default {
     size: 14,
     color: '#000',
   },
-  ...buttonStyles,
+  button: buttonStyles,
 };

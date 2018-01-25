@@ -24,7 +24,7 @@ exports[`H1 Snapshots should render an H1 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#4A4A4A",
+      "color": undefined,
       "fontSize": 20,
       "fontWeight": "600",
     }
@@ -41,7 +41,7 @@ exports[`H1 Snapshots should render an H1 with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#2196F3",
+      "color": undefined,
       "fontSize": 20,
       "fontWeight": "600",
     }
@@ -75,7 +75,7 @@ exports[`H2 Snapshots should render an H2 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 18,
       "fontWeight": "600",
     }
@@ -92,7 +92,7 @@ exports[`H2 Snapshots should render an H2 with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#2196F3",
+      "color": undefined,
       "fontSize": 18,
       "fontWeight": "600",
     }
@@ -126,7 +126,7 @@ exports[`H3 Snapshots should render an H3 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 16,
       "fontWeight": "500",
     }
@@ -143,7 +143,7 @@ exports[`H3 Snapshots should render an H3 with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#2196F3",
+      "color": undefined,
       "fontSize": 16,
       "fontWeight": "500",
     }
@@ -177,7 +177,7 @@ exports[`H4 Snapshots should render an H4 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 14,
       "fontWeight": "500",
     }
@@ -194,7 +194,7 @@ exports[`H4 Snapshots should render an H4 with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#2196F3",
+      "color": undefined,
       "fontSize": 14,
       "fontWeight": "500",
     }
@@ -228,7 +228,7 @@ exports[`H5 Snapshots should render an H5 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 12,
       "fontWeight": "600",
     }
@@ -245,7 +245,7 @@ exports[`H5 Snapshots should render an H5 with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#2196F3",
+      "color": undefined,
       "fontSize": 12,
       "fontWeight": "600",
     }
@@ -279,7 +279,7 @@ exports[`Text Snapshots should render an Text 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 14,
       "fontWeight": "400",
     }
@@ -296,7 +296,7 @@ exports[`Text Snapshots should render an Text with color 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "#757575",
+      "color": undefined,
       "fontSize": 14,
       "fontWeight": "400",
     }

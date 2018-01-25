@@ -12,9 +12,18 @@ storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Default', () => <Button text="LOGIN" onPress={() => false} />)
   .add('Disabled', () => <Button text="DISABLED" disabled onPress={() => false} />)
-  .add('Styled', () => <Button text="STYLED" onPress={() => false} style={styles} />)
+  .add('Styled', () => (
+    <Button
+      text="STYLED"
+      onPress={() => false}
+      backgroundStyles={styles}
+      textStyles={{ color: 'black' }}
+    />
+  ))
   .add('Block', () => <Button text="BLOCK" onPress={() => false} block />)
-  .add('transparent', () => <Button text="TRANSPARENT" onPress={() => false} transparent />)
+  .add('transparent', () => (
+    <Button text="TRANSPARENT" onPress={() => false} transparent textStyles={{ color: 'black' }} />
+  ))
   .add('rounded', () => (
     <Button icon="ios-basketball" onPress={() => false} roundedDimensions={40} />
   ))

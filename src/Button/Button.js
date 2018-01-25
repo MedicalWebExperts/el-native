@@ -11,13 +11,20 @@ import {
 } from 'react-native';
 import Icon from '../Icon/Icon';
 
-import styles from './styles';
+import Theme from '../Theme';
+
+const theme = Theme.getTheme();
+const styles = theme.button;
 
 const propTypes = {
   /**
-   * The object to overwrite the styles
+   * The object to overwrite the background styles
    */
-  style: PropTypes.object,
+  backgroundStyles: PropTypes.object,
+  /**
+   * The object to overwrite the text styles
+   */
+  textStyles: PropTypes.object,
   /**
    * Represent as a disabled
    */
@@ -69,7 +76,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  style: {},
+  backgroundStyles: {},
+  textStyles: {},
   disabled: false,
   accessibilityLabel: '',
   block: false,
@@ -87,7 +95,7 @@ const defaultProps = {
 const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
 const accessibilityTraits = ['button'];
-let buttonStyles = styles.button;
+
 let textStyles = styles.text;
 
 const renderProcessing = (text, txtStyles) => (
@@ -144,15 +152,21 @@ const renderContent = (text, disabled, icon, iconLeft, iconRight, txtStyles, pro
 
 const Button = (props) => {
   const { text, disabled, icon, iconLeft, iconRight, processing } = props;
+  let buttonStyles = styles.default;
+
   if (props.block) {
     buttonStyles = { ...buttonStyles, ...{ width: '100%' } };
   }
   if (props.transparent) {
     buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 0 } };
-    textStyles = { ...textStyles, color: 'black' };
+    textStyles = { ...textStyles };
   }
   if (props.outline) {
     buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 1 } };
+  }
+  if (props.disabled) {
+    buttonStyles = { ...buttonStyles, ...styles.disabled };
+    textStyles = { ...textStyles, ...styles.disabledText };
   }
   if (props.roundedDimensions) {
     buttonStyles = {
@@ -171,8 +185,16 @@ const Button = (props) => {
       accessibilityLabel={props.accessibilityLabel}
       accessibilityTraits={accessibilityTraits}
     >
-      <View style={{ ...buttonStyles, ...props.style }}>
-        {renderContent(text, disabled, icon, iconLeft, iconRight, textStyles, processing)}
+      <View style={{ ...buttonStyles, ...props.backgroundStyles }}>
+        {renderContent(
+          text,
+          disabled,
+          icon,
+          iconLeft,
+          iconRight,
+          { ...textStyles, ...props.textStyles },
+          processing,
+        )}
       </View>
     </Touchable>
   );
