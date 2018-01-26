@@ -18,9 +18,7 @@ const props = {
 
 describe('Avatar Snapshots', () => {
   it('should render an Avatar Large with placeholder', () => {
-    const component = renderer.create(
-      <Avatar {...props} size="large" placeholder={placeholderImage} />,
-    );
+    const component = renderer.create(<Avatar {...props} size="large" placeholder={placeholderImage} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -40,29 +38,23 @@ describe('Avatar Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Large bordered', () => {
-    const component = renderer.create(
-      <Avatar {...props} source={imageUrl} size="large" borderColor={'blue'} borderThickness={2} />,
-    );
+    const component = renderer.create(<Avatar {...props} source={imageUrl} size="large" borderColor="blue" borderThickness={2} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Medium bordered', () => {
-    const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        size="medium"
-        borderColor={'blue'}
-        borderThickness={2}
-      />,
-    );
+    const component = renderer.create(<Avatar
+      {...props}
+      source={imageUrl}
+      size="medium"
+      borderColor="blue"
+      borderThickness={2}
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Small bordered', () => {
-    const component = renderer.create(
-      <Avatar {...props} source={imageUrl} size="small" borderColor={'blue'} borderThickness={2} />,
-    );
+    const component = renderer.create(<Avatar {...props} source={imageUrl} size="small" borderColor="blue" borderThickness={2} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -82,44 +74,38 @@ describe('Avatar Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Square Large bordered', () => {
-    const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        square
-        size="large"
-        borderColor={'blue'}
-        borderThickness={2}
-      />,
-    );
+    const component = renderer.create(<Avatar
+      {...props}
+      source={imageUrl}
+      square
+      size="large"
+      borderColor="blue"
+      borderThickness={2}
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Square Medium bordered', () => {
-    const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        square
-        size="medium"
-        borderColor={'blue'}
-        borderThickness={2}
-      />,
-    );
+    const component = renderer.create(<Avatar
+      {...props}
+      source={imageUrl}
+      square
+      size="medium"
+      borderColor="blue"
+      borderThickness={2}
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render an Avatar Square Small bordered', () => {
-    const component = renderer.create(
-      <Avatar
-        {...props}
-        source={imageUrl}
-        square
-        size="small"
-        borderColor={'blue'}
-        borderThickness={2}
-      />,
-    );
+    const component = renderer.create(<Avatar
+      {...props}
+      source={imageUrl}
+      square
+      size="small"
+      borderColor="blue"
+      borderThickness={2}
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

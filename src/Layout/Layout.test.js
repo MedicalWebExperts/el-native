@@ -14,29 +14,31 @@ const childProps = {
 
 describe('Layout Snapshots', () => {
   it('should render a Grid with Cols', () => {
-    const component = renderer.create(
+    const elements = (
       <Grid {...props}>
         <Col {...childProps} style={{ backgroundColor: 'pink' }} />
         <Col {...childProps} style={{ backgroundColor: 'red' }} size={2} />
         <Col {...childProps} style={{ backgroundColor: 'yellow' }} size={3} />
-      </Grid>,
+      </Grid>
     );
+    const component = renderer.create(elements);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render a Grid with Rows', () => {
-    const component = renderer.create(
+    const elements = (
       <Grid {...props}>
         <Row {...childProps} style={{ backgroundColor: 'pink' }} />
         <Row {...childProps} style={{ backgroundColor: 'pink' }} size={2} />
         <Row {...childProps} style={{ backgroundColor: 'pink' }} size={3} />
-      </Grid>,
+      </Grid>
     );
+    const component = renderer.create(elements);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render an Grid with Combined Rows and Cols', () => {
-    const component = renderer.create(
+    const elements = (
       <Grid>
         <Row {...childProps}>
           <Col {...childProps} style={{ backgroundColor: 'pink' }} />
@@ -51,8 +53,9 @@ describe('Layout Snapshots', () => {
           <Col {...childProps} style={{ backgroundColor: 'pink' }} size={2} />
           <Col {...childProps} style={{ backgroundColor: 'pink' }} size={3} />
         </Row>
-      </Grid>,
+      </Grid>
     );
+    const component = renderer.create(elements);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

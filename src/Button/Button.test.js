@@ -20,9 +20,7 @@ describe('Button Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a Button with custom styles', () => {
-    const component = renderer.create(
-      <Button text="STYLED" onPress={() => false} style={styles} />,
-    );
+    const component = renderer.create(<Button text="STYLED" onPress={() => false} style={styles} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -32,16 +30,13 @@ describe('Button Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a transparent Button', () => {
-    const component = renderer.create(
-      <Button text="TRANSPARENT" onPress={() => false} transparent />,
-    );
+    const component = renderer.create(<Button text="TRANSPARENT" onPress={() => false} transparent />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render a rounded Button', () => {
-    const component = renderer.create(
-      <Button icon="ios-basketball" onPress={() => false} roundedDimensions={40} />,
-    );
+    const component = renderer.create(<Button icon="ios-basketball" onPress={() => false} roundedDimensions={40} />);
+
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -51,16 +46,12 @@ describe('Button Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a Button with a left icon', () => {
-    const component = renderer.create(
-      <Button text="LOGIN" onPress={() => false} iconLeft="ios-basketball" />,
-    );
+    const component = renderer.create(<Button text="LOGIN" onPress={() => false} iconLeft="ios-basketball" />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render a Button with a right button', () => {
-    const component = renderer.create(
-      <Button text="LOGIN" onPress={() => false} iconRight="ios-basketball" />,
-    );
+    const component = renderer.create(<Button text="LOGIN" onPress={() => false} iconRight="ios-basketball" />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -70,9 +61,7 @@ describe('Button Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a Button with a spinner and text', () => {
-    const component = renderer.create(
-      <Button text="LOADING..." onPress={() => false} processing />,
-    );
+    const component = renderer.create(<Button text="LOADING..." onPress={() => false} processing />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
