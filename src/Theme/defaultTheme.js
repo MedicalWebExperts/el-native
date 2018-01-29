@@ -6,6 +6,6 @@ export default {
     size: 14,
     color: '#000',
   },
-  ...buttonStyles,
-  ...cardStyles,
+  button: buttonStyles,
+  card: cardStyles,
 };
