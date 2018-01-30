@@ -6,8 +6,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest src/",
-    "test:watch": "TEST=true jest --watch --silent",
+    "test": "jest",
+    "test:watch": "TEST=true jest --watch",
     "test:coverage": "TEST=true jest --coverage --silent",
     "lint": "eslint src",
     "build": "babel src --out-dir dist --ignore '**/*.test.js'",
@@ -19,13 +19,15 @@
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
     "android": "adb reverse tcp:7007 tcp:7007 && react-native run-android",
-    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
+    "updateDocs":
+      "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
     "generate": "node generate-component.js"
   },
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-native": "^0.52.2",
+    "react": "16.0.0",
+    "react-native": "0.51.0",
     "react-native-vector-icons": "^4.5.0"
   },
   "devDependencies": {
@@ -59,19 +61,11 @@
     "react-native-vector-icons": "^4.5.0"
   },
   "jest": {
-    "preset": "react-native",
-    "setupFiles": [
-      "./jest/setup.js"
-    ],
+    "setupFiles": ["./setupJest.js"],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "globals": {
       "__DEV__": true
     },
-    "snapshotSerializers": [
-      "./node_modules/jest-serializer-enzyme"
-    ],
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
-    "transformIgnorePatterns": [
-      "node_modules/(?!react-native)"
-    ]
+    "preset": "react-native"
   }
 }
