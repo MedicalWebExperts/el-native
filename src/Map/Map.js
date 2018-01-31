@@ -12,7 +12,10 @@ import {
   Linking,
 } from 'react-native';
 
-import Styles from './styles';
+import Theme from '../Theme';
+
+const theme = Theme.getTheme();
+const styles = theme.map;
 
 const propTypes = {
   /**
@@ -104,7 +107,7 @@ export default function Map(props) {
     <TouchableHighlight
       onPress={onPress}
       underlayColor={props.underlayColor}
-      style={{ ...Styles.button, ...props.style.button }}
+      style={{ ...styles.button, ...props.style.button }}
     >
       <View>
         {props.button || <Text>Navigate</Text>}
@@ -113,7 +116,7 @@ export default function Map(props) {
   );
 
   return (
-    <View style={{ ...Styles.container, ...props.style.container }}>
+    <View style={{ ...styles.container, ...props.style.container }}>
       <Image
         source={{
           uri: googleStaticMapUri(),

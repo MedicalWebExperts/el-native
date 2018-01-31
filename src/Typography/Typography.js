@@ -2,7 +2,10 @@ import React from 'react';
 import { object, bool, string } from 'prop-types';
 import { Text } from 'react-native';
 
-import Styles from './styles';
+import Theme from '../Theme';
+
+const theme = Theme.getTheme();
+const styles = theme.typography;
 
 const h1Proptypes = {
   /**
@@ -113,7 +116,7 @@ const textDefaultProps = {
  */
 const H1 = props => (
   <Text
-    style={props.color ? { ...Styles.h1Color, ...props.style } : { ...Styles.h1, ...props.style }}
+    style={props.color ? { ...styles.h1Color, ...props.style } : { ...styles.h1, ...props.style }}
   >
     {props.children}
   </Text>
@@ -123,7 +126,7 @@ const H1 = props => (
  */
 const H2 = props => (
   <Text
-    style={props.color ? { ...Styles.h2Color, ...props.style } : { ...Styles.h2, ...props.style }}
+    style={props.color ? { ...styles.h2Color, ...props.style } : { ...styles.h2, ...props.style }}
   >
     {props.children}
   </Text>
@@ -133,7 +136,7 @@ const H2 = props => (
  */
 const H3 = props => (
   <Text
-    style={props.color ? { ...Styles.h3Color, ...props.style } : { ...Styles.h3, ...props.style }}
+    style={props.color ? { ...styles.h3Color, ...props.style } : { ...styles.h3, ...props.style }}
   >
     {props.children}
   </Text>
@@ -143,7 +146,7 @@ const H3 = props => (
  */
 const H4 = props => (
   <Text
-    style={props.color ? { ...Styles.h4Color, ...props.style } : { ...Styles.h4, ...props.style }}
+    style={props.color ? { ...styles.h4Color, ...props.style } : { ...styles.h4, ...props.style }}
   >
     {props.children}
   </Text>
@@ -153,7 +156,7 @@ const H4 = props => (
  */
 const H5 = props => (
   <Text
-    style={props.color ? { ...Styles.h5Color, ...props.style } : { ...Styles.h5, ...props.style }}
+    style={props.color ? { ...styles.h5Color, ...props.style } : { ...styles.h5, ...props.style }}
   >
     {props.children}
   </Text>
@@ -161,7 +164,7 @@ const H5 = props => (
 /**
  * Text component renders a RN <Text> component with custom styles.
  */
-const TextTheme = props => <Text style={{ ...Styles.text, ...props.style }}>{props.children}</Text>;
+const TextTheme = props => <Text style={{ ...styles.text, ...props.style }}>{props.children}</Text>;
 
 H1.propTypes = h1Proptypes;
 H1.defaultProps = h1DefaultProps;
