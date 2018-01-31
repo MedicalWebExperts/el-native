@@ -1,8 +1,4 @@
-import { Dimensions } from 'react-native';
-
-import colors from '../Theme/colors';
-
-const { width } = Dimensions.get('window');
+import colors from '../colors';
 
 export default {
   container: {
@@ -11,18 +7,18 @@ export default {
   },
   base: {
     borderBottomWidth: 1,
-    borderColor: colors.textColor,
-    minHeight: 40,
+    borderColor: colors.text,
+    height: 40,
     marginTop: 4,
     textAlign: 'left',
-    width,
-    color: colors.darkTextColor,
+    minWidth: '100%',
+    color: colors.text,
   },
   error: {
-    borderColor: colors.red,
+    borderColor: colors.danger,
   },
   errorText: {
-    color: colors.red,
+    color: colors.danger,
     paddingVertical: 4,
     fontSize: 12,
   },

@@ -2,7 +2,10 @@ import React from 'react';
 import { oneOf, string, number, bool, object } from 'prop-types';
 import { Image } from 'react-native';
 
-import Styles from './styles';
+import Theme from '../Theme';
+
+const theme = Theme.getTheme();
+const styles = theme.avatar;
 
 const propTypes = {
   /**
@@ -46,9 +49,9 @@ const defaultProps = {
 
 const getSize = (size) => {
   if (size === 'large') {
-    return Styles.avatarLarge;
+    return styles.avatarLarge;
   } else if (size === 'small') {
-    return Styles.avatarSmall;
+    return styles.avatarSmall;
   }
   return false;
 };
@@ -61,11 +64,11 @@ const Avatar = props => (
   <Image
     source={props.source ? { uri: props.source } : props.placeholder}
     style={[
-      Styles.avatar,
+      styles.default,
       !!props.borderThickness && { borderWidth: props.borderThickness },
       !!props.borderColor && { borderColor: props.borderColor },
       !!props.size && getSize(props.size),
-      !!props.square && Styles.avatarSquare,
+      !!props.square && styles.avatarSquare,
     ]}
   />
 );
