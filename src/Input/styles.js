@@ -12,7 +12,7 @@ export default {
   base: {
     borderBottomWidth: 1,
     borderColor: colors.textColor,
-    minHeight: 40,
+    height: 40,
     marginTop: 4,
     textAlign: 'left',
     width,
