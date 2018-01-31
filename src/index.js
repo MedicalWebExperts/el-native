@@ -9,6 +9,7 @@ import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
 import Card from './Card/Card';
+import ComposedRow from './ComposedRow/ComposedRow';
 
 export {
   Map,
@@ -29,4 +30,5 @@ export {
   Input,
   Checkbox,
   Card,
+  ComposedRow,
 };

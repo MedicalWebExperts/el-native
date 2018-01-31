@@ -17,6 +17,7 @@ configure(() => {
   require('./stories/Input');
   require('./stories/Checkbox');
   require('./stories/Card');
+  require('./stories/ComposedRow');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
