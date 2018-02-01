@@ -10,13 +10,13 @@ import typographyStyles from './components/typographyStyles';
 export default {
   font: {
     size: 14,
-    color: '#000',
+    color: colors.text,
   },
   colors,
+  avatar: avatarStyles,
   button: buttonStyles,
   card: cardStyles,
   composedRow: composedRowStyles,
-  avatar: avatarStyles,
   input: inputStyles,
   map: mapStyles,
   typography: typographyStyles,

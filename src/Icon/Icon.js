@@ -20,7 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: colors.text,
+  color: colors.light,
   size: 16,
   name: 'ios-heart',
 };

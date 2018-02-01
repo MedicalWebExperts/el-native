@@ -1,5 +1,10 @@
 export default {
-  rowStyle: {
-    maxHeight: 100,
+  centeredContent: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  leftContent: {
+    alignItems: 'center',
+    paddingLeft: 4,
   },
 };

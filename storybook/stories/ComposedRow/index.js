@@ -10,14 +10,14 @@ storiesOf('ComposedRow', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Default', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 150, backgroundColor: 'salmon' }}
+      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
       title="Title of Composed Row"
       subTitle="Here goes a random a Text as Lorem Ipsum"
     />
   ))
   .add('Clickable Default with Avatar', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 150, backgroundColor: 'salmon' }}
+      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       avatar={imageUrl}
       title="Title of Composed Row"
@@ -26,7 +26,7 @@ storiesOf('ComposedRow', module)
   ))
   .add('All props', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 150, backgroundColor: 'salmon' }}
+      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       avatar={imageUrl}
       title="Title of Composed Row"
@@ -34,19 +34,33 @@ storiesOf('ComposedRow', module)
       subTitleIcon="ios-basketball"
       subTitleText="I'm the subtitle text"
       rightIcon="ios-basketball"
-      rightText="3.830mi"
     />
   ))
   .add('All props with leftIcon instead of Avatar', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 150, backgroundColor: 'salmon' }}
+      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       leftIcon="ios-basketball"
       title="Title of Composed Row"
       subTitle="Here goes a random a Text as Lorem Ipsum"
       subTitleIcon="ios-basketball"
       subTitleText="I'm the subtitle text"
+      rightText="3.830mi"
+    />
+  ))
+  .add('All props with rightIcon and rightText', () => (
+    <ComposedRow
+      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      onPress={() => {}}
+      avatar={imageUrl}
+      title="Title of Composed Row"
+      subTitle="Here goes a random a Text as Lorem Ipsum"
+      subTitleIcon="ios-basketball"
+      subTitleText="I'm the subtitle text"
       rightIcon="ios-basketball"
+      rightIconOnPress={() => {
+        console.warn('You have pressed the Icon!');
+      }}
       rightText="3.830mi"
     />
   ));
