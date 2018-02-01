@@ -1,5 +1,6 @@
 import buttonStyles from './components/buttonStyles';
 import cardStyles from './components/cardStyles';
+import composedRowStyles from './components/composedRowStyles';
 
 export default {
   font: {
@@ -8,4 +9,5 @@ export default {
   },
   button: buttonStyles,
   card: cardStyles,
+  composedRow: composedRowStyles,
 };

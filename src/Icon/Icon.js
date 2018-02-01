@@ -2,6 +2,8 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import VectorIcon from 'react-native-vector-icons/Ionicons';
 
+import colors from '../Theme/colors';
+
 const propTypes = {
   /**
    * Color of the icon. Default: Theme white color.
@@ -18,7 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: 'white',
+  color: colors.text,
   size: 16,
   name: 'ios-heart',
 };

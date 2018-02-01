@@ -1,27 +1,29 @@
 import React from 'react';
-import { func, string } from 'prop-types';
+import { func, string, oneOfType, object } from 'prop-types';
 
 import Icon from '../Icon/Icon';
 import Avatar from '../Avatar/Avatar';
 import { Row, Col } from '../Layout/Layout';
-import { H2, H4 } from '../Typography/Typography';
+import { H2, H4, H5 } from '../Typography/Typography';
 import Theme from '../Theme';
 
 const theme = Theme.getTheme();
-const styles = theme.button;
+const styles = theme.composedRow;
 
 const propTypes = {
-  onPress: func.isRequired,
-  avatar: string,
+  rowStyle: object,
+  onPress: func,
+  avatar: oneOfType(string, func),
   leftIcon: string,
-  title: string.isRequired,
-  subTitle: string.isRequired,
+  title: string,
+  subTitle: string,
   subTitleIcon: string,
   subTitleText: string,
   rightIcon: string,
   rightText: string,
 };
 const defaultProps = {
+  rowStyle: {},
   onPress: () => {},
   avatar: '',
   leftIcon: '',
@@ -34,23 +36,43 @@ const defaultProps = {
 };
 
 const ComposedRow = props => (
-  <Row onPress={props.onPress}>
-    <Col>
-      {!!props.avatar && <Avatar style={styles.icon} />}
-      {!!props.leftIcon && <Icon style={styles.icon} />}
-    </Col>
-    <Col size={2}>
-      <Row>{!!props.title && <H2 style={styles.title} numberOfLines={1} />}</Row>
-      <Row>{!!props.subTitle && <H4 style={styles.subTitle} />}</Row>
-      <Row>
-        <Col>{!!props.subTitleIcon && <H4 style={styles.subTitleIcon} />}</Col>
-        <Col>{!!props.subTitleText && <H4 style={styles.subTitle} />}</Col>
-      </Row>
-    </Col>
-    <Col>
-      <Row>{!!props.rightIcon && <Icon style={styles.icon} />}</Row>
-      <Row>{!!props.rightText && <Icon style={styles.icon} numberOfLines={1} />}</Row>
-    </Col>
+  <Row style={props.rowStyle} onPress={props.onPress}>
+    {(!!props.avatar || !!props.leftIcon) && (
+      <Col size={1}>
+        {!!props.avatar && <Avatar source={props.avatar} />}
+        {!!props.leftIcon && <Icon style={styles.leftIcon} size={40} name={props.leftIcon} />}
+      </Col>
+    )}
+    {(!!props.title || !!props.subTitle || !!props.subTitleIcon || !!props.subTitleText) && (
+      <Col size={2}>
+        <Row>
+          {!!props.title && (
+            <H2 style={styles.title} numberOfLines={1}>
+              {props.title}
+            </H2>
+          )}
+        </Row>
+        <Row>{!!props.subTitle && <H4>{props.subTitle}</H4>}</Row>
+        <Row>
+          <Col>
+            {!!props.subTitleIcon && (
+              <Icon style={styles.subTitleIcon} size={20} name={props.subTitleIcon} />
+            )}
+          </Col>
+          <Col>{!!props.subTitleText && <H5>{props.subTitleText}</H5>}</Col>
+        </Row>
+      </Col>
+    )}
+    {(!!props.rightIcon || !!props.rightText) && (
+      <Col size={1}>
+        <Row style={{ justifyContent: 'center', alignItems: 'flex-end' }} size={1}>
+          {!!props.rightIcon && <Icon size={30} name={props.rightIcon} />}
+        </Row>
+        <Row style={{ justifyContent: 'center', alignItems: 'flex-start' }} size={3}>
+          {!!props.rightText && <H5 numberOfLines={1}>{props.rightText}</H5>}
+        </Row>
+      </Col>
+    )}
   </Row>
 );
 
