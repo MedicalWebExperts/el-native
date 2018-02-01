@@ -6,18 +6,19 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 
 // import stories
 configure(() => {
-  require('./stories/Map');
-  require('./stories/Button');
-  require('./stories/Layout');
-  require('./stories/Typography');
   require('./stories/Avatar');
-  require('./stories/Switch');
+  require('./stories/Button');
+  require('./stories/Checkbox');
   require('./stories/Divider');
   require('./stories/Icon');
   require('./stories/Input');
   require('./stories/Checkbox');
   require('./stories/Card');
   require('./stories/ComposedRow');
+  require('./stories/Map');
+  require('./stories/Layout');
+  require('./stories/Switch');
+  require('./stories/Typography');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });

@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { string, number, bool, oneOf, object, func } from 'prop-types';
 import { TextInput, Text, View } from 'react-native';
 
-import styles from './styles';
-import colors from '../Theme/colors';
+import Theme from '../Theme';
+
+const theme = Theme.getTheme();
+const styles = theme.input;
 
 /**
  * Input component is a wrapper over React Native Input with 3 predefined styles added
@@ -65,7 +67,7 @@ class Input extends Component {
 
   static defaultProps = {
     placeholder: 'Placeholder text',
-    onChangeText: () => {},
+    onChangeText: () => { },
     multiline: false,
     numberOfLines: 4,
     autoCorrect: false,
@@ -75,7 +77,7 @@ class Input extends Component {
     errorText: 'Error text',
     style: {},
     type: 'underline',
-    placeholderTextColor: colors.textColor,
+    placeholderTextColor: theme.colors.text,
   };
 
   state = {
@@ -133,6 +135,7 @@ class Input extends Component {
           selectTextOnFocus={selectTextOnFocus}
           style={[this.defaultStyles(), style]}
           placeholderTextColor={placeholderTextColor}
+          underlineColorAndroid="transparent"
         />
         <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
       </View>
