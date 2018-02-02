@@ -45,9 +45,7 @@ describe('Input Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a squared Input with error', () => {
-    const component = renderer.create(
-      <Input {...props} style={customStyle} type="squared" error />,
-    );
+    const component = renderer.create(<Input {...props} style={customStyle} type="squared" error />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -57,16 +55,12 @@ describe('Input Snapshots', () => {
     expect(json).toMatchSnapshot();
   });
   it('should render a rounded Input with error', () => {
-    const component = renderer.create(
-      <Input {...props} style={customStyle} type="rounded" error />,
-    );
+    const component = renderer.create(<Input {...props} style={customStyle} type="rounded" error />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
   it('should render a Text Area Input', () => {
-    const component = renderer.create(
-      <Input {...props} style={customStyle} placeholder="Text Area" multiline numberOfLines={8} />,
-    );
+    const component = renderer.create(<Input {...props} style={customStyle} placeholder="Text Area" multiline numberOfLines={8} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

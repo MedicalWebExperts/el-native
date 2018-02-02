@@ -9,9 +9,7 @@ const propTypes = {
   children: oneOfType([array, object]).isRequired,
 };
 
-const defaultProps = {
-  children: null,
-};
+const defaultProps = {};
 
 const pressPropTypes = {
   /**
@@ -26,7 +24,6 @@ const pressPropTypes = {
 };
 
 const pressDefaultProps = {
-  children: null,
   onPress: () => {},
 };
 

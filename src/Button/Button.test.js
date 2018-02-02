@@ -1,84 +1,106 @@
 /* global describe it expect jest:true */
 import React from 'react';
-import renderer from 'react-test-renderer';
-
+import { shallow } from 'enzyme';
 import Button from './Button';
+import Icon from '../Icon/Icon';
 
-const styles = {
-  backgroundColor: '#FF0000',
-};
+import {
+  shouldHaveText,
+  shouldHaveComponent,
+  shouldSimulateOnPress,
+  shouldHaveStyles,
+} from '../utils/tests';
+import Theme from '../Theme';
 
-describe('Button Snapshots', () => {
-  it('should render a Button', () => {
-    const component = renderer.create(<Button onPress={() => false} />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+const theme = Theme.getTheme();
+const styles = theme.button;
+
+describe('Button', () => {
+  it('should render a text', () => {
+    shouldHaveText(<Button onPress={() => null} text="LOGIN" />, 'LOGIN');
   });
-  it('should render a Button disabled', () => {
-    const component = renderer.create(<Button text="DISABLED" disabled onPress={() => false} />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should be disabled', () => {
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" disabled />);
+    expect(wrapper.props().disabled).toBeTruthy();
   });
-  it('should render a Button with custom styles', () => {
-    const component = renderer.create(
-      <Button text="STYLED" onPress={() => false} style={styles} />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should have disabled styles', () => {
+    const defaultStyles = styles.default;
+    const disabledStyles = styles.disabled;
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" disabled />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...disabledStyles });
   });
-  it('should render a Button block', () => {
-    const component = renderer.create(<Button text="BLOCK" onPress={() => false} block />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should have background styles', () => {
+    const defaultStyles = styles.default;
+    const bgStyles = { backgroundColor: 'red' };
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" backgroundStyles={bgStyles} />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...bgStyles });
   });
-  it('should render a transparent Button', () => {
-    const component = renderer.create(
-      <Button text="TRANSPARENT" onPress={() => false} transparent />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should be block', () => {
+    const defaultStyles = styles.default;
+    const blockStyles = { width: '100%' };
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" block />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...blockStyles });
   });
-  it('should render a rounded Button', () => {
-    const component = renderer.create(
-      <Button icon="ios-basketball" onPress={() => false} roundedDimensions={40} />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should be transparent', () => {
+    const defaultStyles = styles.default;
+    const transparentStyles = { backgroundColor: 'transparent', elevation: 0 };
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" transparent />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...transparentStyles });
   });
-  it('should render an icon Button', () => {
-    const component = renderer.create(<Button onPress={() => false} icon="ios-basketball" />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should be outlined', () => {
+    const defaultStyles = styles.default;
+    const customStyles = { backgroundColor: 'transparent', elevation: 1 };
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" outline />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...customStyles });
   });
-  it('should render a Button with a left icon', () => {
-    const component = renderer.create(
-      <Button text="LOGIN" onPress={() => false} iconLeft="ios-basketball" />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should be rounded', () => {
+    const roundedDimensions = 40;
+    const defaultStyles = styles.default;
+    const customStyles = {
+      width: roundedDimensions,
+      height: roundedDimensions,
+      borderRadius: parseInt(roundedDimensions / 2, 10),
+    };
+
+    const wrapper = shallow(<Button onPress={() => null} text="LOGIN" roundedDimensions={40} />);
+
+    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...customStyles });
   });
-  it('should render a Button with a right button', () => {
-    const component = renderer.create(
-      <Button text="LOGIN" onPress={() => false} iconRight="ios-basketball" />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should render an Icon', () => {
+    shouldHaveComponent(<Button onPress={() => null} icon="ios-basketball" />, Icon);
   });
-  it('should render a Button with a spinner', () => {
-    const component = renderer.create(<Button onPress={() => false} processing />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should render an Left Icon', () => {
+    shouldHaveComponent(<Button onPress={() => null} iconLeft="ios-basketball" />, Icon);
   });
-  it('should render a Button with a spinner and text', () => {
-    const component = renderer.create(
-      <Button text="LOADING..." onPress={() => false} processing />,
-    );
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should render an Right Icon', () => {
+    shouldHaveComponent(<Button onPress={() => null} iconRight="ios-basketball" />, Icon);
   });
-  it('should render a outline Button', () => {
-    const component = renderer.create(<Button text="OUTLINE" onPress={() => false} outline />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+
+  it('should render a Spinner', () => {
+    shouldHaveComponent(<Button onPress={() => null} processing />, 'ActivityIndicator');
+  });
+
+  test('should call the onPress', () => {
+    shouldSimulateOnPress(<Button onPress={() => null} />);
   });
 });
