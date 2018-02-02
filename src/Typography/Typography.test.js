@@ -29,14 +29,12 @@ describe('H1 Snapshots', () => {
   });
 
   it('should apply custom styles to H1', () => {
-    const component = renderer.create(
-      <H1
-        {...props}
-        style={{
+    const component = renderer.create(<H1
+      {...props}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -56,14 +54,12 @@ describe('H2 Snapshots', () => {
   });
 
   it('should apply custom styles to H2', () => {
-    const component = renderer.create(
-      <H2
-        {...props}
-        style={{
+    const component = renderer.create(<H2
+      {...props}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -83,14 +79,12 @@ describe('H3 Snapshots', () => {
   });
 
   it('should apply custom styles to H3', () => {
-    const component = renderer.create(
-      <H3
-        {...props}
-        style={{
+    const component = renderer.create(<H3
+      {...props}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -110,14 +104,12 @@ describe('H4 Snapshots', () => {
   });
 
   it('should apply custom styles to H4', () => {
-    const component = renderer.create(
-      <H4
-        {...props}
-        style={{
+    const component = renderer.create(<H4
+      {...props}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -137,14 +129,12 @@ describe('H5 Snapshots', () => {
   });
 
   it('should apply custom styles to H5', () => {
-    const component = renderer.create(
-      <H5
-        {...props}
-        style={{
+    const component = renderer.create(<H5
+      {...props}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
@@ -164,14 +154,12 @@ describe('Text Snapshots', () => {
   });
 
   it('should apply custom styles to Text', () => {
-    const component = renderer.create(
-      <Text
-        {...textProps}
-        style={{
+    const component = renderer.create(<Text
+      {...textProps}
+      style={{
           color: 'green',
         }}
-      />,
-    );
+    />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

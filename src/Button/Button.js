@@ -151,7 +151,9 @@ const renderContent = (text, disabled, icon, iconLeft, iconRight, txtStyles, pro
 };
 
 const Button = (props) => {
-  const { text, disabled, icon, iconLeft, iconRight, processing } = props;
+  const {
+    text, disabled, icon, iconLeft, iconRight, processing,
+  } = props;
   let buttonStyles = styles.default;
 
   if (props.block) {

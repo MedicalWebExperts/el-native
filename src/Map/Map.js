@@ -2,15 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import qs from 'qs';
-import {
-  View,
-  Image,
-  Text,
-  Dimensions,
-  Platform,
-  TouchableHighlight,
-  Linking,
-} from 'react-native';
+import { View, Image, Text, Dimensions, Platform, TouchableHighlight, Linking } from 'react-native';
 
 import Theme from '../Theme';
 
@@ -70,7 +62,7 @@ export default function Map(props) {
 
   const googleStaticMapUri = () => {
     const baseUrl = 'https://maps.googleapis.com/maps/api/staticmap';
-    const apiKey = props.apiKey;
+    const { apiKey } = props;
     const params = {
       markers: [props.latitude, props.longitude].join(','),
       maptype: props.maptype,
@@ -84,7 +76,8 @@ export default function Map(props) {
   };
 
   const handleOnPress = () => {
-    const generateIos = () => `https://maps.apple.com/?q=${props.latitude},${props.longitude}&z=${props.zoom}`;
+    const generateIos = () =>
+      `https://maps.apple.com/?q=${props.latitude},${props.longitude}&z=${props.zoom}`;
     const generateAndroid = () => `geo:${props.latitude},${props.longitude}`;
 
     const url = Platform.select({
@@ -92,16 +85,19 @@ export default function Map(props) {
       android: generateAndroid,
     })();
 
-    Linking.canOpenURL(url).then((supported) => {
-      if (!supported) {
-        console.error(`Can't handle url: ${url}`);
-        return;
-      }
-      Linking.openURL(url);
-    }).catch(err => console.error('An error occurred', err));
+    Linking.canOpenURL(url)
+      .then((supported) => {
+        if (!supported) {
+          console.error(`Can't handle url: ${url}`);
+          return;
+        }
+        Linking.openURL(url);
+      })
+      .catch(err => console.error('An error occurred', err));
   };
 
-  const onPress = (props.onPress && typeof props.onPress === 'function') ? props.onPress : handleOnPress;
+  const onPress =
+    props.onPress && typeof props.onPress === 'function' ? props.onPress : handleOnPress;
 
   const renderButton = () => (
     <TouchableHighlight
@@ -109,9 +105,7 @@ export default function Map(props) {
       underlayColor={props.underlayColor}
       style={{ ...styles.button, ...props.style.button }}
     >
-      <View>
-        {props.button || <Text>Navigate</Text>}
-      </View>
+      <View>{props.button || <Text>Navigate</Text>}</View>
     </TouchableHighlight>
   );
 

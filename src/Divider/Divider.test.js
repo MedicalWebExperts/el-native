@@ -32,9 +32,9 @@ describe('Divider Snapshots', () => {
   });
 
   it('should render a Divider with custom colors', () => {
+    // eslint-disable-next-line
     const component = renderer.create(
-      <Divider color={customColor} primaryColor={customPrimaryColor} />,
-    );
+      <Divider color={customColor} primaryColor={customPrimaryColor} />);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
