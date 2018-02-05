@@ -12,4 +12,8 @@ export default {
     shadowOpacity: 0.8,
     shadowRadius: 0,
   },
+  media: {
+    width: '100%',
+    height: '100%',
+  },
 };

@@ -8,7 +8,7 @@ import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
-import Card from './Card/Card';
+import { Card, CardHeader, CardBody, CardFooter, CardMedia } from './Card/Card';
 import ComposedRow from './ComposedRow/ComposedRow';
 
 export {
@@ -30,5 +30,9 @@ export {
   Input,
   Checkbox,
   Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardMedia,
   ComposedRow,
 };

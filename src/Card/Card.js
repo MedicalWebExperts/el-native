@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebView, Image, View } from 'react-native';
-import { bool, object, string, func, number } from 'prop-types';
+import { bool, object, string, func, number, node } from 'prop-types';
 
 import Theme from '../Theme';
 import ComposedRow from '../ComposedRow/ComposedRow';
@@ -12,6 +12,7 @@ const styles = theme.card;
 const cardPropTypes = {
   raised: bool,
   style: object,
+  children: node.isRequired,
 };
 
 const cardHeaderPropTypes = {
@@ -29,23 +30,22 @@ const cardHeaderPropTypes = {
 const cardBodyPropTypes = {
   style: object,
   size: number,
+  children: node.isRequired,
 };
 
 const cardFooterPropTypes = {
-  avatar: string,
-  avatarSize: string,
   leftIcon: string,
   leftIconStyle: object,
+  leftIconSize: number,
   style: object,
   centerIcon: string,
   centerText: string,
-  rightIcon: string,
-  rightIconOnPress: func,
 };
 
 const cardMediaPropTypes = {
   image: string,
   video: string,
+  style: object,
 };
 
 const cardDefaultProps = {
@@ -55,7 +55,7 @@ const cardDefaultProps = {
 
 const cardHeaderDefaultProps = {
   avatar: '',
-  avatarSize: '',
+  avatarSize: 'small',
   leftIcon: '',
   leftIconStyle: {},
   style: {},
@@ -71,27 +71,27 @@ const cardBodyDefaultProps = {
 };
 
 const cardFooterDefaultProps = {
-  avatar: '',
-  avatarSize: '',
   leftIcon: '',
   leftIconStyle: {},
+  leftIconSize: 30,
   style: {},
   centerIcon: '',
   centerText: '',
-  rightIcon: '',
-  rightIconOnPress: () => {},
 };
 
 const cardMediaDefaultProps = {
   image: '',
   video: '',
+  style: {},
 };
 
 const Card = props => (
   <View
     style={[styles.card, props.raised && styles.cardRaised, props.style]}
     elevation={props.raised && 8}
-  />
+  >
+    {props.children}
+  </View>
 );
 
 const CardHeader = props => (
@@ -108,27 +108,36 @@ const CardHeader = props => (
   />
 );
 
-const CardBody = props => <Row style={props.style} size={props.size} />;
+const CardBody = props => (
+  <Row style={props.style} size={props.size}>
+    {props.children}
+  </Row>
+);
 
 const CardFooter = props => (
   <ComposedRow
-    avatar={props.avatar}
-    avatarSize={props.avatarSize}
     leftIcon={props.leftIcon}
     leftIconStyle={props.leftIconStyle}
+    leftIconSize={props.leftIconSize}
     rowStyle={props.style}
     subTitleIcon={props.centerIcon}
     subTitleText={props.centerText}
-    rightIcon={props.rightIcon}
-    rightIconOnPress={props.rightIconOnPress}
   />
 );
 
 const CardMedia = props => (
   <Row>
-    {!!props.video &&
-      !props.image && <WebView source={{ uri: props.video }} style={styles.webView} />}
-    {!!props.image && !props.video && <Image style={styles.image} source={{ uri: props.image }} />}
+    {props.video ? (
+      <WebView
+        source={{ uri: props.video }}
+        style={{ ...styles.media, ...props.style }}
+      />
+    ) : (
+      <Image
+        source={{ uri: props.image }}
+        style={{ ...styles.media, ...props.style }}
+      />
+    )}
   </Row>
 );
 
@@ -144,4 +153,4 @@ CardBody.defaultProps = cardBodyDefaultProps;
 CardFooter.defaultProps = cardFooterDefaultProps;
 CardMedia.defaultProps = cardMediaDefaultProps;
 
-export default { Card, CardHeader, CardBody, CardFooter, CardMedia };
+export { Card, CardHeader, CardBody, CardFooter, CardMedia };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string, oneOfType, object } from 'prop-types';
+import { func, string, oneOfType, object, number } from 'prop-types';
 
 import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
@@ -25,14 +25,15 @@ const propTypes = {
   rightIconOnPress: func,
   rightText: string,
   leftIconStyle: object,
+  leftIconSize: number,
   subTitleIconStyle: object,
-  rightIconStyle: object
+  rightIconStyle: object,
 };
 const defaultProps = {
   rowStyle: {},
   onPress: () => {},
   avatar: '',
-  avatarSize: '',
+  avatarSize: 'medium',
   leftIcon: '',
   title: '',
   subTitle: '',
@@ -42,8 +43,9 @@ const defaultProps = {
   rightIconOnPress: () => {},
   rightText: '',
   leftIconStyle: {},
+  leftIconSize: 40,
   subTitleIconStyle: {},
-  rightIconStyle: {}
+  rightIconStyle: {},
 };
 
 const ComposedRow = props => (
@@ -54,7 +56,11 @@ const ComposedRow = props => (
           <Avatar source={props.avatar} size={props.avatarSize} />
         )}
         {!!props.leftIcon && (
-          <Icon style={props.leftIconStyle} size={40} name={props.leftIcon} />
+          <Icon
+            style={props.leftIconStyle}
+            size={props.leftIconSize}
+            name={props.leftIcon}
+          />
         )}
       </Col>
     )}
@@ -63,26 +69,35 @@ const ComposedRow = props => (
       !!props.subTitleIcon ||
       !!props.subTitleText) && (
       <Col size={3}>
-        <Row size={2} style={styles.leftContent}>
-          {!!props.title && <H2 numberOfLines={1}>{props.title}</H2>}
-        </Row>
-        <Row size={3} style={styles.leftContent}>
-          {!!props.subTitle && <H4>{props.subTitle}</H4>}
-        </Row>
-        <Row size={2} style={styles.leftContent}>
-          <Col size={1}>
+        {!!props.title && (
+          <Row size={2} style={styles.leftContent}>
+            <H2 numberOfLines={1}>{props.title}</H2>
+          </Row>
+        )}
+        {!!props.subTitle && (
+          <Row size={3} style={styles.leftContent}>
+            <H4>{props.subTitle}</H4>
+          </Row>
+        )}
+
+        {(!!props.subTitleIcon || !!props.subTitleText) && (
+          <Row size={2} style={styles.leftContent}>
             {!!props.subTitleIcon && (
-              <Icon
-                style={props.subTitleIconStyle}
-                size={20}
-                name={props.subTitleIcon}
-              />
+              <Col size={1}>
+                <Icon
+                  style={props.subTitleIconStyle}
+                  size={20}
+                  name={props.subTitleIcon}
+                />
+              </Col>
             )}
-          </Col>
-          <Col size={6}>
-            {!!props.subTitleText && <H5>{props.subTitleText}</H5>}
-          </Col>
-        </Row>
+            {!!props.subTitleText && (
+              <Col size={6}>
+                <H5>{props.subTitleText}</H5>
+              </Col>
+            )}
+          </Row>
+        )}
       </Col>
     )}
     {(!!props.rightIcon || !!props.rightText) && (
@@ -91,7 +106,7 @@ const ComposedRow = props => (
           <Row
             style={{
               ...styles.centeredContent,
-              alignItems: props.rightText ? 'flex-end' : 'center'
+              alignItems: props.rightText ? 'flex-end' : 'center',
             }}
           >
             {!!props.rightIcon &&
@@ -109,7 +124,7 @@ const ComposedRow = props => (
           <Row
             style={{
               ...styles.centeredContent,
-              alignItems: props.rightIcon ? 'flex-start' : 'center'
+              alignItems: props.rightIcon ? 'flex-start' : 'center',
             }}
           >
             {!!props.rightText && <H5 numberOfLines={1}>{props.rightText}</H5>}
