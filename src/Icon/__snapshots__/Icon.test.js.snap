@@ -32,7 +32,7 @@ exports[`Icon Snapshots should render a simple Icon 1`] = `
   style={
     Array [
       Object {
-        "color": "white",
+        "color": "#FAFAFA",
         "fontSize": 16,
       },
       undefined,

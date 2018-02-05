@@ -14,7 +14,8 @@ const styles = theme.composedRow;
 const propTypes = {
   rowStyle: object,
   onPress: func,
-  avatar: oneOfType(string, func),
+  avatar: oneOfType([string, func]),
+  avatarSize: string,
   leftIcon: string,
   title: string,
   subTitle: string,
@@ -23,14 +24,15 @@ const propTypes = {
   rightIcon: string,
   rightIconOnPress: func,
   rightText: string,
-  iconStyle: object,
+  leftIconStyle: object,
   subTitleIconStyle: object,
-  rightIconStyle: object,
+  rightIconStyle: object
 };
 const defaultProps = {
   rowStyle: {},
   onPress: () => {},
   avatar: '',
+  avatarSize: '',
   leftIcon: '',
   title: '',
   subTitle: '',
@@ -39,20 +41,27 @@ const defaultProps = {
   rightIcon: '',
   rightIconOnPress: () => {},
   rightText: '',
-  iconStyle: {},
+  leftIconStyle: {},
   subTitleIconStyle: {},
-  rightIconStyle: {},
+  rightIconStyle: {}
 };
 
 const ComposedRow = props => (
   <Row style={props.rowStyle} onPress={props.onPress}>
     {(!!props.avatar || !!props.leftIcon) && (
       <Col size={1} style={styles.centeredContent}>
-        {!!props.avatar && <Avatar source={props.avatar} />}
-        {!!props.leftIcon && <Icon style={props.iconStyle} size={40} name={props.leftIcon} />}
+        {!!props.avatar && (
+          <Avatar source={props.avatar} size={props.avatarSize} />
+        )}
+        {!!props.leftIcon && (
+          <Icon style={props.leftIconStyle} size={40} name={props.leftIcon} />
+        )}
       </Col>
     )}
-    {(!!props.title || !!props.subTitle || !!props.subTitleIcon || !!props.subTitleText) && (
+    {(!!props.title ||
+      !!props.subTitle ||
+      !!props.subTitleIcon ||
+      !!props.subTitleText) && (
       <Col size={3}>
         <Row size={2} style={styles.leftContent}>
           {!!props.title && <H2 numberOfLines={1}>{props.title}</H2>}
@@ -63,10 +72,16 @@ const ComposedRow = props => (
         <Row size={2} style={styles.leftContent}>
           <Col size={1}>
             {!!props.subTitleIcon && (
-              <Icon style={props.subTitleIconStyle} size={20} name={props.subTitleIcon} />
+              <Icon
+                style={props.subTitleIconStyle}
+                size={20}
+                name={props.subTitleIcon}
+              />
             )}
           </Col>
-          <Col size={6}>{!!props.subTitleText && <H5>{props.subTitleText}</H5>}</Col>
+          <Col size={6}>
+            {!!props.subTitleText && <H5>{props.subTitleText}</H5>}
+          </Col>
         </Row>
       </Col>
     )}
@@ -76,7 +91,7 @@ const ComposedRow = props => (
           <Row
             style={{
               ...styles.centeredContent,
-              alignItems: props.rightText ? 'flex-end' : 'center',
+              alignItems: props.rightText ? 'flex-end' : 'center'
             }}
           >
             {!!props.rightIcon &&
@@ -94,7 +109,7 @@ const ComposedRow = props => (
           <Row
             style={{
               ...styles.centeredContent,
-              alignItems: props.rightIcon ? 'flex-start' : 'center',
+              alignItems: props.rightIcon ? 'flex-start' : 'center'
             }}
           >
             {!!props.rightText && <H5 numberOfLines={1}>{props.rightText}</H5>}

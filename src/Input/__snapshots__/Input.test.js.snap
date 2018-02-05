@@ -17,24 +17,25 @@ exports[`Input Snapshots should render a Text Area Input 1`] = `
     numberOfLines={8}
     onChangeText={[Function]}
     placeholder="Text Area"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
-          "color": undefined,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -43,7 +44,7 @@ exports[`Input Snapshots should render a Text Area Input 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -69,27 +70,28 @@ exports[`Input Snapshots should render a rounded Input 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
+          "borderColor": "#212121",
           "borderRadius": 20,
           "borderWidth": 1,
-          "color": undefined,
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -98,7 +100,7 @@ exports[`Input Snapshots should render a rounded Input 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -124,27 +126,28 @@ exports[`Input Snapshots should render a rounded Input with error 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
+          "borderColor": "#E64A19",
           "borderRadius": 20,
           "borderWidth": 1,
-          "color": undefined,
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -153,7 +156,7 @@ exports[`Input Snapshots should render a rounded Input with error 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -181,27 +184,28 @@ exports[`Input Snapshots should render a squared Input 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
+          "borderColor": "#212121",
           "borderRadius": 5,
           "borderWidth": 1,
-          "color": undefined,
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -210,7 +214,7 @@ exports[`Input Snapshots should render a squared Input 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -236,27 +240,28 @@ exports[`Input Snapshots should render a squared Input with error 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
+          "borderColor": "#E64A19",
           "borderRadius": 5,
           "borderWidth": 1,
-          "color": undefined,
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -265,7 +270,7 @@ exports[`Input Snapshots should render a squared Input with error 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -293,22 +298,23 @@ exports[`Input Snapshots should render an Input default 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
-          "color": undefined,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "textAlign": "left",
-          "width": 750,
         },
         Object {},
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -317,7 +323,7 @@ exports[`Input Snapshots should render an Input default 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -343,22 +349,23 @@ exports[`Input Snapshots should render an Input default with error 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
-          "color": undefined,
+          "borderColor": "#E64A19",
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "textAlign": "left",
-          "width": 750,
         },
         Object {},
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -367,7 +374,7 @@ exports[`Input Snapshots should render an Input default with error 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
@@ -395,24 +402,25 @@ exports[`Input Snapshots should render an Input with custom styling 1`] = `
     numberOfLines={4}
     onChangeText={[Function]}
     placeholder="Placeholder text"
-    placeholderTextColor={undefined}
+    placeholderTextColor="#212121"
     selectTextOnFocus={false}
     style={
       Array [
         Object {
           "borderBottomWidth": 1,
-          "borderColor": undefined,
-          "color": undefined,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
           "marginTop": 4,
-          "minHeight": 40,
+          "minWidth": "100%",
           "textAlign": "left",
-          "width": 750,
         },
         Object {
           "borderColor": "#2196F3",
         },
       ]
     }
+    underlineColorAndroid="transparent"
     value=""
   />
   <Text
@@ -421,7 +429,7 @@ exports[`Input Snapshots should render an Input with custom styling 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": undefined,
+        "color": "#E64A19",
         "fontSize": 12,
         "paddingVertical": 4,
       }
