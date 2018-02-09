@@ -1,12 +1,26 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import { Card } from './Card';
+import { Text } from '../Typography/Typography';
+import {
+  // shouldHaveText,
+  // shouldHaveComponent,
+  // shouldSimulateOnPress,
+  shouldHaveStyles,
+} from '../utils/tests';
+import Theme from '../Theme';
 
-describe('Card Snapshots', () => {
-  it('should render a simple Card', () => {
-    const component = renderer.create(<Card />);
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
+const theme = Theme.getTheme();
+const styles = theme.card;
+
+describe('Card', () => {
+  it('should have raised styles', () => {
+    const defaultStyles = styles.default;
+    const { raised } = styles;
+
+    const wrapper = shallow(<Card raised><Text>Card</Text></Card>);
+
+    shouldHaveStyles(wrapper, { ...defaultStyles, ...raised });
   });
 });

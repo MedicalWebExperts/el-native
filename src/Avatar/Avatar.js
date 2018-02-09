@@ -35,7 +35,7 @@ const propTypes = {
   /**
    * The prop "source" is the main prop, and expects a string or a uri to show the image in Avatar.
    */
-  source: string,
+  source: string.isRequired,
 };
 
 const defaultProps = {
@@ -44,7 +44,6 @@ const defaultProps = {
   borderColor: '',
   borderThickness: 0,
   placeholder: {},
-  source: '',
 };
 
 const getSize = (size) => {

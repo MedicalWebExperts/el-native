@@ -2,14 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CardMedia
-} from '../../../src';
-import { Text } from '../../../src';
+import { Card, CardHeader, CardBody, CardFooter, CardMedia, Text } from '../../../src';
 import colors from '../styles/colors';
 
 const imageUrl = 'https://wallscover.com/images/gunther-wallpaper-2.jpg';
@@ -18,7 +11,12 @@ const videoUrl = 'https://www.youtube.com/watch?v=z13qnzUQwuI';
 
 const styles = {
   backgroundColor: colors.jade,
-  maxHeight: 200
+  maxHeight: 200,
+};
+
+const completeCardStyles = {
+  backgroundColor: colors.jade,
+  maxHeight: 300,
 };
 
 storiesOf('Card', module)
@@ -69,7 +67,7 @@ storiesOf('Card', module)
     </Card>
   ))
   .add('Card with all internal components', () => (
-    <Card style={styles}>
+    <Card style={completeCardStyles}>
       <CardHeader
         avatar={imageUrl}
         title="Title of CardHeader"
@@ -78,7 +76,9 @@ storiesOf('Card', module)
           console.warn('Icon Pressed!');
         }}
       />
-      <CardMedia image={imageUrl} />
+      <CardBody>
+        <CardMedia image={imageUrl} />
+      </CardBody>
       <CardFooter leftIcon="ios-basketball" centerText="Text of CardFooter" />
     </Card>
   ));

@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebView, Image, View } from 'react-native';
-import { bool, object, string, func, number, node } from 'prop-types';
+import { bool, object, string, func, number, node, oneOf } from 'prop-types';
 
 import Theme from '../Theme';
 import ComposedRow from '../ComposedRow/ComposedRow';
@@ -10,35 +10,98 @@ const theme = Theme.getTheme();
 const styles = theme.card;
 
 const cardPropTypes = {
+  /**
+   * Gives the Card a raised style by adding shadow
+   */
   raised: bool,
+  /**
+   * Custom styling for Card
+   */
   style: object,
+  /**
+   * Children expected inside the Card.
+   */
   children: node.isRequired,
 };
 
 const cardHeaderPropTypes = {
+  /**
+   * Avatar shown in the left side of the CardHeader.
+   */
   avatar: string,
-  avatarSize: string,
+  /**
+   * Avatar size. Default: 'small'.
+   */
+  avatarSize: oneOf(['small', 'medium', 'large']),
+  /**
+   * Passing this prop instead of avatar, expects an Icon.
+   */
   leftIcon: string,
+  /**
+   * Custom styles for the leftIcon.
+   */
   leftIconStyle: object,
+  /**
+   * Custom style for CardHeader.
+   */
   style: object,
+  /**
+   * Main title of CardHeader.
+   */
   title: string,
+  /**
+   * Small text underneath the title.
+   */
   subTitle: string,
+  /**
+   * This props expects an Icon that could lead to an action.
+   */
   rightIcon: string,
+  /**
+   * Function to execute when rightIcon is pressed.
+   */
   rightIconOnPress: func,
 };
 
 const cardBodyPropTypes = {
+  /**
+   * Custom style for CardBody.
+   */
   style: object,
+  /**
+   * Size in number for the flex property in CardBody.
+   */
   size: number,
+  /**
+   * Children expected inside the CardBody.
+   */
   children: node.isRequired,
 };
 
 const cardFooterPropTypes = {
+  /**
+   * Expects an Icon to be shown at the left of CardFooter.
+   */
   leftIcon: string,
+  /**
+   * Custom styles for leftIcon (mainly used for color).
+   */
   leftIconStyle: object,
+  /**
+   * Size in number for the Icon. Default: 30.
+   */
   leftIconSize: number,
+  /**
+   * Custom styles for CardFooter.
+   */
   style: object,
+  /**
+   * Icon to show on the center of CardFooter. Is always small.
+   */
   centerIcon: string,
+  /**
+   * Text to show at the right of the Icon.
+   */
   centerText: string,
 };
 
@@ -87,7 +150,7 @@ const cardMediaDefaultProps = {
 
 const Card = props => (
   <View
-    style={[styles.card, props.raised && styles.cardRaised, props.style]}
+    style={[styles.default, props.raised && styles.raised, props.style && props.style]}
     elevation={props.raised && 8}
   >
     {props.children}
@@ -109,7 +172,7 @@ const CardHeader = props => (
 );
 
 const CardBody = props => (
-  <Row style={props.style} size={props.size}>
+  <Row style={{ ...styles.body, ...props.style }} size={props.size}>
     {props.children}
   </Row>
 );
@@ -128,15 +191,9 @@ const CardFooter = props => (
 const CardMedia = props => (
   <Row>
     {props.video ? (
-      <WebView
-        source={{ uri: props.video }}
-        style={{ ...styles.media, ...props.style }}
-      />
+      <WebView source={{ uri: props.video }} style={{ ...styles.media, ...props.style }} />
     ) : (
-      <Image
-        source={{ uri: props.image }}
-        style={{ ...styles.media, ...props.style }}
-      />
+      <Image source={{ uri: props.image }} style={{ ...styles.media, ...props.style }} />
     )}
   </Row>
 );
