@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string, oneOfType, object, number } from 'prop-types';
+import { func, string, object, number, oneOf } from 'prop-types';
 
 import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
@@ -12,22 +12,70 @@ const theme = Theme.getTheme();
 const styles = theme.composedRow;
 
 const propTypes = {
+  /**
+   * Custom styling for ComposedRow
+   */
   rowStyle: object,
+  /**
+   * Function to execute when ComposedRow is pressed
+   */
   onPress: func,
-  avatar: oneOfType([string, func]),
-  avatarSize: string,
+  /**
+   * Avatar image to show on the left of the ComposedRow
+   */
+  avatar: string,
+  /**
+   * Size of the Avatar in string. Default: "medium".
+   */
+  avatarSize: oneOf(['small', 'medium', 'large']),
+  /**
+   * When present expects a string indicating which icon to show on the left (instead of Avatar).
+   */
   leftIcon: string,
-  title: string,
-  subTitle: string,
-  subTitleIcon: string,
-  subTitleText: string,
-  rightIcon: string,
-  rightIconOnPress: func,
-  rightText: string,
+  /**
+   * Custom styles for leftIcon (mainly used for color)
+   */
   leftIconStyle: object,
+  /**
+   * Size of leftIcon in number. Default: 40
+   */
   leftIconSize: number,
+  /**
+   * Main text of ComposedRow
+   */
+  title: string,
+  /**
+   * Secondary text of ComposedRow
+   */
+  subTitle: string,
+  /**
+   * Little Icon shown under the subtitle
+   */
+  subTitleIcon: string,
+  /**
+   * Custom styles for subTitleIcon
+   */
   subTitleIconStyle: object,
+  /**
+   * Small font text shown under subtitle and right to subTitleIcon
+   */
+  subTitleText: string,
+  /**
+   * Big action Icon shown on the extreme right of ComposedRow
+   */
+  rightIcon: string,
+  /**
+   * Custom style for rightIcons
+   */
   rightIconStyle: object,
+  /**
+   * Function to execute when rightIcon is pressed
+   */
+  rightIconOnPress: func,
+  /**
+   * Small font text shown below rightIcon
+   */
+  rightText: string,
 };
 const defaultProps = {
   rowStyle: {},
@@ -52,22 +100,13 @@ const ComposedRow = props => (
   <Row style={props.rowStyle} onPress={props.onPress}>
     {(!!props.avatar || !!props.leftIcon) && (
       <Col size={1} style={styles.centeredContent}>
-        {!!props.avatar && (
-          <Avatar source={props.avatar} size={props.avatarSize} />
-        )}
+        {!!props.avatar && <Avatar source={props.avatar} size={props.avatarSize} />}
         {!!props.leftIcon && (
-          <Icon
-            style={props.leftIconStyle}
-            size={props.leftIconSize}
-            name={props.leftIcon}
-          />
+          <Icon style={props.leftIconStyle} size={props.leftIconSize} name={props.leftIcon} />
         )}
       </Col>
     )}
-    {(!!props.title ||
-      !!props.subTitle ||
-      !!props.subTitleIcon ||
-      !!props.subTitleText) && (
+    {(!!props.title || !!props.subTitle || !!props.subTitleIcon || !!props.subTitleText) && (
       <Col size={3}>
         {!!props.title && (
           <Row size={2} style={styles.leftContent}>
@@ -84,11 +123,7 @@ const ComposedRow = props => (
           <Row size={2} style={styles.leftContent}>
             {!!props.subTitleIcon && (
               <Col size={1}>
-                <Icon
-                  style={props.subTitleIconStyle}
-                  size={20}
-                  name={props.subTitleIcon}
-                />
+                <Icon style={props.subTitleIconStyle} size={20} name={props.subTitleIcon} />
               </Col>
             )}
             {!!props.subTitleText && (
