@@ -35,7 +35,7 @@ const propTypes = {
   /**
    * The prop "source" is the main prop, and expects a string or a uri to show the image in Avatar.
    */
-  source: string.isRequired,
+  source: string,
 };
 
 const defaultProps = {
@@ -44,6 +44,7 @@ const defaultProps = {
   borderColor: '',
   borderThickness: 0,
   placeholder: {},
+  source: '',
 };
 
 const getSize = (size) => {
@@ -52,7 +53,24 @@ const getSize = (size) => {
   } else if (size === 'small') {
     return styles.avatarSmall;
   }
-  return false;
+  return styles.default;
+};
+
+const getStyles = (props) => {
+  let fullStyles = { ...styles.default };
+  if (props.borderThickness) {
+    fullStyles = Object.assign(fullStyles, { borderWidth: props.borderThickness });
+  }
+  if (props.borderColor) {
+    fullStyles = Object.assign(fullStyles, { borderColor: props.borderColor });
+  }
+  if (props.size) {
+    fullStyles = Object.assign(fullStyles, getSize(props.size));
+  }
+  if (props.square) {
+    fullStyles = Object.assign(fullStyles, styles.avatarSquare);
+  }
+  return fullStyles;
 };
 
 /**
@@ -62,13 +80,7 @@ const getSize = (size) => {
 const Avatar = props => (
   <Image
     source={props.source ? { uri: props.source } : props.placeholder}
-    style={[
-      styles.default,
-      !!props.borderThickness && { borderWidth: props.borderThickness },
-      !!props.borderColor && { borderColor: props.borderColor },
-      !!props.size && getSize(props.size),
-      !!props.square && styles.avatarSquare,
-    ]}
+    style={getStyles(props)}
   />
 );
 

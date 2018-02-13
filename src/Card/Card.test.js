@@ -17,10 +17,11 @@ const styles = theme.card;
 describe('Card', () => {
   it('should have raised styles', () => {
     const defaultStyles = styles.default;
-    const { raised } = styles;
+    const raisedStyles = styles.raised;
 
     const wrapper = shallow(<Card raised><Text>Card</Text></Card>);
+    console.log('WRAPPER', wrapper.props());
 
-    shouldHaveStyles(wrapper, { ...defaultStyles, ...raised });
+    shouldHaveStyles(wrapper, { ...defaultStyles, ...raisedStyles });
   });
 });

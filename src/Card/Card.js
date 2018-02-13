@@ -148,11 +148,19 @@ const cardMediaDefaultProps = {
   style: {},
 };
 
+const getStyles = (props) => {
+  let fullStyles = { ...styles.default };
+  if (props.raised) {
+    fullStyles = Object.assign(fullStyles, styles.raised);
+  }
+  if (props.style) {
+    fullStyles = Object.assign(fullStyles, props.style);
+  }
+  return fullStyles;
+};
+
 const Card = props => (
-  <View
-    style={[styles.default, props.raised && styles.raised, props.style && props.style]}
-    elevation={props.raised && 8}
-  >
+  <View style={getStyles(props)} elevation={props.raised && 8}>
     {props.children}
   </View>
 );
