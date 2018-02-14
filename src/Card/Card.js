@@ -17,7 +17,7 @@ const cardPropTypes = {
   /**
    * Custom styling for Card
    */
-  style: object,
+  style: object, // eslint-disable-line react/no-unused-prop-types
   /**
    * Children expected inside the Card.
    */

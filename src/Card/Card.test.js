@@ -20,8 +20,6 @@ describe('Card', () => {
     const raisedStyles = styles.raised;
 
     const wrapper = shallow(<Card raised><Text>Card</Text></Card>);
-    console.log('WRAPPER', wrapper.props());
-
     shouldHaveStyles(wrapper, { ...defaultStyles, ...raisedStyles });
   });
 });
