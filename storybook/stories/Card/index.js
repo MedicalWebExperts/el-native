@@ -53,7 +53,7 @@ storiesOf('Card', module)
   ))
   .add('Card with Cardfooter', () => (
     <Card style={styles}>
-      <CardFooter leftIcon="ios-basketball" centerText="Text of CardFooter" />
+      <CardFooter leftIcon="ios-basketball" subTitleText="Text of CardFooter" />
     </Card>
   ))
   .add('Card with CardMedia image', () => (
@@ -79,6 +79,6 @@ storiesOf('Card', module)
       <CardBody>
         <CardMedia image={imageUrl} />
       </CardBody>
-      <CardFooter leftIcon="ios-basketball" centerText="Text of CardFooter" />
+      <CardFooter leftIcon="ios-basketball" subTitleText="Text of CardFooter" />
     </Card>
   ));

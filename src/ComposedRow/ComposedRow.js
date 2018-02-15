@@ -15,7 +15,7 @@ const propTypes = {
   /**
    * Custom styling for ComposedRow
    */
-  rowStyle: object,
+  style: object,
   /**
    * Function to execute when ComposedRow is pressed
    */
@@ -78,7 +78,7 @@ const propTypes = {
   rightText: string,
 };
 const defaultProps = {
-  rowStyle: {},
+  style: {},
   onPress: () => {},
   avatar: '',
   avatarSize: 'medium',
@@ -97,7 +97,7 @@ const defaultProps = {
 };
 
 const ComposedRow = props => (
-  <Row style={props.rowStyle} onPress={props.onPress}>
+  <Row style={props.style} onPress={props.onPress}>
     {(!!props.avatar || !!props.leftIcon) && (
       <Col size={1} style={styles.centeredContent}>
         {!!props.avatar && <Avatar source={props.avatar} size={props.avatarSize} />}

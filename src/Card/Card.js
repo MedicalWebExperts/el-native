@@ -98,11 +98,11 @@ const cardFooterPropTypes = {
   /**
    * Icon to show on the center of CardFooter. Is always small.
    */
-  centerIcon: string,
+  subTitleIcon: string,
   /**
    * Text to show at the right of the Icon.
    */
-  centerText: string,
+  subTitleText: string,
 };
 
 const cardMediaPropTypes = {
@@ -138,8 +138,8 @@ const cardFooterDefaultProps = {
   leftIconStyle: {},
   leftIconSize: 30,
   style: {},
-  centerIcon: '',
-  centerText: '',
+  subTitleIcon: '',
+  subTitleText: '',
 };
 
 const cardMediaDefaultProps = {
@@ -171,7 +171,7 @@ const CardHeader = props => (
     avatarSize={props.avatarSize}
     leftIcon={props.leftIcon}
     leftIconStyle={props.leftIconStyle}
-    rowStyle={props.style}
+    style={props.style}
     title={props.title}
     subTitle={props.subTitle}
     rightIcon={props.rightIcon}
@@ -190,9 +190,9 @@ const CardFooter = props => (
     leftIcon={props.leftIcon}
     leftIconStyle={props.leftIconStyle}
     leftIconSize={props.leftIconSize}
-    rowStyle={props.style}
-    subTitleIcon={props.centerIcon}
-    subTitleText={props.centerText}
+    style={props.style}
+    subTitleIcon={props.subTitleIcon}
+    subTitleText={props.subTitleText}
   />
 );
 
