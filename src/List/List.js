@@ -57,6 +57,7 @@ const List = props => (
     onEndReachedThreshold={props.onEndReachedThreshold}
     stickyHeaderIndices={props.stickyHeaderIndices}
     renderItem={props.renderItem}
+    refreshing={!!props.onRefresh}
   />
 );
 

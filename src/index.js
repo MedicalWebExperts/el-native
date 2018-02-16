@@ -10,6 +10,7 @@ import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
 import { Card, CardHeader, CardBody, CardFooter, CardMedia } from './Card/Card';
 import ComposedRow from './ComposedRow/ComposedRow';
+import List from './List/List';
 
 export {
   Map,
@@ -35,4 +36,5 @@ export {
   CardFooter,
   CardMedia,
   ComposedRow,
+  List,
 };

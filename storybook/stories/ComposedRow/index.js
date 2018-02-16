@@ -10,14 +10,14 @@ storiesOf('ComposedRow', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Default', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      style={{ maxHeight: 100, backgroundColor: 'salmon' }}
       title="Title of Composed Row"
       subTitle="Here goes a random a Text as Lorem Ipsum"
     />
   ))
   .add('Clickable Default with Avatar', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      style={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       avatar={imageUrl}
       title="Title of Composed Row"
@@ -26,7 +26,7 @@ storiesOf('ComposedRow', module)
   ))
   .add('All props', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      style={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       avatar={imageUrl}
       title="Title of Composed Row"
@@ -38,7 +38,7 @@ storiesOf('ComposedRow', module)
   ))
   .add('All props with leftIcon instead of Avatar', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      style={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       leftIcon="ios-basketball"
       title="Title of Composed Row"
@@ -50,7 +50,7 @@ storiesOf('ComposedRow', module)
   ))
   .add('All props with rightIcon and rightText', () => (
     <ComposedRow
-      rowStyle={{ maxHeight: 100, backgroundColor: 'salmon' }}
+      style={{ maxHeight: 100, backgroundColor: 'salmon' }}
       onPress={() => {}}
       avatar={imageUrl}
       title="Title of Composed Row"
