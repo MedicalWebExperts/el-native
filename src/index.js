@@ -8,6 +8,7 @@ import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
+import Option from './Option/Option';
 
 export {
   Map,
@@ -27,4 +28,5 @@ export {
   Icon,
   Input,
   Checkbox,
+  Option,
 };
