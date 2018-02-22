@@ -10,7 +10,7 @@
     "test:watch": "TEST=true jest --watch",
     "test:coverage": "TEST=true jest --coverage --silent",
     "lint": "eslint src",
-    "build": "babel src --out-dir dist --ignore '**/*.test.js'",
+    "build": "babel src --out-dir dist --ignore test.js",
     "build:watch": "babel src -w -d dist",
     "prepublishBuild": "npm run build",
     "precommit": "npm run lint",
