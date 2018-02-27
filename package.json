@@ -19,19 +19,19 @@
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
     "android": "adb reverse tcp:7007 tcp:7007 && react-native run-android",
-    "updateDocs":
-      "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
+    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
     "generate": "node generate-component.js"
   },
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.0",
     "react": "16.0.0",
-    "react-native": "0.51.0",
+    "react-native": "^0.51.0",
+    "react-native-linear-gradient": "^2.4.0",
     "react-native-vector-icons": "^4.5.0"
   },
   "devDependencies": {
-    "@storybook/react-native": "^3.3.10",
+    "@storybook/react-native": "^3.3.13",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
@@ -56,12 +56,14 @@
   },
   "peerDependencies": {
     "react": "16.0.0",
-    "react-native": "0.50.1",
+    "react-native": "0.51.0",
     "prop-types": "^15.6.0",
     "react-native-vector-icons": "^4.5.0"
   },
   "jest": {
-    "setupFiles": ["./setupJest.js"],
+    "setupFiles": [
+      "./setupJest.js"
+    ],
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "globals": {
       "__DEV__": true

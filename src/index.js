@@ -8,6 +8,7 @@ import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
+import CircularProgress from './CircularProgress/CircularProgress';
 
 export {
   Map,
@@ -27,4 +28,5 @@ export {
   Icon,
   Input,
   Checkbox,
+  CircularProgress,
 };
