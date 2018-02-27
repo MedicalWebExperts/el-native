@@ -4,6 +4,7 @@ import inputStyles from './components/inputStyles';
 import colors from './colors';
 import mapStyles from './components/mapStyles';
 import typographyStyles from './components/typographyStyles';
+import circularProgressStyles from './components/circularProgressStyles';
 
 export default {
   font: {
@@ -16,4 +17,5 @@ export default {
   input: inputStyles,
   map: mapStyles,
   typography: typographyStyles,
+  circularProgress: circularProgressStyles,
 };
