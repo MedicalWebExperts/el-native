@@ -186,6 +186,7 @@ const Button = (props) => {
       onPress={props.onPress}
       accessibilityLabel={props.accessibilityLabel}
       accessibilityTraits={accessibilityTraits}
+      style={styles.container}
     >
       <View style={{ ...buttonStyles, ...props.backgroundStyles }}>
         {renderContent(

@@ -24,7 +24,8 @@ export default {
     color: colors.gray300,
   },
   container: {
-    alignItems: 'flex-end',
+    width: '100%',
+    alignItems: 'center',
   },
   iconWrapper: {
     flexDirection: 'row',
