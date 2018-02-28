@@ -24,7 +24,6 @@ export default {
     color: colors.gray300,
   },
   container: {
-    width: '100%',
     alignItems: 'center',
   },
   iconWrapper: {

@@ -155,9 +155,11 @@ const Button = (props) => {
     text, disabled, icon, iconLeft, iconRight, processing,
   } = props;
   let buttonStyles = styles.default;
+  let containerStyles = styles.container;
 
   if (props.block) {
     buttonStyles = { ...buttonStyles, ...{ width: '100%' } };
+    containerStyles = { ...containerStyles, ...{ width: '100%' } };
   }
   if (props.transparent) {
     buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 0 } };
@@ -186,7 +188,7 @@ const Button = (props) => {
       onPress={props.onPress}
       accessibilityLabel={props.accessibilityLabel}
       accessibilityTraits={accessibilityTraits}
-      style={styles.container}
+      style={containerStyles}
     >
       <View style={{ ...buttonStyles, ...props.backgroundStyles }}>
         {renderContent(
