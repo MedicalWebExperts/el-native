@@ -50,7 +50,7 @@ const propTypes = {
    */
   outline: bool,
   /**
-   * Color for the borders (outline onyl)
+   * Color for the borders (outline only)
    */
   outlineColor: string,
   /**
