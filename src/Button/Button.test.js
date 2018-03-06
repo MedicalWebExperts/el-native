@@ -54,7 +54,11 @@ describe('Button', () => {
 
   it('should be transparent', () => {
     const defaultStyles = styles.default;
-    const transparentStyles = { backgroundColor: 'transparent', elevation: 0 };
+    const transparentStyles = {
+      backgroundColor: 'transparent',
+      borderWidth: 0,
+      elevation: 0,
+    };
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" transparent />);
 
@@ -63,7 +67,10 @@ describe('Button', () => {
 
   it('should be outlined', () => {
     const defaultStyles = styles.default;
-    const customStyles = { backgroundColor: 'transparent', elevation: 1 };
+    const customStyles = {
+      ...styles.outline,
+      borderColor: theme.colors.primary,
+    };
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" outline />);
 

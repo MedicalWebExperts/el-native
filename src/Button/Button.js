@@ -1,6 +1,6 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, string, func, number, object } from 'prop-types';
 import {
   View,
   Text,
@@ -20,59 +20,63 @@ const propTypes = {
   /**
    * The object to overwrite the background styles
    */
-  backgroundStyles: PropTypes.object,
+  backgroundStyles: object,
   /**
    * The object to overwrite the text styles
    */
-  textStyles: PropTypes.object,
+  textStyles: object,
   /**
    * Represent as a disabled
    */
-  disabled: PropTypes.bool,
+  disabled: bool,
   /**
    * Text to display for blindness accessibility features
    */
-  accessibilityLabel: PropTypes.string,
+  accessibilityLabel: string,
   /**
    * The label of the button
    */
-  text: PropTypes.string,
+  text: string,
   /**
    * Display as a block, with 100% of width
    */
-  block: PropTypes.bool,
+  block: bool,
   /**
    * No background and no borders
    */
-  transparent: PropTypes.bool,
+  transparent: bool,
   /**
    * Display just the borders
    */
-  outline: PropTypes.bool,
+  outline: bool,
+  /**
+   * Color for the borders (outline onyl)
+   */
+  outlineColor: string,
   /**
    * Dimensions of the rounded button
    */
-  roundedDimensions: PropTypes.number,
+  roundedDimensions: number,
   /**
    * Shows an spinner
    */
-  processing: PropTypes.bool,
+  processing: bool,
   /**
    * The name of the icon that will be placed on the right
    */
-  iconRight: PropTypes.string,
+  iconRight: string,
   /**
    * The name of the icon that will be placed on the left
    */
-  iconLeft: PropTypes.string,
+  iconLeft: string,
   /**
    * The name of the icon
    */
-  icon: PropTypes.string,
+  icon: string,
   /**
    * The callback function
    */
-  onPress: PropTypes.func.isRequired,
+  onPress: func.isRequired,
 };
 
 const defaultProps = {
@@ -82,6 +86,7 @@ const defaultProps = {
   accessibilityLabel: '',
   block: false,
   outline: false,
+  outlineColor: theme.colors.primary,
   roundedDimensions: 0,
   transparent: false,
   processing: false,
@@ -158,15 +163,16 @@ const Button = (props) => {
   let containerStyles = styles.container;
 
   if (props.block) {
-    buttonStyles = { ...buttonStyles, ...{ width: '100%' } };
-    containerStyles = { ...containerStyles, ...{ width: '100%' } };
+    buttonStyles = { ...buttonStyles, width: '100%' };
+    containerStyles = { ...containerStyles, width: '100%' };
   }
   if (props.transparent) {
-    buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 0 } };
+    buttonStyles = { ...buttonStyles, ...styles.transparent };
     textStyles = { ...textStyles };
   }
   if (props.outline) {
-    buttonStyles = { ...buttonStyles, ...{ backgroundColor: 'transparent', elevation: 1 } };
+    buttonStyles = { ...buttonStyles, ...styles.outline, borderColor: props.outlineColor };
+    textStyles = { ...textStyles, color: props.outlineColor };
   }
   if (props.disabled) {
     buttonStyles = { ...buttonStyles, ...styles.disabled };
