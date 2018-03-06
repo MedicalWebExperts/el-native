@@ -26,6 +26,11 @@ export default {
   container: {
     alignItems: 'center',
   },
+  transparent: {
+    backgroundColor: 'transparent',
+    borderWidth: 0,
+    elevation: 0,
+  },
   iconWrapper: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -36,5 +41,10 @@ export default {
   },
   textWithIconRight: {
     marginRight: 6,
+  },
+  outline: {
+    elevation: 0,
+    backgroundColor: 'transparent',
+    borderWidth: 1.5,
   },
 };
