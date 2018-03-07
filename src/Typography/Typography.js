@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, bool, string } from 'prop-types';
+import { object, bool, string, number } from 'prop-types';
 import { Text } from 'react-native';
 
 import Theme from '../Theme';
@@ -17,6 +17,11 @@ const h1Proptypes = {
    */
   color: bool,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
@@ -24,6 +29,7 @@ const h1Proptypes = {
 const h1DefaultProps = {
   style: {},
   color: false,
+  numberOfLines: null,
 };
 const h2Proptypes = {
   /**
@@ -35,6 +41,11 @@ const h2Proptypes = {
    */
   color: bool,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
@@ -42,6 +53,7 @@ const h2Proptypes = {
 const h2DefaultProps = {
   style: {},
   color: false,
+  numberOfLines: null,
 };
 const h3Proptypes = {
   /**
@@ -53,6 +65,11 @@ const h3Proptypes = {
    */
   color: bool,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
@@ -60,6 +77,7 @@ const h3Proptypes = {
 const h3DefaultProps = {
   style: {},
   color: false,
+  numberOfLines: null,
 };
 const h4Proptypes = {
   /**
@@ -71,6 +89,11 @@ const h4Proptypes = {
    */
   color: bool,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
@@ -78,6 +101,7 @@ const h4Proptypes = {
 const h4DefaultProps = {
   style: {},
   color: false,
+  numberOfLines: null,
 };
 const h5Proptypes = {
   /**
@@ -89,6 +113,11 @@ const h5Proptypes = {
    */
   color: bool,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
@@ -96,6 +125,7 @@ const h5Proptypes = {
 const h5DefaultProps = {
   style: {},
   color: false,
+  numberOfLines: null,
 };
 const textProptypes = {
   /**
@@ -103,12 +133,18 @@ const textProptypes = {
    */
   style: object,
   /**
+   * The prop "numberOfLines" receives a number which limits the lines shown
+   * (an ellipsis will show at the end when truncated)
+   */
+  numberOfLines: number,
+  /**
    * The prop "children" defines the content that will live inside the component.
    */
   children: string.isRequired,
 };
 const textDefaultProps = {
   style: {},
+  numberOfLines: null,
 };
 
 /**
@@ -116,6 +152,7 @@ const textDefaultProps = {
  */
 const H1 = props => (
   <Text
+    numberOfLines={props.numberOfLines}
     style={props.color ? { ...styles.h1Color, ...props.style } : { ...styles.h1, ...props.style }}
   >
     {props.children}
@@ -126,6 +163,7 @@ const H1 = props => (
  */
 const H2 = props => (
   <Text
+    numberOfLines={props.numberOfLines}
     style={props.color ? { ...styles.h2Color, ...props.style } : { ...styles.h2, ...props.style }}
   >
     {props.children}
@@ -136,6 +174,7 @@ const H2 = props => (
  */
 const H3 = props => (
   <Text
+    numberOfLines={props.numberOfLines}
     style={props.color ? { ...styles.h3Color, ...props.style } : { ...styles.h3, ...props.style }}
   >
     {props.children}
@@ -146,6 +185,7 @@ const H3 = props => (
  */
 const H4 = props => (
   <Text
+    numberOfLines={props.numberOfLines}
     style={props.color ? { ...styles.h4Color, ...props.style } : { ...styles.h4, ...props.style }}
   >
     {props.children}
@@ -156,6 +196,7 @@ const H4 = props => (
  */
 const H5 = props => (
   <Text
+    numberOfLines={props.numberOfLines}
     style={props.color ? { ...styles.h5Color, ...props.style } : { ...styles.h5, ...props.style }}
   >
     {props.children}
@@ -164,7 +205,11 @@ const H5 = props => (
 /**
  * Text component renders a RN <Text> component with custom styles.
  */
-const TextTheme = props => <Text style={{ ...styles.text, ...props.style }}>{props.children}</Text>;
+const TextTheme = props => (
+  <Text numberOfLines={props.numberOfLines} style={{ ...styles.text, ...props.style }}>
+    {props.children}
+  </Text>
+);
 
 H1.propTypes = h1Proptypes;
 H1.defaultProps = h1DefaultProps;

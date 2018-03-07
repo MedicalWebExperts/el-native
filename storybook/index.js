@@ -12,6 +12,9 @@ configure(() => {
   require('./stories/Divider');
   require('./stories/Icon');
   require('./stories/Input');
+  require('./stories/Checkbox');
+  require('./stories/Card');
+  require('./stories/ComposedRow');
   require('./stories/Map');
   require('./stories/Layout');
   require('./stories/Option');

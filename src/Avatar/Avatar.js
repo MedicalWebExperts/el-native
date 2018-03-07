@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, string, number, bool, object } from 'prop-types';
+import { oneOf, string, number, bool, object, oneOfType } from 'prop-types';
 import { Image } from 'react-native';
 
 import Theme from '../Theme';
@@ -31,7 +31,7 @@ const propTypes = {
   /**
    * The prop "placeholder" can be used as a default image if no image is present in "source" prop.
    */
-  placeholder: object,
+  placeholder: oneOfType([number, object]),
   /**
    * The prop "source" is the main prop, and expects a string or a uri to show the image in Avatar.
    */
@@ -53,7 +53,24 @@ const getSize = (size) => {
   } else if (size === 'small') {
     return styles.avatarSmall;
   }
-  return false;
+  return styles.default;
+};
+
+const getStyles = (props) => {
+  let fullStyles = { ...styles.default };
+  if (props.borderThickness) {
+    fullStyles = Object.assign(fullStyles, { borderWidth: props.borderThickness });
+  }
+  if (props.borderColor) {
+    fullStyles = Object.assign(fullStyles, { borderColor: props.borderColor });
+  }
+  if (props.size) {
+    fullStyles = Object.assign(fullStyles, getSize(props.size));
+  }
+  if (props.square) {
+    fullStyles = Object.assign(fullStyles, styles.avatarSquare);
+  }
+  return fullStyles;
 };
 
 /**
@@ -63,13 +80,11 @@ const getSize = (size) => {
 const Avatar = props => (
   <Image
     source={props.source ? { uri: props.source } : props.placeholder}
-    style={[
-      styles.default,
-      !!props.borderThickness && { borderWidth: props.borderThickness },
-      !!props.borderColor && { borderColor: props.borderColor },
-      !!props.size && getSize(props.size),
-      !!props.square && styles.avatarSquare,
-    ]}
+    style={getStyles(props)}
+    borderThickness={props.borderThickness}
+    borderColor={props.borderColor}
+    square={props.square}
+    size={props.size}
   />
 );
 

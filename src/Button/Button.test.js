@@ -22,6 +22,7 @@ describe('Button', () => {
 
   it('should be disabled', () => {
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" disabled />);
+
     expect(wrapper.props().disabled).toBeTruthy();
   });
 

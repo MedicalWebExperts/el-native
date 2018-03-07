@@ -1,4 +1,6 @@
 import buttonStyles from './components/buttonStyles';
+import cardStyles from './components/cardStyles';
+import composedRowStyles from './components/composedRowStyles';
 import avatarStyles from './components/avatarStyles';
 import inputStyles from './components/inputStyles';
 import colors from './colors';
@@ -11,8 +13,10 @@ import circularProgressStyles from './components/circularProgressStyles';
 export default {
   font,
   colors,
-  button: buttonStyles,
   avatar: avatarStyles,
+  button: buttonStyles,
+  card: cardStyles,
+  composedRow: composedRowStyles,
   input: inputStyles,
   map: mapStyles,
   typography: typographyStyles,

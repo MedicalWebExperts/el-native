@@ -8,6 +8,9 @@ import Divider from './Divider/Divider';
 import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
+import { Card, CardHeader, CardBody, CardFooter, CardMedia } from './Card/Card';
+import ComposedRow from './ComposedRow/ComposedRow';
+import List from './List/List';
 import Option from './Option/Option';
 import CircularProgress from './CircularProgress/CircularProgress';
 
@@ -29,6 +32,13 @@ export {
   Icon,
   Input,
   Checkbox,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardMedia,
+  ComposedRow,
+  List,
   Option,
   CircularProgress,
 };
