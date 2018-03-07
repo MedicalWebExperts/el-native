@@ -4,18 +4,18 @@ import inputStyles from './components/inputStyles';
 import colors from './colors';
 import mapStyles from './components/mapStyles';
 import typographyStyles from './components/typographyStyles';
+import optionStyles from './components/optionStyles';
+import font from './font';
 import circularProgressStyles from './components/circularProgressStyles';
 
 export default {
-  font: {
-    size: 14,
-    color: '#000',
-  },
+  font,
   colors,
   button: buttonStyles,
   avatar: avatarStyles,
   input: inputStyles,
   map: mapStyles,
   typography: typographyStyles,
+  option: optionStyles,
   circularProgress: circularProgressStyles,
 };
