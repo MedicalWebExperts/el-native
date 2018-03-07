@@ -17,7 +17,7 @@ const cardPropTypes = {
   /**
    * Custom styling for Card
    */
-  style: object, // eslint-disable-line react/no-unused-prop-types
+  style: object,
   /**
    * Children expected inside the Card.
    */
@@ -148,19 +148,22 @@ const cardMediaDefaultProps = {
   style: {},
 };
 
-const getStyles = (props) => {
+const getStyles = ({ style, raised }) => {
   let fullStyles = { ...styles.default };
-  if (props.raised) {
+  if (raised) {
     fullStyles = Object.assign(fullStyles, styles.raised);
   }
-  if (props.style) {
-    fullStyles = Object.assign(fullStyles, props.style);
+  if (style) {
+    fullStyles = Object.assign(fullStyles, style);
   }
   return fullStyles;
 };
 
 const Card = props => (
-  <View style={getStyles(props)} elevation={props.raised && 8}>
+  <View
+    style={getStyles({ style: props.style, raised: props.raised })}
+    elevation={props.raised && 8}
+  >
     {props.children}
   </View>
 );
