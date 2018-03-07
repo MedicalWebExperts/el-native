@@ -9,7 +9,7 @@ exports[`H1 Snapshots should apply custom styles to H1 1`] = `
   style={
     Object {
       "color": "green",
-      "fontSize": 20,
+      "fontSize": 48,
       "fontWeight": "600",
     }
   }
@@ -27,7 +27,7 @@ exports[`H1 Snapshots should render an H1 1`] = `
   style={
     Object {
       "color": "#212121",
-      "fontSize": 20,
+      "fontSize": 48,
       "fontWeight": "600",
     }
   }
@@ -45,7 +45,7 @@ exports[`H1 Snapshots should render an H1 with color 1`] = `
   style={
     Object {
       "color": "#2196F3",
-      "fontSize": 20,
+      "fontSize": 48,
       "fontWeight": "600",
     }
   }
@@ -63,7 +63,7 @@ exports[`H2 Snapshots should apply custom styles to H2 1`] = `
   style={
     Object {
       "color": "green",
-      "fontSize": 18,
+      "fontSize": 36,
       "fontWeight": "600",
     }
   }
@@ -81,7 +81,7 @@ exports[`H2 Snapshots should render an H2 1`] = `
   style={
     Object {
       "color": "#212121",
-      "fontSize": 18,
+      "fontSize": 36,
       "fontWeight": "600",
     }
   }
@@ -99,7 +99,7 @@ exports[`H2 Snapshots should render an H2 with color 1`] = `
   style={
     Object {
       "color": "#2196F3",
-      "fontSize": 18,
+      "fontSize": 36,
       "fontWeight": "600",
     }
   }
@@ -117,7 +117,7 @@ exports[`H3 Snapshots should apply custom styles to H3 1`] = `
   style={
     Object {
       "color": "green",
-      "fontSize": 16,
+      "fontSize": 24,
       "fontWeight": "500",
     }
   }
@@ -135,7 +135,7 @@ exports[`H3 Snapshots should render an H3 1`] = `
   style={
     Object {
       "color": "#212121",
-      "fontSize": 16,
+      "fontSize": 24,
       "fontWeight": "500",
     }
   }
@@ -153,7 +153,7 @@ exports[`H3 Snapshots should render an H3 with color 1`] = `
   style={
     Object {
       "color": "#2196F3",
-      "fontSize": 16,
+      "fontSize": 24,
       "fontWeight": "500",
     }
   }
@@ -171,7 +171,7 @@ exports[`H4 Snapshots should apply custom styles to H4 1`] = `
   style={
     Object {
       "color": "green",
-      "fontSize": 14,
+      "fontSize": 20,
       "fontWeight": "500",
     }
   }
@@ -189,7 +189,7 @@ exports[`H4 Snapshots should render an H4 1`] = `
   style={
     Object {
       "color": "#212121",
-      "fontSize": 14,
+      "fontSize": 20,
       "fontWeight": "500",
     }
   }
@@ -207,7 +207,7 @@ exports[`H4 Snapshots should render an H4 with color 1`] = `
   style={
     Object {
       "color": "#2196F3",
-      "fontSize": 14,
+      "fontSize": 20,
       "fontWeight": "500",
     }
   }
@@ -225,7 +225,7 @@ exports[`H5 Snapshots should apply custom styles to H5 1`] = `
   style={
     Object {
       "color": "green",
-      "fontSize": 12,
+      "fontSize": 16,
       "fontWeight": "600",
     }
   }
@@ -243,7 +243,7 @@ exports[`H5 Snapshots should render an H5 1`] = `
   style={
     Object {
       "color": "#212121",
-      "fontSize": 12,
+      "fontSize": 16,
       "fontWeight": "600",
     }
   }
@@ -261,7 +261,7 @@ exports[`H5 Snapshots should render an H5 with color 1`] = `
   style={
     Object {
       "color": "#2196F3",
-      "fontSize": 12,
+      "fontSize": 16,
       "fontWeight": "600",
     }
   }

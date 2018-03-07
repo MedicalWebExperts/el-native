@@ -24,7 +24,12 @@ export default {
     color: colors.gray300,
   },
   container: {
-    alignItems: 'flex-end',
+    alignItems: 'center',
+  },
+  transparent: {
+    backgroundColor: 'transparent',
+    borderWidth: 0,
+    elevation: 0,
   },
   iconWrapper: {
     flexDirection: 'row',
@@ -36,5 +41,10 @@ export default {
   },
   textWithIconRight: {
     marginRight: 6,
+  },
+  outline: {
+    elevation: 0,
+    backgroundColor: 'transparent',
+    borderWidth: 1.5,
   },
 };

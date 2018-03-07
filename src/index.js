@@ -11,6 +11,8 @@ import Checkbox from './Checkbox/Checkbox';
 import { Card, CardHeader, CardBody, CardFooter, CardMedia } from './Card/Card';
 import ComposedRow from './ComposedRow/ComposedRow';
 import List from './List/List';
+import Option from './Option/Option';
+import CircularProgress from './CircularProgress/CircularProgress';
 
 export {
   Map,
@@ -37,4 +39,6 @@ export {
   CardMedia,
   ComposedRow,
   List,
+  Option,
+  CircularProgress,
 };
