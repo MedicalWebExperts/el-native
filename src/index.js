@@ -9,6 +9,7 @@ import Icon from './Icon/Icon';
 import Input from './Input/Input';
 import Checkbox from './Checkbox/Checkbox';
 import Option from './Option/Option';
+import CircularProgress from './CircularProgress/CircularProgress';
 
 export {
   Map,
@@ -29,4 +30,5 @@ export {
   Input,
   Checkbox,
   Option,
+  CircularProgress,
 };

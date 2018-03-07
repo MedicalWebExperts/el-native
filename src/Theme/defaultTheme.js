@@ -6,6 +6,7 @@ import mapStyles from './components/mapStyles';
 import typographyStyles from './components/typographyStyles';
 import optionStyles from './components/optionStyles';
 import font from './font';
+import circularProgressStyles from './components/circularProgressStyles';
 
 export default {
   font,
@@ -16,4 +17,5 @@ export default {
   map: mapStyles,
   typography: typographyStyles,
   option: optionStyles,
+  circularProgress: circularProgressStyles,
 };
