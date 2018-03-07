@@ -78,6 +78,7 @@ const Grid = (props) => {
     flexDirection: ifRow() ? 'column' : 'row',
     height: '100%',
     width: '100%',
+    ...props.style,
   };
 
   const renderView = () => <View style={style}>{props.children}</View>;
