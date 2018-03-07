@@ -151,7 +151,7 @@ const cardMediaDefaultProps = {
 const getStyles = ({ style, raised }) => {
   let fullStyles = { ...styles.default };
   if (raised) {
-    fullStyles = Object.assign(fullStyles, raised);
+    fullStyles = Object.assign(fullStyles, styles.raised);
   }
   if (style) {
     fullStyles = Object.assign(fullStyles, style);
