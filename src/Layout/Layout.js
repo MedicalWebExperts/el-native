@@ -71,7 +71,10 @@ const Col = props => createChild(props, 'column');
  * Grid component, expects childs, that could be Row or Col components.
  */
 const Grid = (props) => {
-  const ifRow = () => !!props.children && props.children[0].type === Row;
+  const ifRow = () =>
+    !!props.children &&
+    ((Array.isArray(props.children) && props.children[0].type === Row) ||
+      props.children.type === Row);
 
   const style = {
     flex: 1,
