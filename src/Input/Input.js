@@ -63,11 +63,15 @@ class Input extends Component {
      * Prop for changing the placeholder color.
      */
     placeholderTextColor: string,
+    /**
+     * Function to be executed when input is focused.
+     */
+    onFocus: string,
   };
 
   static defaultProps = {
     placeholder: 'Placeholder text',
-    onChangeText: () => { },
+    onChangeText: () => {},
     multiline: false,
     numberOfLines: 4,
     autoCorrect: false,
@@ -78,6 +82,7 @@ class Input extends Component {
     style: {},
     type: 'underline',
     placeholderTextColor: theme.colors.text,
+    onFocus: () => {},
   };
 
   state = {
@@ -120,6 +125,7 @@ class Input extends Component {
       errorText,
       style,
       placeholderTextColor,
+      onFocus,
     } = this.props;
 
     return (
@@ -136,6 +142,7 @@ class Input extends Component {
           style={[this.defaultStyles(), style]}
           placeholderTextColor={placeholderTextColor}
           underlineColorAndroid="transparent"
+          onFocus={onFocus}
         />
         <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
       </View>
