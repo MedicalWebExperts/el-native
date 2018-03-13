@@ -66,7 +66,7 @@ class Input extends Component {
     /**
      * Function to be executed when input is focused.
      */
-    onFocus: string,
+    onFocus: func,
   };
 
   static defaultProps = {
