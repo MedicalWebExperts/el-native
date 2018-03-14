@@ -18,6 +18,7 @@ configure(() => {
   require('./stories/Map');
   require('./stories/Layout');
   require('./stories/Option');
+  require('./stories/OptionGroup');
   require('./stories/Switch');
   require('./stories/Typography');
   require('./stories/CircularProgress');
