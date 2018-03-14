@@ -10,28 +10,38 @@ const theme = Theme.getTheme();
 const OptionStyles = theme.option;
 
 const propTypes = {
+  selected: PropTypes.bool,
   label: PropTypes.string,
   iconStyles: PropTypes.object,
   labelStyles: PropTypes.object,
   onPress: PropTypes.func,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 const defaultProps = {
+  selected: false,
   label: '',
   iconStyles: {},
   labelStyles: {},
   onPress: null,
+  id: 0,
 };
 
 const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
 class Option extends Component {
   state = {
-    selected: false,
+    selected: this.props.selected,
   };
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selected !== this.state.selected) {
+      this.setState({ selected: nextProps.selected });
+    }
+  }
+
   handlePress = () => {
     this.setState({ selected: !this.state.selected }, () =>
-      this.props.onPress(this.state.selected));
+      this.props.onPress(this.state.selected, this.props.id));
   };
 
   render() {

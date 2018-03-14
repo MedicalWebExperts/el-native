@@ -12,6 +12,8 @@ import { Card, CardHeader, CardBody, CardFooter, CardMedia } from './Card/Card';
 import ComposedRow from './ComposedRow/ComposedRow';
 import List from './List/List';
 import Option from './Option/Option';
+import OptionGroup from './OptionGroup/OptionGroup';
+
 import CircularProgress from './CircularProgress/CircularProgress';
 
 export {
@@ -41,4 +43,5 @@ export {
   List,
   Option,
   CircularProgress,
+  OptionGroup,
 };

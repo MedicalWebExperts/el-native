@@ -19,7 +19,8 @@
     "updateTests": "npm run test -- -u",
     "storybook": "storybook start -p 7007",
     "android": "adb reverse tcp:7007 tcp:7007 && react-native run-android",
-    "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
+    "updateDocs":
+      "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
     "generate": "node generate-component.js"
   },
   "dependencies": {
@@ -61,9 +62,7 @@
     "react-native-vector-icons": "^4.5.0"
   },
   "jest": {
-    "setupFiles": [
-      "./setupJest.js"
-    ],
+    "setupFiles": ["./setupJest.js"],
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "globals": {
       "__DEV__": true
