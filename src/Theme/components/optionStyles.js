@@ -13,6 +13,10 @@ export default {
     marginRight: 5,
     fontSize: font.size + 4,
   },
+  iconRight: {
+    marginRight: 0,
+    marginLeft: 5,
+  },
   label: {
     color: colors.text,
     fontSize: font.size,
