@@ -8,7 +8,7 @@ import Theme from '../Theme';
 const theme = Theme.getTheme();
 const styles = theme.option;
 
-describe('Button', () => {
+describe('Option', () => {
   it('should render a text', () => {
     shouldHaveText(<Option label="text" />, 'text');
   });
@@ -20,6 +20,6 @@ describe('Button', () => {
   });
 
   test('should call the onPress', () => {
-    shouldSimulateOnPress(<Option onPress={() => null} />);
+    shouldSimulateOnPress(<Option label="text" onPress={() => null} />);
   });
 });

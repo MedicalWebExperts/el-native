@@ -47,13 +47,21 @@ class Option extends Component {
     }
   }
 
+  changeState = () => {
+    this.setState(
+      { selected: !this.state.selected },
+      () =>
+        typeof this.props.onPress === 'function' &&
+        this.props.onPress(this.state.selected, this.props.id),
+    );
+  };
+
   handleOnPress = () => {
     if (this.props.optionGroup && !this.state.selected) {
-      this.setState({ selected: !this.state.selected }, () =>
-        this.props.onPress(this.state.selected, this.props.id));
+      this.changeState();
     }
     if (!this.props.optionGroup) {
-      this.setState({ selected: !this.state.selected });
+      this.changeState();
     }
   };
 
