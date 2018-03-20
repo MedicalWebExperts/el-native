@@ -49,6 +49,7 @@ class OptionGroup extends Component {
             style={this.props.style}
             spaced={this.props.spaced}
             iconRight={this.props.iconRight}
+            optionGroup
           />
         ))}
       </View>
