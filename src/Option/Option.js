@@ -19,9 +19,11 @@ const propTypes = {
   onPress: PropTypes.func,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   iconRight: PropTypes.bool,
+  optionGroup: PropTypes.bool,
 };
 
 const defaultProps = {
+  optionGroup: false,
   spaced: false,
   iconRight: false,
   style: {},
@@ -45,9 +47,14 @@ class Option extends Component {
     }
   }
 
-  handlePress = () => {
-    this.setState({ selected: !this.state.selected }, () =>
-      this.props.onPress(this.state.selected, this.props.id));
+  handleOnPress = () => {
+    if (this.props.optionGroup && !this.state.selected) {
+      this.setState({ selected: !this.state.selected }, () =>
+        this.props.onPress(this.state.selected, this.props.id));
+    }
+    if (!this.props.optionGroup) {
+      this.setState({ selected: !this.state.selected });
+    }
   };
 
   render() {
@@ -64,7 +71,7 @@ class Option extends Component {
     }
     const spaced = this.props.spaced ? { justifyContent: 'space-between' } : {};
     return (
-      <Touchable onPress={this.handlePress}>
+      <Touchable onPress={this.handleOnPress}>
         <View style={[OptionStyles.default, this.props.style, spaced]}>
           {!this.props.iconRight && <Icon name={iconName} style={iconStyles} />}
           <Text style={labelStyles}>{this.props.label}</Text>
