@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, bool, string, number } from 'prop-types';
+import { object, bool, string, number, element, oneOfType } from 'prop-types';
 import { Text } from 'react-native';
 
 import Theme from '../Theme';
@@ -24,7 +24,7 @@ const h1Proptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const h1DefaultProps = {
   style: {},
@@ -48,7 +48,7 @@ const h2Proptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const h2DefaultProps = {
   style: {},
@@ -72,7 +72,7 @@ const h3Proptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const h3DefaultProps = {
   style: {},
@@ -96,7 +96,7 @@ const h4Proptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const h4DefaultProps = {
   style: {},
@@ -120,7 +120,7 @@ const h5Proptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const h5DefaultProps = {
   style: {},
@@ -140,7 +140,7 @@ const textProptypes = {
   /**
    * The prop "children" defines the content that will live inside the component.
    */
-  children: string.isRequired,
+  children: oneOfType([string, element]).isRequired,
 };
 const textDefaultProps = {
   style: {},
