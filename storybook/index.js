@@ -20,6 +20,7 @@ configure(() => {
   require('./stories/Option');
   require('./stories/OptionGroup');
   require('./stories/Switch');
+  require('./stories/Theme');
   require('./stories/Typography');
   require('./stories/CircularProgress');
 }, module);

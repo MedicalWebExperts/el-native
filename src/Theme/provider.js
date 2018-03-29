@@ -18,3 +18,5 @@ ThemeProvider.childContextTypes = {
     color: PropTypes.string,
   }),
 };
+
+export default ThemeProvider;

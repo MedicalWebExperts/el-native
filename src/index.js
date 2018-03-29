@@ -14,6 +14,7 @@ import List from './List/List';
 import Option from './Option/Option';
 import OptionGroup from './OptionGroup/OptionGroup';
 import TextThemed from './Text/Text';
+import ThemeProvider from './Theme/provider';
 
 import CircularProgress from './CircularProgress/CircularProgress';
 
@@ -46,4 +47,5 @@ export {
   CircularProgress,
   OptionGroup,
   TextThemed,
+  ThemeProvider,
 };
