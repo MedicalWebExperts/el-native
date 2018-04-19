@@ -23,6 +23,10 @@ const propTypes = {
    * If true the user won't be able to toggle the switch. Default: false.
    */
   disabled: bool,
+  /**
+   * Color of the switch circle. Default: white.
+   */
+  thumbTintColor: string,
 };
 
 const defaultProps = {
@@ -34,6 +38,7 @@ const defaultProps = {
   color: 'grey',
   value: false,
   disabled: false,
+  thumbTintColor: 'white',
 };
 
 /**
@@ -45,10 +50,11 @@ const defaultProps = {
 const Switch = props => (
   <SwitchRN
     style={props.style}
-    onValueChange={props.onPress && typeof props.onPress === 'function' ? props.onPress : () => {}}
+    onValueChange={props.onPress && typeof props.onPress === 'function' ? props.onPress : () => { }}
     onTintColor={props.color}
     value={props.value}
     disabled={props.disabled}
+    thumbTintColor={props.thumbTintColor}
   />
 );
 
