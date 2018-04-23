@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
-
+import { View, Text } from 'react-native';
 import CenterView from '../CenterView';
 import { Grid, Col, Row } from '../../../src';
 import colors from '../styles/colors';
@@ -16,9 +16,17 @@ storiesOf('Layout', module)
   ))
   .add('Rows', () => (
     <Grid>
-      <Row style={{ backgroundColor: colors.lightgreen }} />
-      <Row style={{ backgroundColor: colors.jade }} size={2} />
-      <Row style={{ backgroundColor: colors.turquoise }} size={3} />
+      <Row style={{ backgroundColor: colors.lightgreen }}>
+        <Text>lightgreen</Text>
+      </Row>
+      <Row style={{ backgroundColor: colors.jade }} size={2}>
+        <Text>jade</Text>
+      </Row>
+      <Row style={{ backgroundColor: colors.turquoise }} size={3}>
+        <View>
+          <Text>turquoise</Text>
+        </View>
+      </Row>
     </Grid>
   ))
   .add('Combined', () => (
