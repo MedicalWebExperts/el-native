@@ -49,12 +49,14 @@ const createChild = (props, type) => {
     </TouchableOpacity>
   );
 
+  const renderComponent = () => (props.onPress ? renderTouchableOpacity() : renderView());
+
   renderView.propTypes = propTypes;
   renderView.defaultProps = defaultProps;
   renderTouchableOpacity.propTypes = pressPropTypes;
   renderTouchableOpacity.defaultProps = pressDefaultProps;
 
-  return props.onPress ? renderTouchableOpacity() : renderView();
+  return renderComponent();
 };
 
 /**
