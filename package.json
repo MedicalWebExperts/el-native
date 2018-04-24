@@ -25,6 +25,7 @@
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.0",
+    "qs": "^6.5.1",
     "react": "^16.3.2",
     "react-native": "^0.55.3",
     "react-native-linear-gradient": "^2.4.0",
