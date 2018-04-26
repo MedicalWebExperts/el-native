@@ -182,7 +182,7 @@ const Button = (props) => {
   }
   if (props.outline) {
     buttonStyles = { ...buttonStyles, ...styles.outline, borderColor: props.outlineColor };
-    textStyles = { ...textStyles, color: props.outlineColor };
+    textStyles = { ...textStyles };
   }
   if (props.disabled) {
     buttonStyles = { ...buttonStyles, ...styles.disabled, ...props.disabledStyles };
