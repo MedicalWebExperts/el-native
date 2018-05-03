@@ -26,6 +26,14 @@ const propTypes = {
    */
   textStyles: object,
   /**
+   * The object to overwrite the disabled styles
+   */
+  disabledStyles: object,
+  /**
+   * The object to overwrite the disabled text styles
+   */
+  disabledTextStyles: object,
+  /**
    * Represent as a disabled
    */
   disabled: bool,
@@ -82,6 +90,8 @@ const propTypes = {
 const defaultProps = {
   backgroundStyles: {},
   textStyles: {},
+  disabledStyles: {},
+  disabledTextStyles: {},
   disabled: false,
   accessibilityLabel: '',
   block: false,
@@ -172,11 +182,11 @@ const Button = (props) => {
   }
   if (props.outline) {
     buttonStyles = { ...buttonStyles, ...styles.outline, borderColor: props.outlineColor };
-    textStyles = { ...textStyles, color: props.outlineColor };
+    textStyles = { ...textStyles };
   }
   if (props.disabled) {
-    buttonStyles = { ...buttonStyles, ...styles.disabled };
-    textStyles = { ...textStyles, ...styles.disabledText };
+    buttonStyles = { ...buttonStyles, ...styles.disabled, ...props.disabledStyles };
+    textStyles = { ...textStyles, ...styles.disabledText, ...props.disabledTextStyles };
   }
   if (props.roundedDimensions) {
     buttonStyles = {
