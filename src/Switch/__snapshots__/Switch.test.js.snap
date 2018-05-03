@@ -17,7 +17,7 @@ exports[`Switch Snapshots should render a Switch 1`] = `
       Object {},
     ]
   }
-  thumbTintColor="white"
+  thumbTintColor={null}
   value={false}
 />
 `;
@@ -39,7 +39,7 @@ exports[`Switch Snapshots should render a Switch disabled 1`] = `
       Object {},
     ]
   }
-  thumbTintColor="white"
+  thumbTintColor={null}
   value={false}
 />
 `;
@@ -61,7 +61,7 @@ exports[`Switch Snapshots should render a Switch disabled toggled on 1`] = `
       Object {},
     ]
   }
-  thumbTintColor="white"
+  thumbTintColor={null}
   value={true}
 />
 `;
@@ -83,7 +83,7 @@ exports[`Switch Snapshots should render a Switch toggled on 1`] = `
       Object {},
     ]
   }
-  thumbTintColor="white"
+  thumbTintColor={null}
   value={true}
 />
 `;
@@ -105,7 +105,7 @@ exports[`Switch Snapshots should render a Switch with custom color 1`] = `
       Object {},
     ]
   }
-  thumbTintColor="white"
+  thumbTintColor={null}
   value={false}
 />
 `;
