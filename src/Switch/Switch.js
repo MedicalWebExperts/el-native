@@ -24,7 +24,7 @@ const propTypes = {
    */
   disabled: bool,
   /**
-   * Color of the switch circle. Default: white.
+   * Color of the switch circle.
    */
   thumbTintColor: string,
 };
@@ -38,7 +38,7 @@ const defaultProps = {
   color: 'grey',
   value: false,
   disabled: false,
-  thumbTintColor: 'white',
+  thumbTintColor: null,
 };
 
 /**
