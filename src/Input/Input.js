@@ -65,6 +65,14 @@ const propTypes = {
    * Value of the Input
    */
   value: string,
+  /**
+   * Type of the keyboard
+   */
+  keyboardType: string,
+  /**
+   * Maximum characters allowed
+   */
+  maxLength: number,
 };
 
 const defaultProps = {
@@ -82,6 +90,8 @@ const defaultProps = {
   placeholderTextColor: theme.colors.text,
   onFocus: () => {},
   value: '',
+  keyboardType: '',
+  maxLength: 200,
 };
 
 const defaultStyles = (error, type) => {
@@ -123,6 +133,8 @@ const Input = (props) => {
     value,
     onChangeText,
     type,
+    keyboardType,
+    maxLength,
   } = props;
 
   return (
@@ -140,6 +152,8 @@ const Input = (props) => {
         placeholderTextColor={placeholderTextColor}
         underlineColorAndroid="transparent"
         onFocus={onFocus}
+        keyboardType={keyboardType}
+        maxLength={maxLength}
       />
       <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
     </View>
