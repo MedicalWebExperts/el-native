@@ -33,4 +33,5 @@ export default {
     position: 'absolute',
     bottom: 35,
   },
+  buttonText: { color: 'black', fontSize: 40 },
 };

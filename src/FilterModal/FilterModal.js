@@ -54,11 +54,9 @@ class FilterModal extends Component {
           <Row style={{ ...styles.row, ...styles.titleWrapper }}>
             <Text style={styles.title}>{title}</Text>
             <Button
-              onPress={() => {
-                closeModal();
-              }}
+              onPress={closeModal()}
               icon="ios-close"
-              textStyles={{ color: 'black', fontSize: 40 }}
+              textStyles={styles.buttonText}
               transparent
             />
           </Row>

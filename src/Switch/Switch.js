@@ -18,7 +18,7 @@ const propTypes = {
    */
   color: string,
   /**
-   * Background color when the switch is turned off. Default: grey.
+   * Background color when the switch is turned off. Default: React Native's default grey color.
    */
   colorOff: string,
   /**
