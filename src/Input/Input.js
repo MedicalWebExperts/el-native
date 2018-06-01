@@ -90,7 +90,7 @@ const defaultProps = {
   placeholderTextColor: theme.colors.text,
   onFocus: () => {},
   value: '',
-  keyboardType: '',
+  keyboardType: 'default',
   maxLength: 200,
 };
 

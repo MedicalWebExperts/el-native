@@ -22,6 +22,7 @@ configure(() => {
   require('./stories/Switch');
   require('./stories/Typography');
   require('./stories/CircularProgress');
+  require('./stories/FilterModal');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
