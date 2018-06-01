@@ -8,21 +8,14 @@ import { FilterModal } from '../../../src';
 class ModalClass extends Component {
   state = {
     modalVisible: false,
-    filters: [
-      { name: 'Pediatrics', value: true },
-      { name: 'Plastic Surgery', value: false },
-      { name: 'Gynecologist', value: false },
-      { name: 'Cardiac Surgery', value: false },
-    ],
   };
 
-  updateFilter = (filter, value) => {
-    const { filters } = this.state;
-    filters[filters.indexOf(filter)].value = value;
-    this.setState({
-      filters,
-    });
-  };
+  filters = [
+    { name: 'Pediatrics', value: true },
+    { name: 'Plastic Surgery', value: false },
+    { name: 'Gynecologist', value: false },
+    { name: 'Cardiac Surgery', value: false },
+  ];
 
   render() {
     return (
@@ -30,11 +23,9 @@ class ModalClass extends Component {
         <FilterModal
           modalVisible={this.state.modalVisible}
           title="Specialties"
-          filters={this.state.filters}
-          updateFilter={this.updateFilter}
-          closeModal={() => {
-            this.setState({ modalVisible: false });
-          }}
+          filters={this.filters}
+          closeModal={() => this.setState({ modalVisible: false })}
+          onApplyFilters={filters => console.warn(filters)}
         />
         <TouchableHighlight
           onPress={() => {

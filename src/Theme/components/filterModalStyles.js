@@ -28,4 +28,9 @@ export default {
   switch: {
     height: 10,
   },
+  button: {
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 35,
+  },
 };
