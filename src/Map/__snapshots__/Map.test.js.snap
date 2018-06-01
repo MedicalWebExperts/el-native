@@ -39,19 +39,22 @@ exports[`Snapshots should apply custom styles 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "backgroundColor": "yellow",
-        "bottom": 78,
-        "padding": 30,
-        "position": "relative",
-      }
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "yellow",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
-      style={null}
-    >
+    <View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -102,19 +105,22 @@ exports[`Snapshots should apply underlayColor 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "backgroundColor": "red",
-        "bottom": 78,
-        "padding": 30,
-        "position": "relative",
-      }
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
-      style={null}
-    >
+    <View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -165,19 +171,22 @@ exports[`Snapshots should render custom button 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "backgroundColor": "red",
-        "bottom": 78,
-        "padding": 30,
-        "position": "relative",
-      }
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
-      style={null}
-    >
+    <View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -228,19 +237,22 @@ exports[`Snapshots should render default map 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "backgroundColor": "red",
-        "bottom": 78,
-        "padding": 30,
-        "position": "relative",
-      }
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+          "bottom": 78,
+          "padding": 30,
+          "position": "relative",
+        },
+      ]
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
-      style={null}
-    >
+    <View>
       <Text
         accessible={true}
         allowFontScaling={true}
