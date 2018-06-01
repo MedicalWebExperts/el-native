@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, number, bool, oneOf, object, func } from 'prop-types';
-import { TextInput, Text, View } from 'react-native';
+import { TextInput, Text, View, Platform } from 'react-native';
 
 import Theme from '../Theme';
 
@@ -73,6 +73,14 @@ const propTypes = {
    * Maximum characters allowed
    */
   maxLength: number,
+  /**
+   * Sets the return key to the label. (Ex. "search")
+   */
+  returnKeyType: string,
+  /**
+   * Callback that is called when text input ends.
+   */
+  onEndEditing: func,
 };
 
 const defaultProps = {
@@ -90,8 +98,10 @@ const defaultProps = {
   placeholderTextColor: theme.colors.text,
   onFocus: () => {},
   value: '',
-  keyboardType: '',
+  keyboardType: 'default',
   maxLength: 200,
+  returnKeyType: Platform.OS === 'android' ? 'none' : 'default',
+  onEndEditing: () => null,
 };
 
 const defaultStyles = (error, type) => {
@@ -135,6 +145,8 @@ const Input = (props) => {
     type,
     keyboardType,
     maxLength,
+    returnKeyType,
+    onEndEditing,
   } = props;
 
   return (
@@ -154,6 +166,8 @@ const Input = (props) => {
         onFocus={onFocus}
         keyboardType={keyboardType}
         maxLength={maxLength}
+        returnKeyType={returnKeyType}
+        onEndEditing={onEndEditing}
       />
       <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
     </View>
