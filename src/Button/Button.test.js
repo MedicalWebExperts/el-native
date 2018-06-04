@@ -1,5 +1,6 @@
 /* global describe it expect jest:true */
 import React from 'react';
+import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import Button from './Button';
 import Icon from '../Icon/Icon';
@@ -32,7 +33,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" disabled />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...disabledStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...disabledStyles });
   });
 
   it('should have background styles', () => {
@@ -41,7 +42,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" backgroundStyles={bgStyles} />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...bgStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...bgStyles });
   });
 
   it('should be block', () => {
@@ -50,7 +51,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" block />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...blockStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...blockStyles });
   });
 
   it('should be transparent', () => {
@@ -63,7 +64,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" transparent />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...transparentStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...transparentStyles });
   });
 
   it('should be outlined', () => {
@@ -75,7 +76,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" outline />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...customStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...customStyles });
   });
 
   it('should be rounded', () => {
@@ -89,7 +90,7 @@ describe('Button', () => {
 
     const wrapper = shallow(<Button onPress={() => null} text="LOGIN" roundedDimensions={40} />);
 
-    shouldHaveStyles(wrapper.find('View'), { ...defaultStyles, ...customStyles });
+    shouldHaveStyles(wrapper.find(View), { ...defaultStyles, ...customStyles });
   });
 
   it('should render an Icon', () => {

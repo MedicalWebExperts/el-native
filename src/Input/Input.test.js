@@ -6,7 +6,7 @@ import colors from '../Theme/colors';
 
 const props = {
   placeholder: 'Placeholder text',
-  onChangeText: () => {},
+  onChangeText: () => { },
   multiline: false,
   numberOfLines: 4,
   autoCorrect: false,
@@ -17,6 +17,7 @@ const props = {
   style: {},
   type: 'underline',
   placeholderTextColor: colors.textColor,
+  keyboardType: 'default',
 };
 
 const customStyle = {
