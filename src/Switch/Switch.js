@@ -2,6 +2,8 @@ import React from 'react';
 import { bool, func, object, string } from 'prop-types';
 import { Switch as SwitchRN } from 'react-native';
 
+import colors from '../Theme/colors';
+
 const propTypes = {
   /**
    * Action to execute when the user toggles the switch.
@@ -15,6 +17,10 @@ const propTypes = {
    * Background color when the switch is turned on. Default: Theme primary color.
    */
   color: string,
+  /**
+   * Background color when the switch is turned off. Default: React Native's default grey color.
+   */
+  colorOff: string,
   /**
    * The value of the switch. If true the switch will be turned on. Default: false.
    */
@@ -35,7 +41,8 @@ const defaultProps = {
   /**
    * TODO: Replace with theme primary color.
    */
-  color: 'grey',
+  color: colors.primary,
+  colorOff: null,
   value: false,
   disabled: false,
   thumbTintColor: null,
@@ -50,8 +57,9 @@ const defaultProps = {
 const Switch = props => (
   <SwitchRN
     style={props.style}
-    onValueChange={props.onPress && typeof props.onPress === 'function' ? props.onPress : () => { }}
+    onValueChange={props.onPress && typeof props.onPress === 'function' ? props.onPress : () => {}}
     onTintColor={props.color}
+    tintColor={props.colorOff}
     value={props.value}
     disabled={props.disabled}
     thumbTintColor={props.thumbTintColor}

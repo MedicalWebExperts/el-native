@@ -9,6 +9,7 @@ import typographyStyles from './components/typographyStyles';
 import optionStyles from './components/optionStyles';
 import font from './font';
 import circularProgressStyles from './components/circularProgressStyles';
+import filterModalStyles from './components/filterModalStyles';
 
 export default {
   font,
@@ -22,4 +23,5 @@ export default {
   typography: typographyStyles,
   option: optionStyles,
   circularProgress: circularProgressStyles,
+  filterModal: filterModalStyles,
 };
