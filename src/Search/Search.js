@@ -1,10 +1,7 @@
-/* eslint no-console: ["error", { allow: ["error"] }] */
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import matchSorter from 'match-sorter';
-import { View, Text } from 'react-native';
-import { Input, Button, FilterModal } from '../index';
-
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import { Button, FilterModal, Input } from '../index';
 import Theme from '../Theme';
 
 const theme = Theme.getTheme();
@@ -20,53 +17,129 @@ const propTypes = {
 const defaultProps = {
   handleSearch: () => null,
   keys: [],
-  filters: [],
+  filters: {},
 };
-
 class Search extends Component {
-  state = {
-    value: '',
-    modalVisible: false,
-    selectedFilters: {},
-  };
+  constructor(props) {
+    super(props);
+    const selectedFilters = {};
+    Object.keys(this.props.filters).forEach(e => Object.assign(selectedFilters, { [e]: false }));
+    this.state = {
+      value: '',
+      modalVisible: false,
+      filters: this.props.filters,
+      selectedFilters,
+    };
+  }
+
   onEndEditing = () => {
     this.handleSearch();
   };
+
   handleChange = (value) => {
     this.setState({ value });
   };
 
+  searchByFilters = (list, filters, selectedFilters) => {
+    const activeFilters = [];
+
+    const filterSelected = Object.keys(selectedFilters).some(k => selectedFilters[k]);
+
+    if (!filterSelected) {
+      return list;
+    }
+    Object.keys(filters).forEach((f) => {
+      filters[f].forEach((e) => {
+        if (e.value) {
+          activeFilters.push({ [f]: e.name });
+        }
+      });
+    });
+    return list.filter(listElement =>
+      activeFilters.every((f) => {
+        const key = Object.keys(f)[0];
+        return listElement[key] === f[key];
+      }));
+  };
+
+  searchByKeys = (list, keys, patt) =>
+    list.filter(listElement => keys.some(k => patt.test(listElement[k])));
+
+  search = (list, value, keys) => {
+    const regValues = value.split(' ').join('|');
+    const patt = new RegExp(regValues, 'i');
+    const { filters, selectedFilters } = this.state;
+    let result = list;
+
+    result = this.searchByFilters(list, filters, selectedFilters);
+
+    if (value && keys) {
+      return this.searchByKeys(result, keys, patt);
+    }
+
+    if (value === '') {
+      return result;
+    }
+
+    return result.filter(e => patt.test(e));
+  };
+
   handleSearch = () => {
     const { value } = this.state;
-    let result = [];
-    if (value) {
-      result = matchSorter(
-        this.props.dataList,
-        this.state.value,
-        this.props.keys.length ? { keys: this.props.keys } : undefined,
-      );
-    }
+    const result = this.search(this.props.dataList, value, this.props.keys);
+
     this.props.handleSearch(result);
   };
 
   cleanInput = () => {
-    this.setState({ value: '' });
+    this.setState({ value: '' }, () => this.handleSearch());
   };
 
   handleOpenFilter = (f) => {
-    this.setState({ selectedFilters: { ...this.state.selectedFilters, ...{ [f]: true } } });
+    this.setState({ modalVisible: true, selectedFilter: f });
   };
 
-  renderFilterLabel = f => (
-    <Button
-      onPress={() => this.handleOpenFilter(f)}
-      key={f}
-      backgroundStyles={styles.label}
-      textStyles={styles.labelText}
-      outline
-      text={f}
+  handleClose = (filters) => {
+    const selected = filters.find(e => e.value);
+    this.setState(
+      prevState => ({
+        modalVisible: false,
+        selectedFilters: {
+          ...prevState.selectedFilters,
+          ...{ [prevState.selectedFilter]: !!selected },
+        },
+      }),
+      () => {
+        this.handleSearch();
+      },
+    );
+  };
+
+  renderFilterLabel = (f, i) => {
+    const bgStyles = this.state.selectedFilters[f]
+      ? { ...styles.label, ...styles.labelOn }
+      : styles.label;
+    return (
+      <Button
+        onPress={() => this.handleOpenFilter(f)}
+        key={i}
+        backgroundStyles={bgStyles}
+        textStyles={styles.labelText}
+        outline
+        text={f}
+      />
+    );
+  };
+
+  renderModal = (visible, filters) => (
+    <FilterModal
+      modalVisible={visible}
+      title="Specialties"
+      filters={filters}
+      closeModal={this.handleClose}
     />
   );
+
   render() {
     return (
       <View>
@@ -92,14 +165,10 @@ class Search extends Component {
             </View>
           )}
         </View>
-        {/* <FilterModal
-            modalVisible={this.state.modalVisible}
-            title="Specialties"
-            filters={this.filters}
-            closeModal={this.handleClose}
-          /> */}
+        {this.state.selectedFilter &&
+          this.renderModal(this.state.modalVisible, this.state.filters[this.state.selectedFilter])}
         <View style={styles.wrapper}>
-          {Object.keys(this.props.filters).map(e => this.renderFilterLabel(e))}
+          {Object.keys(this.state.filters).map((e, i) => this.renderFilterLabel(e, i))}
         </View>
       </View>
     );

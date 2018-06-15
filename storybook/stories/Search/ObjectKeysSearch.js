@@ -7,7 +7,9 @@ const objList = [
   { name: 'Janice', color: 'Green', city: 'Barcelona' },
   { name: 'Fred', color: 'Orange', city: 'Los Angeles' },
   { name: 'George', color: 'Red', city: 'Paris' },
+  { name: 'George', color: 'Red', city: 'London' },
   { name: 'Jen', color: 'Red', city: 'Paris' },
+  { name: 'Paris', color: 'Pink', city: 'Madrid' },
 ];
 
 const filters = {
@@ -20,6 +22,7 @@ const filters = {
     { name: 'Paris', value: false },
     { name: 'Los Angeles', value: false },
     { name: 'Barcelona', value: false },
+    { name: 'London', value: false },
   ],
 };
 class ObjectKeysSearch extends React.Component {
@@ -32,7 +35,7 @@ class ObjectKeysSearch extends React.Component {
   render() {
     return (
       <View>
-        <View>{objList.map(v => <Text key={v.name}>{JSON.stringify(v)}</Text>)}</View>
+        <View>{objList.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}</View>
         <Search
           label="option button"
           handleSearch={this.handleSearch}
@@ -40,7 +43,7 @@ class ObjectKeysSearch extends React.Component {
           keys={['name', 'color']}
           filters={filters}
         />
-        {this.state.result.map(v => <Text key={v.name}>{JSON.stringify(v)}</Text>)}
+        {this.state.result.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}
       </View>
     );
   }

@@ -19,10 +19,21 @@ class FilterModal extends Component {
     closeModal: func.isRequired,
   };
 
-  state = {
-    selectAll: false,
-    filters: this.props.filters,
-  };
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const selectAll = nextProps.filters.every(e => e.value);
+    return {
+      ...prevState,
+      ...{ filters: nextProps.filters, selectAll },
+    };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectAll: false,
+      filters: props.filters,
+    };
+  }
 
   updateFilter = (filter, value) => {
     const { filters } = this.state;
@@ -42,8 +53,9 @@ class FilterModal extends Component {
   };
 
   render() {
-    const { title, filters, modalVisible } = this.props;
-    const { selectAll } = this.state;
+    const { title, modalVisible } = this.props;
+    const { selectAll, filters } = this.state;
+
     return (
       <Modal animationType="slide" visible={modalVisible} onRequestClose={this.handleClose}>
         <Col style={styles.wrapper}>
@@ -67,8 +79,9 @@ class FilterModal extends Component {
               />
             </Row>
             {filters.length &&
-              filters.map(filter => (
-                <Row key={filters.indexOf(filter)} style={styles.row}>
+              filters.map((filter, i) => (
+                // eslint-disable-next-line
+                <Row key={i} style={styles.row}>
                   <Text style={styles.text}>{filter.name}</Text>
                   <Switch
                     color={colors.primary}

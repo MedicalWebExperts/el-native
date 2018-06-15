@@ -25,7 +25,7 @@ export default {
     fontSize: 14,
   },
   labelOn: {
-    backgroundColor: '#FFC107',
-    borderColor: '#FFC107',
+    backgroundColor: '#b3e5fc',
+    borderColor: '#b3e5fc',
   },
 };
