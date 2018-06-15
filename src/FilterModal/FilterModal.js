@@ -17,17 +17,11 @@ class FilterModal extends Component {
     filters: array.isRequired,
     modalVisible: bool.isRequired,
     closeModal: func.isRequired,
-    onApplyFilters: func.isRequired,
   };
 
   state = {
     selectAll: false,
     filters: this.props.filters,
-  };
-
-  onApplyFilters = () => {
-    this.props.onApplyFilters(this.state.filters);
-    this.props.closeModal();
   };
 
   updateFilter = (filter, value) => {
@@ -43,18 +37,20 @@ class FilterModal extends Component {
     this.setState(prevState => ({ selectAll: !prevState.selectAll }));
   };
 
+  handleClose = () => {
+    this.props.closeModal(this.state.filters);
+  };
+
   render() {
-    const {
-      title, filters, modalVisible, closeModal,
-    } = this.props;
+    const { title, filters, modalVisible } = this.props;
     const { selectAll } = this.state;
     return (
-      <Modal animationType="slide" visible={modalVisible}>
+      <Modal animationType="slide" visible={modalVisible} onRequestClose={this.handleClose}>
         <Col style={styles.wrapper}>
           <Row style={{ ...styles.row, ...styles.titleWrapper }}>
             <Text style={styles.title}>{title}</Text>
             <Button
-              onPress={closeModal()}
+              onPress={this.handleClose}
               icon="ios-close"
               textStyles={styles.buttonText}
               transparent
@@ -83,7 +79,7 @@ class FilterModal extends Component {
                 </Row>
               ))}
             <View style={styles.button}>
-              <Button onPress={this.onApplyFilters} block text="APPLY FILTERS" />
+              <Button onPress={this.handleClose} block text="APPLY FILTERS" />
             </View>
           </View>
         </Col>
