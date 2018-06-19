@@ -17,6 +17,11 @@ class ModalClass extends Component {
     { name: 'Cardiac Surgery', value: false },
   ];
 
+  handleClose = (filters) => {
+    console.log(filters);
+    this.setState({ modalVisible: false });
+  };
+
   render() {
     return (
       <View>
@@ -24,8 +29,7 @@ class ModalClass extends Component {
           modalVisible={this.state.modalVisible}
           title="Specialties"
           filters={this.filters}
-          closeModal={() => this.setState({ modalVisible: false })}
-          onApplyFilters={filters => console.warn(filters)}
+          closeModal={this.handleClose}
         />
         <TouchableHighlight
           onPress={() => {

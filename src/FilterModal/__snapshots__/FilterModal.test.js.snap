@@ -4,6 +4,7 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
 <Modal
   animationType="slide"
   hardwareAccelerated={false}
+  onRequestClose={[Function]}
   visible={false}
 >
   <View

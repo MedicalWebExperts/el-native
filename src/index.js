@@ -13,6 +13,7 @@ import ComposedRow from './ComposedRow/ComposedRow';
 import List from './List/List';
 import Option from './Option/Option';
 import OptionGroup from './OptionGroup/OptionGroup';
+import Search from './Search/Search';
 import FilterModal from './FilterModal/FilterModal';
 
 import CircularProgress from './CircularProgress/CircularProgress';
@@ -45,5 +46,6 @@ export {
   Option,
   CircularProgress,
   OptionGroup,
+  Search,
   FilterModal,
 };

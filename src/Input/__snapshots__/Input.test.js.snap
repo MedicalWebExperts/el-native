@@ -18,9 +18,11 @@ exports[`Input Snapshots should render a Text Area Input 1`] = `
     multiline={true}
     numberOfLines={8}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Text Area"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -29,7 +31,6 @@ exports[`Input Snapshots should render a Text Area Input 1`] = `
           "borderColor": "#212121",
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "textAlign": "left",
         },
@@ -74,9 +75,11 @@ exports[`Input Snapshots should render a rounded Input 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -87,7 +90,6 @@ exports[`Input Snapshots should render a rounded Input 1`] = `
           "borderWidth": 1,
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
@@ -133,9 +135,11 @@ exports[`Input Snapshots should render a rounded Input with error 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -146,7 +150,6 @@ exports[`Input Snapshots should render a rounded Input with error 1`] = `
           "borderWidth": 1,
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
@@ -194,9 +197,11 @@ exports[`Input Snapshots should render a squared Input 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -207,7 +212,6 @@ exports[`Input Snapshots should render a squared Input 1`] = `
           "borderWidth": 1,
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
@@ -253,9 +257,11 @@ exports[`Input Snapshots should render a squared Input with error 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -266,7 +272,6 @@ exports[`Input Snapshots should render a squared Input with error 1`] = `
           "borderWidth": 1,
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "paddingLeft": 10,
           "textAlign": "left",
@@ -314,9 +319,11 @@ exports[`Input Snapshots should render an Input default 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -325,7 +332,6 @@ exports[`Input Snapshots should render an Input default 1`] = `
           "borderColor": "#212121",
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "textAlign": "left",
         },
@@ -368,9 +374,11 @@ exports[`Input Snapshots should render an Input default with error 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -379,7 +387,6 @@ exports[`Input Snapshots should render an Input default with error 1`] = `
           "borderColor": "#E64A19",
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "textAlign": "left",
         },
@@ -424,9 +431,11 @@ exports[`Input Snapshots should render an Input with custom styling 1`] = `
     multiline={false}
     numberOfLines={4}
     onChangeText={[Function]}
+    onEndEditing={[Function]}
     onFocus={[Function]}
     placeholder="Placeholder text"
     placeholderTextColor="#212121"
+    returnKeyType="default"
     selectTextOnFocus={false}
     style={
       Array [
@@ -435,7 +444,6 @@ exports[`Input Snapshots should render an Input with custom styling 1`] = `
           "borderColor": "#212121",
           "color": "#212121",
           "height": 40,
-          "marginTop": 4,
           "minWidth": "100%",
           "textAlign": "left",
         },

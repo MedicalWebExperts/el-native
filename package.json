@@ -23,6 +23,8 @@
     "generate": "node generate-component.js"
   },
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
+    "prop-types": "^15.6.0",
     "qs": "^6.5.1",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-vector-icons": "^4.5.0"

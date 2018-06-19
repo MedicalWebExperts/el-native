@@ -9,7 +9,6 @@ export default {
     borderBottomWidth: 1,
     borderColor: colors.text,
     height: 40,
-    marginTop: 4,
     textAlign: 'left',
     minWidth: '100%',
     color: colors.text,
