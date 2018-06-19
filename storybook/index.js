@@ -24,6 +24,7 @@ configure(() => {
   require('./stories/Typography');
   require('./stories/CircularProgress');
   require('./stories/FilterModal');
+  require('./stories/LinearGradient');
 }, module);
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
