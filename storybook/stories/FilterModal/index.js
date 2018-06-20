@@ -11,6 +11,25 @@ class ModalClass extends Component {
   };
 
   filters = [
+    {
+      name: 'PediatricsPediatricsPediatricsPediatricsPediatricsPediatricsPediatricsPediatrics',
+      value: true,
+    },
+    { name: 'Plastic Surgery', value: false },
+    { name: 'Gynecologist', value: false },
+    { name: 'Cardiac Surgery', value: false },
+    { name: 'Pediatrics', value: true },
+    { name: 'Plastic Surgery', value: false },
+    { name: 'Gynecologist', value: false },
+    { name: 'Cardiac Surgery', value: false },
+    { name: 'Pediatrics', value: true },
+    { name: 'Plastic Surgery', value: false },
+    { name: 'Gynecologist', value: false },
+    { name: 'Cardiac Surgery', value: false },
+    { name: 'Pediatrics', value: true },
+    { name: 'Plastic Surgery', value: false },
+    { name: 'Gynecologist', value: false },
+    { name: 'Cardiac Surgery', value: false },
     { name: 'Pediatrics', value: true },
     { name: 'Plastic Surgery', value: false },
     { name: 'Gynecologist', value: false },
