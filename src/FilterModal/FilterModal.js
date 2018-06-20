@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { bool, string, array, func } from 'prop-types';
-import { Modal, Text, View } from 'react-native';
+import { Modal, Text, View, ScrollView } from 'react-native';
 
 import Theme from '../Theme';
 import Switch from '../Switch/Switch';
@@ -68,7 +68,7 @@ class FilterModal extends Component {
               transparent
             />
           </Row>
-          <View style={styles.innerWrapper}>
+          <ScrollView style={styles.innerWrapper} showsVerticalScrollIndicator={false}>
             <Row style={styles.row}>
               <Text style={{ ...styles.text, ...styles.selectAll }}>Select All</Text>
               <Switch
@@ -82,7 +82,9 @@ class FilterModal extends Component {
               filters.map((filter, i) => (
                 // eslint-disable-next-line
                 <Row key={i} style={styles.row}>
-                  <Text style={styles.text}>{filter.name}</Text>
+                  <Text style={{ ...styles.text, ...styles.filter }} numberOfLines={1}>
+                    {filter.name}
+                  </Text>
                   <Switch
                     color={colors.primary}
                     value={filter.value}
@@ -91,9 +93,10 @@ class FilterModal extends Component {
                   />
                 </Row>
               ))}
-            <View style={styles.button}>
-              <Button onPress={this.handleClose} block text="APPLY FILTERS" />
-            </View>
+            <Row style={styles.extraRow} />
+          </ScrollView>
+          <View style={styles.button}>
+            <Button onPress={this.handleClose} block text="APPLY FILTERS" />
           </View>
         </Col>
       </Modal>
