@@ -81,6 +81,8 @@ const propTypes = {
    * Callback that is called when text input ends.
    */
   onEndEditing: func,
+
+  errorLabel: bool,
 };
 
 const defaultProps = {
@@ -102,6 +104,7 @@ const defaultProps = {
   maxLength: 200,
   returnKeyType: Platform.OS === 'android' ? 'none' : 'default',
   onEndEditing: () => null,
+  errorLabel: true,
 };
 
 const defaultStyles = (error, type) => {
@@ -169,7 +172,9 @@ const Input = (props) => {
         returnKeyType={returnKeyType}
         onEndEditing={onEndEditing}
       />
-      <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
+      {props.errorLabel && (
+        <Text style={styles.errorText}>{error && !!errorText && errorText}</Text>
+      )}
     </View>
   );
 };

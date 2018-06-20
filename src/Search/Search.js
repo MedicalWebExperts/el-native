@@ -12,12 +12,24 @@ const propTypes = {
   keys: PropTypes.array,
   dataList: PropTypes.array.isRequired,
   filters: PropTypes.object,
+  placeholder: PropTypes.string,
+  inputStyles: PropTypes.object,
+  cancelIconStyles: PropTypes.object,
+  labelStyle: PropTypes.object,
+  labelStyleActive: PropTypes.object,
+  labelTextStyle: PropTypes.object,
 };
 
 const defaultProps = {
   handleSearch: () => null,
   keys: [],
   filters: {},
+  placeholder: 'Search',
+  inputStyles: {},
+  cancelIconStyles: {},
+  labelStyle: {},
+  labelStyleActive: {},
+  labelTextStyle: {},
 };
 class Search extends Component {
   constructor(props) {
@@ -116,15 +128,17 @@ class Search extends Component {
   };
 
   renderFilterLabel = (f, i) => {
+    const defaultStyles = { ...styles.label, ...this.props.labelStyle };
+    const onStyles = { ...styles.labelOn, ...this.props.labelStyleActive };
     const bgStyles = this.state.selectedFilters[f]
-      ? { ...styles.label, ...styles.labelOn }
-      : styles.label;
+      ? { ...defaultStyles, ...onStyles }
+      : defaultStyles;
     return (
       <Button
         onPress={() => this.handleOpenFilter(f)}
         key={i}
         backgroundStyles={bgStyles}
-        textStyles={styles.labelText}
+        textStyles={{ ...styles.labelText, ...this.props.labelTextStyle }}
         outline
         text={f}
       />
@@ -145,31 +159,32 @@ class Search extends Component {
       <View>
         <View style={styles.wrapper}>
           <Input
-            placeholder="Search"
+            placeholder={this.props.placeholder}
             type="squared"
             onChangeText={text => this.handleChange(text)}
             value={this.state.value}
-            style={{ height: 40 }}
+            style={{ ...styles.input, ...this.props.inputStyles }}
             onEndEditing={this.onEndEditing}
             returnKeyType="search"
+            errorLabel={false}
           />
           {this.state.value !== '' && (
-            <View style={styles.button}>
+            <View style={styles.cancelButtonWrapper}>
               <Button
                 onPress={this.cleanInput}
                 icon="ios-close"
                 transparent
-                textStyles={{ color: '#999', fontSize: 28 }}
-                backgroundStyles={{ height: 40, width: 40 }}
+                textStyles={{ ...styles.cancelButtonIcon, ...this.props.cancelIconStyles }}
+                backgroundStyles={styles.cancelButton}
               />
             </View>
           )}
         </View>
-        {this.state.selectedFilter &&
-          this.renderModal(this.state.modalVisible, this.state.filters[this.state.selectedFilter])}
         <View style={styles.wrapper}>
           {Object.keys(this.state.filters).map((e, i) => this.renderFilterLabel(e, i))}
         </View>
+        {this.state.selectedFilter &&
+          this.renderModal(this.state.modalVisible, this.state.filters[this.state.selectedFilter])}
       </View>
     );
   }
