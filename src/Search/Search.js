@@ -18,6 +18,8 @@ const propTypes = {
   labelStyle: PropTypes.object,
   labelStyleActive: PropTypes.object,
   labelTextStyle: PropTypes.object,
+  labelTextStyleActive: PropTypes.object,
+  placeholderTextColor: PropTypes.string,
 };
 
 const defaultProps = {
@@ -30,6 +32,8 @@ const defaultProps = {
   labelStyle: {},
   labelStyleActive: {},
   labelTextStyle: {},
+  labelTextStyleActive: {},
+  placeholderTextColor: '#999',
 };
 class Search extends Component {
   constructor(props) {
@@ -53,25 +57,17 @@ class Search extends Component {
   };
 
   searchByFilters = (list, filters, selectedFilters) => {
-    const activeFilters = [];
+    const selectedFiltersName = Object.keys(selectedFilters).filter(k => selectedFilters[k]);
 
-    const filterSelected = Object.keys(selectedFilters).some(k => selectedFilters[k]);
-
-    if (!filterSelected) {
+    if (!selectedFiltersName.length) {
       return list;
     }
-    Object.keys(filters).forEach((f) => {
-      filters[f].forEach((e) => {
-        if (e.value) {
-          activeFilters.push({ [f]: e.name });
-        }
-      });
-    });
-    return list.filter(listElement =>
-      activeFilters.every((f) => {
-        const key = Object.keys(f)[0];
-        return listElement[key] === f[key];
-      }));
+
+    return list.filter(e =>
+      selectedFiltersName.every(currentFilterName =>
+        // eslint-disable-next-line
+        filters[currentFilterName].some(
+          filterObject => filterObject.value && e[currentFilterName] === filterObject.name)));
   };
 
   searchByKeys = (list, keys, patt) =>
@@ -133,12 +129,19 @@ class Search extends Component {
     const bgStyles = this.state.selectedFilters[f]
       ? { ...defaultStyles, ...onStyles }
       : defaultStyles;
+
+    const defaultTextStyle = { ...styles.labelText, ...this.props.labelTextStyle };
+    const onTextStyles = { ...styles.labelTextOn, ...this.props.labelTextStyleActive };
+    const textStyles = this.state.selectedFilters[f]
+      ? { ...defaultTextStyle, ...onTextStyles }
+      : defaultTextStyle;
+
     return (
       <Button
         onPress={() => this.handleOpenFilter(f)}
         key={i}
         backgroundStyles={bgStyles}
-        textStyles={{ ...styles.labelText, ...this.props.labelTextStyle }}
+        textStyles={textStyles}
         outline
         text={f}
       />
@@ -167,6 +170,7 @@ class Search extends Component {
             onEndEditing={this.onEndEditing}
             returnKeyType="search"
             errorLabel={false}
+            placeholderTextColor={this.props.placeholderTextColor}
           />
           {this.state.value !== '' && (
             <View style={styles.cancelButtonWrapper}>

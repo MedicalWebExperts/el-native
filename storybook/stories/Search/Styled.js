@@ -25,6 +25,10 @@ const labelTextStyle = {
   color: '#2196F3',
 };
 
+const labelTextStyleActive = {
+  color: 'red',
+};
+
 const objList = [
   { name: 'Janice', color: 'Green', city: 'Barcelona' },
   { name: 'Fred', color: 'Orange', city: 'Los Angeles' },
@@ -69,6 +73,8 @@ class ObjectKeysSearch extends React.Component {
           labelStyle={labelStyle}
           labelTextStyle={labelTextStyle}
           labelStyleActive={labelStyleActive}
+          labelTextStyleActive={labelTextStyleActive}
+          placeholderTextColor="#f0f"
         />
         {this.state.result.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}
       </View>
