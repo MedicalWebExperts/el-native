@@ -51,6 +51,17 @@ const filters = {
     { name: 'London', value: false },
   ],
 };
+const filtersLabels = {
+  color: {
+    label: 'Color',
+    modalTitle: 'Select a color',
+  },
+  city: {
+    label: 'City',
+    modalTitle: 'Choose the city',
+  },
+};
+
 class ObjectKeysSearch extends React.Component {
   state = {
     result: [],
@@ -75,6 +86,7 @@ class ObjectKeysSearch extends React.Component {
           labelStyleActive={labelStyleActive}
           labelTextStyleActive={labelTextStyleActive}
           placeholderTextColor="#f0f"
+          filtersLabels={filtersLabels}
         />
         {this.state.result.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}
       </View>
