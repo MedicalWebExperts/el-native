@@ -20,6 +20,7 @@ const propTypes = {
   labelTextStyle: PropTypes.object,
   labelTextStyleActive: PropTypes.object,
   placeholderTextColor: PropTypes.string,
+  filtersLabels: PropTypes.object,
 };
 
 const defaultProps = {
@@ -34,6 +35,7 @@ const defaultProps = {
   labelTextStyle: {},
   labelTextStyleActive: {},
   placeholderTextColor: '#999',
+  filtersLabels: {},
 };
 class Search extends Component {
   constructor(props) {
@@ -143,7 +145,7 @@ class Search extends Component {
         backgroundStyles={bgStyles}
         textStyles={textStyles}
         outline
-        text={f}
+        text={this.props.filtersLabels[f].label}
       />
     );
   };
@@ -151,7 +153,7 @@ class Search extends Component {
   renderModal = (visible, filters) => (
     <FilterModal
       modalVisible={visible}
-      title="Specialties"
+      title={this.props.filtersLabels[this.state.selectedFilter].modalTitle}
       filters={filters}
       closeModal={this.handleClose}
     />
