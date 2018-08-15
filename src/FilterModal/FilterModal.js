@@ -50,8 +50,7 @@ class FilterModal extends Component {
   };
 
   handleClose = () => {
-    this.setState({ filters: {} });
-    this.props.closeModal();
+    this.setState({ filters: {} }, this.props.closeModal());
   };
 
   handleApplyFilters = () => {
