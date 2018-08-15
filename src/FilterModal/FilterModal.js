@@ -17,6 +17,7 @@ class FilterModal extends Component {
     filters: array.isRequired,
     modalVisible: bool.isRequired,
     closeModal: func.isRequired,
+    applyFilters: func.isRequired,
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -49,7 +50,11 @@ class FilterModal extends Component {
   };
 
   handleClose = () => {
-    this.props.closeModal(this.state.filters);
+    this.props.closeModal();
+  };
+
+  handleApplyFilters = () => {
+    this.props.applyFilters(this.state.filters);
   };
 
   render() {
@@ -96,7 +101,7 @@ class FilterModal extends Component {
             <Row style={styles.extraRow} />
           </ScrollView>
           <View style={styles.button}>
-            <Button onPress={this.handleClose} block text="APPLY FILTERS" />
+            <Button onPress={this.handleApplyFilters} block text="APPLY FILTERS" />
           </View>
         </Col>
       </Modal>
