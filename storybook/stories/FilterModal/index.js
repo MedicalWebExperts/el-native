@@ -41,6 +41,11 @@ class ModalClass extends Component {
     this.setState({ modalVisible: false });
   };
 
+  handleApplyFilters = (filters) => {
+    console.log(filters);
+    this.setState({ modalVisible: false });
+  };
+
   render() {
     return (
       <View>
@@ -49,6 +54,7 @@ class ModalClass extends Component {
           title="Specialties"
           filters={this.filters}
           closeModal={this.handleClose}
+          applyFilters={this.handleApplyFilters}
         />
         <TouchableHighlight
           onPress={() => {
