@@ -15,7 +15,6 @@ const props = {
   title: 'Specialties',
   filters,
   updateFilter: () => null,
-  closeModal: () => null,
   applyFilters: () => null,
 };
 

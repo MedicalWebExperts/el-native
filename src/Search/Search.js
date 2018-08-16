@@ -109,8 +109,6 @@ class Search extends Component {
     this.setState({ modalVisible: true, selectedFilter: f });
   };
 
-  handleClose = () => this.setState({ modalVisible: false }, () => this.handleSearch());
-
   handleApplyFilters = (filters) => {
     const selected = filters.find(e => e.value);
     this.setState(
@@ -157,7 +155,6 @@ class Search extends Component {
       modalVisible={visible}
       title={this.props.filtersLabels[this.state.selectedFilter].modalTitle}
       filters={filters}
-      closeModal={this.handleClose}
       applyFilters={this.handleApplyFilters}
     />
   );

@@ -16,7 +16,6 @@ class FilterModal extends Component {
     title: string.isRequired,
     filters: array.isRequired,
     modalVisible: bool.isRequired,
-    closeModal: func.isRequired,
     applyFilters: func.isRequired,
   };
 
@@ -51,7 +50,7 @@ class FilterModal extends Component {
 
   handleClose = (filters) => {
     filters.forEach(filter => this.updateFilter(filter, false));
-    this.props.closeModal();
+    this.props.applyFilters(this.state.filters);
   };
 
   handleApplyFilters = () => {
