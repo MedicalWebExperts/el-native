@@ -16,6 +16,7 @@ const props = {
   filters,
   updateFilter: () => null,
   closeModal: () => null,
+  applyFilters: () => null,
 };
 
 describe('FilterModal Snapshots', () => {

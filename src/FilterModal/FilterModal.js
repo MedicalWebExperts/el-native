@@ -49,8 +49,9 @@ class FilterModal extends Component {
     this.setState(prevState => ({ selectAll: !prevState.selectAll }));
   };
 
-  handleClose = () => {
-    this.setState({ filters: {} }, this.props.closeModal());
+  handleClose = (filters) => {
+    filters.forEach(filter => this.updateFilter(filter, false));
+    this.props.closeModal();
   };
 
   handleApplyFilters = () => {
@@ -62,12 +63,16 @@ class FilterModal extends Component {
     const { selectAll, filters } = this.state;
 
     return (
-      <Modal animationType="slide" visible={modalVisible} onRequestClose={this.handleClose}>
+      <Modal
+        animationType="slide"
+        visible={modalVisible}
+        onRequestClose={() => this.handleClose(filters)}
+      >
         <Col style={styles.wrapper}>
           <Row style={{ ...styles.row, ...styles.titleWrapper }}>
             <Text style={styles.title}>{title}</Text>
             <Button
-              onPress={this.handleClose}
+              onPress={() => this.handleClose(filters)}
               icon="ios-close"
               textStyles={styles.buttonText}
               transparent
