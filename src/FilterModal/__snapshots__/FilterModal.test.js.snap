@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  visible={false}
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#ced4da",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxHeight": 60,
+          "paddingHorizontal": 14,
+          "paddingVertical": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Specialties
+      </Text>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel=""
+        accessibilityTraits={
+          Array [
+            "button",
+          ]
+        }
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderRadius": 2,
+              "borderWidth": 0,
+              "elevation": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "padding": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "padding": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 40,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <RCTScrollView
+      showsVerticalScrollIndicator={false}
+      style={
+        Object {
+          "flex": 1,
+          "marginHorizontal": 14,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#ced4da",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "maxHeight": 60,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Select All
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#2196F3"
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {},
+              ]
+            }
+            thumbTintColor={null}
+            tintColor={null}
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#ced4da",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "maxHeight": 60,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "maxWidth": "80%",
+              }
+            }
+          >
+            Pediatrics
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#2196F3"
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {},
+              ]
+            }
+            thumbTintColor={null}
+            tintColor={null}
+            value={true}
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#ced4da",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "maxHeight": 60,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "maxWidth": "80%",
+              }
+            }
+          >
+            Plastic Surgery
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#2196F3"
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {},
+              ]
+            }
+            thumbTintColor={null}
+            tintColor={null}
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#ced4da",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "maxHeight": 60,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "maxWidth": "80%",
+              }
+            }
+          >
+            Gynecologist
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#2196F3"
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {},
+              ]
+            }
+            thumbTintColor={null}
+            tintColor={null}
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#ced4da",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "maxHeight": 60,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "maxWidth": "80%",
+              }
+            }
+          >
+            Cardiac Surgery
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#2196F3"
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {},
+              ]
+            }
+            thumbTintColor={null}
+            tintColor={null}
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 90,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "bottom": 25,
+          "flexDirection": "row",
+          "marginHorizontal": 20,
+          "position": "absolute",
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel=""
+        accessibilityTraits={
+          Array [
+            "button",
+          ]
+        }
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#2196F3",
+              "borderRadius": 2,
+              "elevation": 4,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "padding": 8,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFF",
+                "fontSize": 18,
+                "fontWeight": "500",
+                "textAlign": "center",
+              }
+            }
+          >
+            APPLY FILTERS
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

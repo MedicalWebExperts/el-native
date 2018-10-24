@@ -1,0 +1,347 @@
+{
+  "src/Avatar/Avatar.js": {
+    "description": "Avatar component is a wrapper over RN <Image> with custom styles\napplied and with an interface that let users change certain props with ease.",
+    "methods": [],
+    "props": {
+      "square": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The prop \"square\" is a boolean that when present makes the Avatar squared.\nIn abscence the shape will be rounded.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'large'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'small'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The prop \"size\" offers 3 custom sizes to choose from. In abscence the default is medium.\nThe other sizes available are \"large\" and \"small\"",
+        "defaultValue": {
+          "value": "'medium'",
+          "computed": false
+        }
+      },
+      "borderColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The prop \"borderColor\" defines the color of the border.\nThis prop will not work without the \"borderThickness\" prop present.",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "borderThickness": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The prop \"borderThickness\" determines the width of the border of the Avatar.\nExpects a number. The default is 0.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The prop \"placeholder\" can be used as a default image if no image is present in \"source\" prop.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "source": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The prop \"source\" is the main prop, and expects a string or a uri to show the image in Avatar.",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/Divider/Divider.js": {
+    "description": "Divider renders a thin View to separate content.",
+    "methods": [],
+    "props": {
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Color of the divider. Default: Theme light gray color.",
+        "defaultValue": {
+          "value": "colors.lightgray",
+          "computed": true
+        }
+      },
+      "primaryColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Color of the short thick line divider. Default: Theme primary color.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "accentLength": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'short'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'long'",
+              "computed": false
+            },
+            {
+              "value": "'none'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Length of the short thick accent. Default: none.",
+        "defaultValue": {
+          "value": "'none'",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/Layout/Layout.js": {
+    "description": "Grid component, expects childs, that could be Row or Col components.",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "array"
+            },
+            {
+              "name": "object"
+            }
+          ]
+        },
+        "required": true,
+        "description": "The prop \"children\" defines the content that will live inside the component.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/Map/Map.js": {
+    "description": "Map component description.",
+    "displayName": "Map",
+    "methods": [],
+    "props": {
+      "latitude": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Description of prop \"latitude\"."
+      },
+      "longitude": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Description of prop \"longitude\"."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Description of prop \"width\".",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "height": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Description of prop \"height\".",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "apiKey": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Description of prop \"apiKey\"."
+      },
+      "maptype": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'roadmap'",
+          "computed": false
+        }
+      },
+      "zoom": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "18",
+          "computed": false
+        }
+      },
+      "onPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "button": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "undefined",
+          "computed": true
+        }
+      },
+      "underlayColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'white'",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/Switch/Switch.js": {
+    "description": "Boolean input.\n\nRequires a onPress callback that updates the `value` prop in order to reflect user actions.\nIf no callback is provided, the component will continue to render the value supplied.",
+    "methods": [],
+    "props": {
+      "onPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Action to execute when the user toggles the switch.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom style.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Background color when the switch is turned on. Default: Theme primary color.",
+        "defaultValue": {
+          "value": "colors.primary",
+          "computed": true
+        }
+      },
+      "value": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The value of the switch. If true the switch will be turned on. Default: false.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true the user won't be able to toggle the switch. Default: false.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      }
+    }
+  }
+}

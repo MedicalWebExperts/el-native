@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Snapshots should render a Text Area Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={true}
+    numberOfLines={8}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Text Area"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a rounded Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#212121",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "paddingLeft": 10,
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a rounded Input with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#E64A19",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "paddingLeft": 10,
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render a squared Input 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#212121",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "paddingLeft": 10,
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render a squared Input with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#E64A19",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "paddingLeft": 10,
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render an Input default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "textAlign": "left",
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input Snapshots should render an Input default with error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#E64A19",
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "textAlign": "left",
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    Error text
+  </Text>
+</View>
+`;
+
+exports[`Input Snapshots should render an Input with custom styling 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    editable={false}
+    keyboardType="default"
+    maxLength={200}
+    multiline={false}
+    numberOfLines={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onFocus={[Function]}
+    placeholder="Placeholder text"
+    placeholderTextColor="#212121"
+    returnKeyType="default"
+    selectTextOnFocus={false}
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#212121",
+          "color": "#212121",
+          "height": 40,
+          "minWidth": "100%",
+          "textAlign": "left",
+        },
+        Object {
+          "borderColor": "#2196F3",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#E64A19",
+        "fontSize": 12,
+        "paddingVertical": 4,
+      }
+    }
+  />
+</View>
+`;

@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="./el-native.png">
+</p>
+
 # EL NATIVE
+
+[![Nevercode build status](https://app.nevercode.io/api/projects/00221536-8b56-4bfd-8d15-b6b7c876d4f6/workflows/26972073-bbf4-4458-8c20-a02c9a4bcba3/status_badge.svg?branch=develop)](https://app.nevercode.io/#/project/00221536-8b56-4bfd-8d15-b6b7c876d4f6/workflow/26972073-bbf4-4458-8c20-a02c9a4bcba3/latestBuild?branch=develop)
 
 Just Another React Native Components Library.
 
@@ -6,6 +12,11 @@ Just Another React Native Components Library.
 
 * The intended use for this repository is serving as a component library to develop react-native applications.
 * Version 1.0.1
+
+### Misc
+
+* [Sketch Files](https://bitbucket.org/NewWaveWeb/el-native-sketch)
+* [Jira Task](https://newwaveweb.atlassian.net/browse/MIW-894)
 
 # Getting Started
 
@@ -20,7 +31,7 @@ That's it.
 Then, import the components that you want to use:
 
 ```js
-  import { Map } from 'el-native';
+import { Map } from "el-native";
 ```
 
 And that would do the trick.
@@ -29,7 +40,7 @@ And that would do the trick.
 
 ## Clone this repository
 
-``` bash
+```bash
 $ git clone git@bitbucket.org:NewWaveWeb/el-native.git
 ```
 
@@ -37,26 +48,26 @@ $ git clone git@bitbucket.org:NewWaveWeb/el-native.git
 
 ### 1. Install the dependencies
 
-``` bash
+```bash
 $ cd el-native
 $ npm install
 ```
 
 ### 2. Run the application
 
-``` bash
+```bash
 $ react-native run-ios
 ```
 
 or
 
-``` bash
+```bash
 $ react-native run-android
 ```
 
 ### 3. Running Storybook
 
-``` bash
+```bash
 $ npm run storybook
 ```
 
@@ -64,30 +75,52 @@ This command will show a storybook instance at: [http://localhost:7007](http://l
 
 ### 4. Running Tests
 
-``` bash
+```bash
 $ npm test
 ```
 
 To update the snapshots:
-``` bash
+
+```bash
 $ npm test -- -u
 ```
 
 To watch the test suite:
-``` bash
+
+```bash
 $ npm run test:watch
 ```
 
-### 5. Building the app to publish
+### 5. Component Documentation
 
-``` bash
+* To document the components we are using [react-docgen](https://github.com/reactjs/react-docgen). Follow the docs to document your components.
+
+\*Everytime a component is added, modified or deleted, run:
+
+```bash
+$ npm run updateDocs
+```
+
+This command will update the `docs.json` file placed in the root of this repository. Add this file to commit and submit it with your changes.
+
+### 6. Building the app to publish
+
+```bash
 $ npm run prepublish
 ```
 
 or:
 
-``` bash
+```bash
 $ npm run build
+```
+
+### For Android development
+
+Reverse the port for the emulator
+
+```bash
+$ adb reverse tcp:7007 tcp:7007
 ```
 
 ## Structure of the Components Directory
@@ -100,10 +133,24 @@ All the components are placed under the src/ folder. If you want to create a new
 src/
 ├── index.js
 ├── MyComponent
-│   └── __snapshots__
-│       ├── index.js
-│       ├── styles.js
-│       └── MyComponent.test.js
+│   ├── __snapshots__
+│   ├── MyComponent.js
+│   ├── styles.js
+│   └── MyComponent.test.js
+```
+
+## Generate component
+
+Set bash script permissions:
+
+```
+$ chmod +x generate-component.sh
+```
+
+Generate component:
+
+```
+$ npm run generate MyComponent
 ```
 
 ## Storybook
@@ -113,13 +160,12 @@ This project has configured a [storybook](https://storybook.js.org/). If you run
 If you want to add an story to the storybook, you can add it in the storybook/ folder at the root of this repository.
 
 ```js
-  import React from 'react';
-  import { storiesOf } from '@storybook/react-native';
+import React from "react";
+import { storiesOf } from "@storybook/react-native";
 
-  import { MyComponent } from '../../../src';
+import { MyComponent } from "../../../src";
 
-  storiesOf('MyComponent', module).add('default', () => <MyComponent />);
+storiesOf("MyComponent", module).add("default", () => <MyComponent />);
 ```
 
 Checkout the storybook [documentation](https://storybook.js.org/basics/guide-react/) for more examples.
-

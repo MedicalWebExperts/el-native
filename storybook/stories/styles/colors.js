@@ -1,0 +1,17 @@
+export default {
+  primary: 'lightgreen',
+  backgroundLight: '#F5FCFF',
+  backgroundDark: '#AFAFAF',
+  customColor: 'aquamarine',
+  blueColor: '#2196F3',
+  lightgray: 'lightgray',
+  darkgray: 'gray',
+  white: 'white',
+  lightgreen: '#8EB568',
+  jade: '#509D76',
+  turquoise: '#236571',
+  navy: '#2F4858',
+  pink: '#C769CD',
+  red: '#CB4A40',
+  yellow: '#D7C563',
+};

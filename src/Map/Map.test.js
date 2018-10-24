@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
-import Map from './index';
+import Map from './Map';
 
 const apiKey = process.env.ELNATIVE_GOOGLE_MAPS_APIKEY || '';
 

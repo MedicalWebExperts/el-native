@@ -1,0 +1,1 @@
+Object.defineProperty(exports,"__esModule",{value:true});exports.default={centeredContent:{justifyContent:'center',alignItems:'center'},leftContent:{alignItems:'center',paddingLeft:4}};
