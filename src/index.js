@@ -15,7 +15,6 @@ import Option from './Option/Option';
 import OptionGroup from './OptionGroup/OptionGroup';
 import Search from './Search/Search';
 import FilterModal from './FilterModal/FilterModal';
-import LinearGradient from './LinearGradient/LinearGradient';
 import CircularProgress from './CircularProgress/CircularProgress';
 
 export {
@@ -48,5 +47,4 @@ export {
   OptionGroup,
   Search,
   FilterModal,
-  LinearGradient,
 };

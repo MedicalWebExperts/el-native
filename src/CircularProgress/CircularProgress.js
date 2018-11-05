@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { number, string } from 'prop-types';
-// import LinearGradient from 'react-native-linear-gradient';
+import { array, number, string } from 'prop-types';
+import LinearGradient from 'react-native-linear-gradient';
 
 import { H1 } from '../Typography/Typography';
 
@@ -18,7 +18,7 @@ const propTypes = {
   text: string,
   innerText: string,
   textColor: string,
-  // colors: array.isRequired,
+  colors: array.isRequired,
 };
 
 const defaultProps = {
@@ -57,15 +57,15 @@ const CircularProgress = (props) => {
   const styles = getStyles({ size, border, textColor });
 
   // Magic to work on android with only 1 color in array.
-  // const colors = props.colors.length > 1 ? props.colors : [...props.colors, ...props.colors];
+  const colors = props.colors.length > 1 ? props.colors : [...props.colors, ...props.colors];
 
   return (
     <View style={styles.wrapper}>
-      {/* <LinearGradient colors={colors} style={styles.linearGradient}> */}
-      <View style={[styles.innerView, { backgroundColor: props.backgroundColor }]}>
-        {props.innerText && <H1 style={styles.innerText}>{props.innerText}</H1>}
-      </View>
-      {/* </LinearGradient> */}
+      <LinearGradient colors={colors} style={styles.linearGradient}>
+        <View style={[styles.innerView, { backgroundColor: props.backgroundColor }]}>
+          {props.innerText && <H1 style={styles.innerText}>{props.innerText}</H1>}
+        </View>
+      </LinearGradient>
       {props.text && (
         <View style={styles.textWrapper}>
           <H1 style={styles.outerText}>{props.text}</H1>
