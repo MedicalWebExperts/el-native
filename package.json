@@ -22,11 +22,7 @@
     "updateDocs": "node node_modules/react-docgen/bin/react-docgen.js src/ -o docs.json -e styles.js --pretty",
     "generate": "node generate-component.js"
   },
-  "dependencies": {
-    "qs": "^6.5.1",
-    "react-native-linear-gradient": "^2.4.0",
-    "react-native-vector-icons": "^4.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@storybook/react-native": "^3.4.2",
     "babel-cli": "^6.26.0",
@@ -48,11 +44,14 @@
     "jest-enzyme": "^4.0.2",
     "jest-serializer-enzyme": "1.0.0",
     "prop-types": "^15.6.0",
+    "qs": "^6.5.1",
     "react": "^16.3.2",
     "react-addons-test-utils": "15.6.2",
     "react-docgen": "^2.20.0",
     "react-dom": "^16.3.2",
     "react-native": "^0.55.3",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-test-renderer": "^16.3.2"
   },
   "peerDependencies": {
