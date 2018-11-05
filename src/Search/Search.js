@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { Button, FilterModal, Input } from '../index';
 import Theme from '../Theme';
@@ -37,7 +37,7 @@ const defaultProps = {
   placeholderTextColor: '#999',
   filtersLabels: {},
 };
-class Search extends Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     const selectedFilters = {};

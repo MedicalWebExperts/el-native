@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, TouchableHighlight, Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../CenterView';
 import { FilterModal } from '../../../src';
 
-class ModalClass extends Component {
+class ModalClass extends React.Component {
   state = {
     modalVisible: false,
   };

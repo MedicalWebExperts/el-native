@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { View } from 'react-native';
 
@@ -6,7 +6,7 @@ import CenterView from '../CenterView';
 import { Checkbox } from '../../../src';
 import colors from '../styles/colors';
 
-class CheckboxWrapper extends Component {
+class CheckboxWrapper extends React.Component {
   state = { value: false };
 
   onPress = () => {

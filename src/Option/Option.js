@@ -1,5 +1,5 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableNativeFeedback, TouchableOpacity, Platform } from 'react-native';
 import Icon from '../Icon/Icon';
@@ -37,7 +37,7 @@ const defaultProps = {
 
 const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-class Option extends Component {
+class Option extends React.Component {
   state = {
     selected: this.props.selected,
   };

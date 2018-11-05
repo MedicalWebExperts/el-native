@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { View } from 'react-native';
 import { array, func, object, bool } from 'prop-types';
@@ -24,7 +24,7 @@ const defaultProps = {
   labelStyles: {},
 };
 
-class OptionGroup extends Component {
+class OptionGroup extends React.Component {
   state = {
     selected: -1,
   };

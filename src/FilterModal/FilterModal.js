@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { bool, string, array, func } from 'prop-types';
 import { Modal, Text, View, ScrollView } from 'react-native';
 
@@ -11,7 +11,7 @@ const theme = Theme.getTheme();
 const styles = theme.filterModal;
 const { colors } = theme;
 
-class FilterModal extends Component {
+class FilterModal extends React.Component {
   static propTypes = {
     title: string.isRequired,
     filters: array.isRequired,
