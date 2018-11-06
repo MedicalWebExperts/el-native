@@ -4,7 +4,6 @@ import { array, number, string } from 'prop-types';
 import LinearGradient from 'react-native-linear-gradient';
 
 import { H1 } from '../Typography/Typography';
-
 import Theme from '../Theme';
 import ThemeColors from '../Theme/colors';
 
