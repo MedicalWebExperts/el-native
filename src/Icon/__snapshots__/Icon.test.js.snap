@@ -2,9 +2,7 @@
 
 exports[`Icon Snapshots should render a custom Icon 1`] = `
 <Text
-  accessible={true}
   allowFontScaling={false}
-  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -26,9 +24,7 @@ exports[`Icon Snapshots should render a custom Icon 1`] = `
 
 exports[`Icon Snapshots should render a simple Icon 1`] = `
 <Text
-  accessible={true}
   allowFontScaling={false}
-  ellipsizeMode="tail"
   style={
     Array [
       Object {

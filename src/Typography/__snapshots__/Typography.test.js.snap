@@ -2,9 +2,6 @@
 
 exports[`H1 Snapshots should apply custom styles to H1 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -20,9 +17,6 @@ exports[`H1 Snapshots should apply custom styles to H1 1`] = `
 
 exports[`H1 Snapshots should render an H1 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -38,9 +32,6 @@ exports[`H1 Snapshots should render an H1 1`] = `
 
 exports[`H1 Snapshots should render an H1 with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -56,9 +47,6 @@ exports[`H1 Snapshots should render an H1 with color 1`] = `
 
 exports[`H2 Snapshots should apply custom styles to H2 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -74,9 +62,6 @@ exports[`H2 Snapshots should apply custom styles to H2 1`] = `
 
 exports[`H2 Snapshots should render an H2 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -92,9 +77,6 @@ exports[`H2 Snapshots should render an H2 1`] = `
 
 exports[`H2 Snapshots should render an H2 with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -110,9 +92,6 @@ exports[`H2 Snapshots should render an H2 with color 1`] = `
 
 exports[`H3 Snapshots should apply custom styles to H3 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -128,9 +107,6 @@ exports[`H3 Snapshots should apply custom styles to H3 1`] = `
 
 exports[`H3 Snapshots should render an H3 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -146,9 +122,6 @@ exports[`H3 Snapshots should render an H3 1`] = `
 
 exports[`H3 Snapshots should render an H3 with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -164,9 +137,6 @@ exports[`H3 Snapshots should render an H3 with color 1`] = `
 
 exports[`H4 Snapshots should apply custom styles to H4 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -182,9 +152,6 @@ exports[`H4 Snapshots should apply custom styles to H4 1`] = `
 
 exports[`H4 Snapshots should render an H4 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -200,9 +167,6 @@ exports[`H4 Snapshots should render an H4 1`] = `
 
 exports[`H4 Snapshots should render an H4 with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -218,9 +182,6 @@ exports[`H4 Snapshots should render an H4 with color 1`] = `
 
 exports[`H5 Snapshots should apply custom styles to H5 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -236,9 +197,6 @@ exports[`H5 Snapshots should apply custom styles to H5 1`] = `
 
 exports[`H5 Snapshots should render an H5 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -254,9 +212,6 @@ exports[`H5 Snapshots should render an H5 1`] = `
 
 exports[`H5 Snapshots should render an H5 with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -272,9 +227,6 @@ exports[`H5 Snapshots should render an H5 with color 1`] = `
 
 exports[`Text Snapshots should apply custom styles to Text 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -290,9 +242,6 @@ exports[`Text Snapshots should apply custom styles to Text 1`] = `
 
 exports[`Text Snapshots should render an Text 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {
@@ -308,9 +257,6 @@ exports[`Text Snapshots should render an Text 1`] = `
 
 exports[`Text Snapshots should render an Text with color 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   numberOfLines={null}
   style={
     Object {

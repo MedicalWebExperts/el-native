@@ -32,9 +32,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "fontSize": 18,
@@ -45,7 +42,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
         Specialties
       </Text>
       <View
-        accessibilityComponentType={undefined}
         accessibilityLabel=""
         accessibilityTraits={
           Array [
@@ -53,12 +49,7 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           ]
         }
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -71,8 +62,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -96,9 +85,7 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -145,9 +132,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "fontWeight": "bold",
@@ -192,9 +176,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             numberOfLines={1}
             style={
               Object {
@@ -240,9 +221,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             numberOfLines={1}
             style={
               Object {
@@ -288,9 +266,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             numberOfLines={1}
             style={
               Object {
@@ -336,9 +311,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             numberOfLines={1}
             style={
               Object {
@@ -391,7 +363,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
         accessibilityLabel=""
         accessibilityTraits={
           Array [
@@ -399,12 +370,7 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           ]
         }
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -418,8 +384,6 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
             "width": "100%",
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -436,10 +400,7 @@ exports[`FilterModal Snapshots should render a simple FilterModal 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
             disabled={false}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#FFF",

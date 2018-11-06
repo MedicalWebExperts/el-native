@@ -105,10 +105,6 @@ describe('Button', () => {
     shouldHaveComponent(<Button onPress={() => null} iconRight="ios-basketball" />, Icon);
   });
 
-  it('should render a Spinner', () => {
-    shouldHaveComponent(<Button onPress={() => null} processing />, 'ActivityIndicator');
-  });
-
   test('should call the onPress', () => {
     shouldSimulateOnPress(<Button onPress={() => null} />);
   });

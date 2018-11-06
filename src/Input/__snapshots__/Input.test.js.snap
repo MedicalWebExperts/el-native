@@ -43,9 +43,6 @@ exports[`Input Snapshots should render a Text Area Input 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -103,9 +100,6 @@ exports[`Input Snapshots should render a rounded Input 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -163,9 +157,6 @@ exports[`Input Snapshots should render a rounded Input with error 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -225,9 +216,6 @@ exports[`Input Snapshots should render a squared Input 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -285,9 +273,6 @@ exports[`Input Snapshots should render a squared Input with error 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -342,9 +327,6 @@ exports[`Input Snapshots should render an Input default 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -397,9 +379,6 @@ exports[`Input Snapshots should render an Input default with error 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
@@ -456,9 +435,6 @@ exports[`Input Snapshots should render an Input with custom styling 1`] = `
     value=""
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#E64A19",
