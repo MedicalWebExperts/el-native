@@ -1,4 +1,4 @@
 {
-  "presets": ["@babel/preset-env"],
+  "presets": ["react-native"],
   "plugins": ["transform-decorators-legacy"]
 }
