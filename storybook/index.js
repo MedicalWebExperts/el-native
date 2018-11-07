@@ -26,6 +26,7 @@ configure(() => {
   require('./stories/FilterModal');
 }, module);
 
+
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
 AppRegistry.registerComponent('%APP_NAME%', () => StorybookUI);
 export default StorybookUI;
