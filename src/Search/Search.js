@@ -66,10 +66,14 @@ class Search extends React.Component {
 
     const findValueInMany = (values, comparator) => {
       if (values.indexOf(',') === -1) {
-        return values === comparator;
+        return values.replace(/ /g, '') === comparator.replace(/ /g, '');
       }
       const names = values.split(',');
-      return names.indexOf(comparator) !== -1 || names.indexOf(` ${comparator}`) !== -1;
+      return (
+        names.indexOf(comparator.replace(/ /g, '')) !== -1 ||
+        names.indexOf(` ${comparator}`) !== -1 ||
+        names.indexOf(`${comparator} `) !== -1
+      );
     };
 
     const filteredList = list.filter(e =>

@@ -104,7 +104,6 @@ const defaultProps = {
   iconRight: '',
   iconLeft: '',
   icon: '',
-  onPress: null,
 };
 
 const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;

@@ -32,17 +32,20 @@ const labelTextStyleActive = {
 const objList = [
   { name: 'Janice', color: 'Green', city: 'Barcelona' },
   { name: 'Fred', color: 'Orange', city: 'Los Angeles' },
-  { name: 'George', color: 'Red, Green', city: 'Paris' },
+  { name: 'George', color: 'Red, Green, Blue', city: 'Paris' },
   { name: 'George', color: 'Red', city: 'London' },
   { name: 'Jen', color: 'Red', city: 'Paris' },
   { name: 'Paris', color: 'Pink', city: 'Madrid' },
+  { name: 'Paris', color: 'Blue, Pink', city: 'Madrid' },
 ];
 
 const filters = {
   color: [
-    { name: 'Red', value: false },
+    { name: ' Red', value: false },
     { name: 'Green', value: false },
     { name: 'Orange', value: false },
+    { name: 'Blue', value: false },
+    { name: 'Pink', value: false },
   ],
   city: [
     { name: 'Paris', value: false },
@@ -72,7 +75,11 @@ class ObjectKeysSearch extends React.Component {
   render() {
     return (
       <View>
-        <View>{objList.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}</View>
+        <View>
+          {objList.map((v, i) => (
+            <Text key={i}>{JSON.stringify(v)}</Text>
+          ))}
+        </View>
         <Search
           label="option button"
           handleSearch={this.handleSearch}
@@ -88,7 +95,9 @@ class ObjectKeysSearch extends React.Component {
           placeholderTextColor="#f0f"
           filtersLabels={filtersLabels}
         />
-        {this.state.result.map((v, i) => <Text key={i}>{JSON.stringify(v)}</Text>)}
+        {this.state.result.map((v, i) => (
+          <Text key={i}>{JSON.stringify(v)}</Text>
+        ))}
       </View>
     );
   }
