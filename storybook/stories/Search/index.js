@@ -8,6 +8,6 @@ import Styled from './Styled';
 
 storiesOf('Search', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Default', () => <SimpleSearch />)
   .add('Styled', () => <Styled />)
+  .add('Default', () => <SimpleSearch />)
   .add('Search Object Keys', () => <ObjectKeysSearch />);

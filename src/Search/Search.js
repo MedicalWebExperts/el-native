@@ -60,16 +60,25 @@ class Search extends React.Component {
 
   searchByFilters = (list, filters, selectedFilters) => {
     const selectedFiltersName = Object.keys(selectedFilters).filter(k => selectedFilters[k]);
-
     if (!selectedFiltersName.length) {
       return list;
     }
 
-    return list.filter(e =>
+    const findValueInMany = (values, comparator) => {
+      if (values.indexOf(',') === -1) {
+        return values === comparator;
+      }
+      const names = values.split(',');
+      return names.indexOf(comparator) !== -1 || names.indexOf(` ${comparator}`) !== -1;
+    };
+
+    const filteredList = list.filter(e =>
       selectedFiltersName.every(currentFilterName =>
         // eslint-disable-next-line
         filters[currentFilterName].some(
-          filterObject => filterObject.value && e[currentFilterName] === filterObject.name)));
+          filterObject =>
+            filterObject.value && findValueInMany(e[currentFilterName], filterObject.name))));
+    return filteredList;
   };
 
   searchByKeys = (list, keys, patt) =>

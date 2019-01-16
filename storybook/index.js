@@ -6,6 +6,7 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 
 // import stories
 configure(() => {
+  require('./stories/Search');
   require('./stories/Avatar');
   require('./stories/Button');
   require('./stories/Card');
@@ -19,13 +20,11 @@ configure(() => {
   require('./stories/Layout');
   require('./stories/Option');
   require('./stories/OptionGroup');
-  require('./stories/Search');
   require('./stories/Switch');
   require('./stories/Typography');
   require('./stories/CircularProgress');
   require('./stories/FilterModal');
 }, module);
-
 
 const StorybookUI = getStorybookUI({ port: 7007, host: 'localhost' });
 AppRegistry.registerComponent('%APP_NAME%', () => StorybookUI);

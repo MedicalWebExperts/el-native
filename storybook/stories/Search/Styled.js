@@ -32,7 +32,7 @@ const labelTextStyleActive = {
 const objList = [
   { name: 'Janice', color: 'Green', city: 'Barcelona' },
   { name: 'Fred', color: 'Orange', city: 'Los Angeles' },
-  { name: 'George', color: 'Red', city: 'Paris' },
+  { name: 'George', color: 'Red, Green', city: 'Paris' },
   { name: 'George', color: 'Red', city: 'London' },
   { name: 'Jen', color: 'Red', city: 'Paris' },
   { name: 'Paris', color: 'Pink', city: 'Madrid' },
