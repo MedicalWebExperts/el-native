@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { array, func, object, bool } from 'prop-types';
+import { array, func, object, bool, oneOfType, string, number } from 'prop-types';
 
 import Option from '../Option/Option';
 
@@ -13,6 +13,7 @@ const propTypes = {
   iconStyles: object,
   labelStyles: object,
   onChange: func,
+  selected: oneOfType([string, number]),
 };
 
 const defaultProps = {
@@ -22,12 +23,14 @@ const defaultProps = {
   onChange: () => null,
   iconStyles: {},
   labelStyles: {},
+  selected: -1,
 };
 
 class OptionGroup extends React.Component {
   state = {
-    selected: -1,
+    selected: this.props.selected || -1,
   };
+
   handlePress = (selected, id) => {
     if (selected) {
       this.setState({ selected: id });
