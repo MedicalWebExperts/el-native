@@ -1,1 +1,31 @@
-var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");var _extends2=_interopRequireDefault(require("@babel/runtime/helpers/extends"));var _react=_interopRequireDefault(require("react"));var _reactNative=require("react-native");var _reactTestRenderer=_interopRequireDefault(require("react-test-renderer"));var _Icon=_interopRequireDefault(require("./Icon"));var _jsxFileName="/Users/nacho/projects/el-native/src/Icon/Icon.test.js";var customProps={color:'aquamarine',size:14,name:(_reactNative.Platform.OS==='ios'?'ios':'md')+"-beer"};describe('Icon Snapshots',function(){it('should render a simple Icon',function(){var component=_reactTestRenderer.default.create(_react.default.createElement(_Icon.default,{__source:{fileName:_jsxFileName,lineNumber:15}}));var json=component.toJSON();expect(json).toMatchSnapshot();});it('should render a custom Icon',function(){var component=_reactTestRenderer.default.create(_react.default.createElement(_Icon.default,(0,_extends2.default)({},customProps,{__source:{fileName:_jsxFileName,lineNumber:21}})));var json=component.toJSON();expect(json).toMatchSnapshot();});});
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactNative = require("react-native");
+
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+
+var _Icon = _interopRequireDefault(require("./Icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var customProps = {
+  color: 'aquamarine',
+  size: 14,
+  name: "".concat(_reactNative.Platform.OS === 'ios' ? 'ios' : 'md', "-beer")
+};
+describe('Icon Snapshots', function () {
+  it('should render a simple Icon', function () {
+    var component = _reactTestRenderer.default.create(_react.default.createElement(_Icon.default, null));
+
+    var json = component.toJSON();
+    expect(json).toMatchSnapshot();
+  });
+  it('should render a custom Icon', function () {
+    var component = _reactTestRenderer.default.create(_react.default.createElement(_Icon.default, customProps));
+
+    var json = component.toJSON();
+    expect(json).toMatchSnapshot();
+  });
+});
