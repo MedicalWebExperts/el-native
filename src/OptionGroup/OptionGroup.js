@@ -38,6 +38,7 @@ class OptionGroup extends React.Component {
     }
   };
   render() {
+    console.warn(this.props.selected);
     return (
       <View>
         {this.props.options.map(e => (
