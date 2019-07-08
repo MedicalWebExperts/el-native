@@ -24,4 +24,12 @@ storiesOf('OptionGroup', module)
   ))
   .add('style option row', () => (
     <OptionGroup options={options} onChange={handleOnChange} style={{ backgroundColor: 'red' }} />
+  ))
+  .add('selected', () => (
+    <OptionGroup
+      options={options}
+      onChange={handleOnChange}
+      style={{ backgroundColor: 'red' }}
+      selected={1}
+    />
   ));
