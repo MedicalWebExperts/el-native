@@ -97,6 +97,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
+      console.warn(this.props.selected);
       return _react.default.createElement(_reactNative.View, null, this.props.options.map(function (e) {
         return _react.default.createElement(_Option.default, {
           key: e.id,
