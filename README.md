@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./el-native.png">
+  <img src="https://www.medicalwebexperts.com/blog/content/uploads/2018/10/el-native.png">
 </p>
 
 # EL NATIVE
